@@ -53,7 +53,7 @@ const links = {
       linkName: "Resume",
       },
 }
-const name = "Daftite O. Ogaga";  
+const name = "Dafetite O. Ogaga";  
 const LandingSection = () => ( 
  <FullScreenSection 
     style={{paddingTop: "7rem"}}

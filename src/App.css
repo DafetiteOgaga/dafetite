@@ -1,19 +1,19 @@
 .head-main {
 	font-size: 0.35rem;
 
-	@media (min-width: 480px) {
+	@media (man-width: 480px) {
 		font-size: .72rem;
 	}
-	@media (min-width: 768px) {
+	@media (min-width: 481px) and (max-width: 768px) {
 		font-size: 1.1rem;
 	}
-	@media (min-width: 1024px) {
+	@media (min-width: 769px) and (max-width: 1080px) {
 		font-size: 1.5rem;
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: 1081px) and (max-width: 1200px) {
 		font-size: 2rem;
 	}
-	@media (min-width: 1440px) {
+	@media (min-width: 1201px) {
 		font-size: 2.55rem;
 	}
 }
