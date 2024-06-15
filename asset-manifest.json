@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.dc9fb96d.css",
-    "main.js": "/dafetite/static/js/main.4abea72f.js",
+    "main.js": "/dafetite/static/js/main.f72b91bf.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/C_Dafetite_Ogaga_SE.pdf": "/dafetite/static/media/C_Dafetite_Ogaga_SE.032267a057a80e956acd.pdf",
@@ -11,11 +11,11 @@
     "static/media/creonovo-gardens.png": "/dafetite/static/media/creonovo-gardens.15ef5fe97c6b9e852082.png",
     "index.html": "/dafetite/index.html",
     "main.dc9fb96d.css.map": "/dafetite/static/css/main.dc9fb96d.css.map",
-    "main.4abea72f.js.map": "/dafetite/static/js/main.4abea72f.js.map",
+    "main.f72b91bf.js.map": "/dafetite/static/js/main.f72b91bf.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dc9fb96d.css",
-    "static/js/main.4abea72f.js"
+    "static/js/main.f72b91bf.js"
   ]
 }
