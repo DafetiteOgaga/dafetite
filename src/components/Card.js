@@ -21,13 +21,14 @@ const Card = ({ title, description, imageSrc }) => {
        <Image borderRadius="xl" src={imageSrc} alt={title} /> 
        <VStack spacing={{ base: 2, md: 8 }} p={4} alignItems="flex-start"> 
          <HStack justifyContent="space-between" alignItems="center"> 
-           <Heading as="h3" size={ isMobile ? 'xs' : 'md' }> 
-             {title} 
-           </Heading> 
+           {/* <Heading as="h3" size={ isMobile ? 'xs' : 'md' }>  */}
+             <h1 className="head-main">{title}</h1>
+           {/* </Heading>  */}
          </HStack> 
-         <Text color="#64748b" fontSize={ isMobile ? 'xs' : 'lg' }> 
+         {/* <Text color="#64748b" fontSize={ isMobile ? 'xs' : 'lg' }>  */}
+         <h1 className="head-sub" style={{color: "#64748b"}}>
            {description} 
-         </Text> 
+         </h1> 
          <HStack spacing={{ base: 4, md: 8 }} alignItems="center"> 
            <p className="paragraph">See more</p> 
            <FontAwesomeIcon icon={faArrowRight} size={ isMobile ? 'xs' : '1x' } /> 

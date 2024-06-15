@@ -43,11 +43,12 @@ const ProjectsSection = () => {
      alignItems="flex-start" 
      spacing={8}> 
      
-     <Heading 
+     {/* <Heading  */}
+     <h1 className="paragraph"
      style={{color: "#e6e6fa",}}
      as="h1" id="projects-section"> 
        My Projects 
-     </Heading> 
+     </h1> 
      <Box 
        display="grid" 
        gridTemplateColumns="repeat(2,minmax(0,1fr))" 
