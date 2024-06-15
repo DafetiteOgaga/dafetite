@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/dafetite-profilePage/static/css/main.df6a7eab.css",
-    "main.js": "/dafetite-profilePage/static/js/main.c2a8fa4f.js",
-    "static/js/453.8d205b1d.chunk.js": "/dafetite-profilePage/static/js/453.8d205b1d.chunk.js",
-    "static/media/dafetite.jpeg": "/dafetite-profilePage/static/media/dafetite.de43f13a40d007c93175.jpeg",
-    "static/media/C_Dafetite_Ogaga_SE.pdf": "/dafetite-profilePage/static/media/C_Dafetite_Ogaga_SE.032267a057a80e956acd.pdf",
-    "static/media/creonovo-website.png": "/dafetite-profilePage/static/media/creonovo-website.e1ba1479077b1020e92c.png",
-    "static/media/creonovo_restaurant-backend-component.png": "/dafetite-profilePage/static/media/creonovo_restaurant-backend-component.8ad44ad3d7f9933da8d6.png",
-    "static/media/creonovo_restaurant.png": "/dafetite-profilePage/static/media/creonovo_restaurant.121be8c82aab833d39ec.png",
-    "static/media/creonovo-gardens.png": "/dafetite-profilePage/static/media/creonovo-gardens.15ef5fe97c6b9e852082.png",
-    "index.html": "/dafetite-profilePage/index.html",
-    "main.df6a7eab.css.map": "/dafetite-profilePage/static/css/main.df6a7eab.css.map",
-    "main.c2a8fa4f.js.map": "/dafetite-profilePage/static/js/main.c2a8fa4f.js.map",
-    "453.8d205b1d.chunk.js.map": "/dafetite-profilePage/static/js/453.8d205b1d.chunk.js.map"
+    "main.css": "/dafetite/static/css/main.f66773eb.css",
+    "main.js": "/dafetite/static/js/main.dd409914.js",
+    "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
+    "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
+    "static/media/C_Dafetite_Ogaga_SE.pdf": "/dafetite/static/media/C_Dafetite_Ogaga_SE.032267a057a80e956acd.pdf",
+    "static/media/creonovo-website.png": "/dafetite/static/media/creonovo-website.e1ba1479077b1020e92c.png",
+    "static/media/creonovo_restaurant-backend-component.png": "/dafetite/static/media/creonovo_restaurant-backend-component.8ad44ad3d7f9933da8d6.png",
+    "static/media/creonovo_restaurant.png": "/dafetite/static/media/creonovo_restaurant.121be8c82aab833d39ec.png",
+    "static/media/creonovo-gardens.png": "/dafetite/static/media/creonovo-gardens.15ef5fe97c6b9e852082.png",
+    "index.html": "/dafetite/index.html",
+    "main.f66773eb.css.map": "/dafetite/static/css/main.f66773eb.css.map",
+    "main.dd409914.js.map": "/dafetite/static/js/main.dd409914.js.map",
+    "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df6a7eab.css",
-    "static/js/main.c2a8fa4f.js"
+    "static/css/main.f66773eb.css",
+    "static/js/main.dd409914.js"
   ]
 }
