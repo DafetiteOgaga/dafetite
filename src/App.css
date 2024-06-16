@@ -1,4 +1,204 @@
 .head-main {
+	font-size: .88rem;
+
+	@media (min-width: 416px) {
+		font-size: 1.2rem;
+	}
+	@media (min-width: 480px) {
+		font-size: 1.5rem;
+	}
+	@media (min-width: 594px) {
+		font-size: 1.8rem;
+	}
+	@media (min-width: 678px) {
+		font-size: 1.9rem;
+	}
+	@media (min-width: 734px) {
+		font-size: 1.95rem;
+	}
+	@media (min-width: 764px) {
+		font-size: 1.96rem;
+	}
+	@media (min-width: 768px) {
+		font-size: 1rem;
+	}
+	@media (min-width: 848px) {
+		font-size: 1.23rem;
+	}
+	@media (min-width: 884px) {
+		font-size: 1.27rem;
+	}
+	@media (min-width: 896px) {
+		font-size: 1.3rem;
+	}
+	@media (min-width: 960px) {
+		font-size: 1.45rem;
+	}
+	@media (min-width: 1024px) {
+		font-size: 1.5rem;
+	}
+	@media (min-width: 1126px) {
+		font-size: 1.6rem;
+	}
+	@media (min-width: 1162px) {
+		font-size: 1.75rem;
+	}
+	@media (min-width: 1194px) {
+		font-size: 1.75rem;
+	}
+	@media (min-width: 1200px) {
+		font-size: 2.56rem;
+	}
+	@media (min-width: 1440px) {
+		font-size: 3.8rem;
+	}
+}
+
+.head-sub {
+	font-size: .68rem;
+
+	@media (min-width: 416px) {
+		font-size: .86rem;
+	}
+	@media (min-width: 460px) {
+		font-size: .9rem;
+	}
+	@media (min-width: 480px) {
+		font-size: 1rem;
+	}
+	@media (min-width: 536px) {
+		font-size: 1.2rem;
+	}
+	@media (min-width: 594px) {
+		font-size: 1.25rem;
+	}
+	@media (min-width: 658px) {
+		font-size: 1.3rem;
+	}
+	@media (min-width: 678px) {
+		font-size: 1.4rem;
+	}
+	@media (min-width: 734px) {
+		font-size: 1.45rem;
+	}
+	@media (min-width: 764px) {
+		font-size: 1.45rem;
+	}
+	@media (min-width: 768px) {
+		font-size: .71rem;
+	}
+	@media (min-width: 848px) {
+		font-size: .79rem;
+	}
+	@media (min-width: 884px) {
+		font-size: .83rem;
+	}
+	@media (min-width: 896px) {
+		font-size: .85rem;
+	}
+	@media (min-width: 960px) {
+		font-size: .9rem;
+	}
+	@media (min-width: 1024px) {
+		font-size: .97rem;
+	}
+	@media (min-width: 1126px) {
+		font-size: 1.06rem;
+	}
+	@media (min-width: 1162px) {
+		font-size: 1.11rem;
+	}
+	@media (min-width: 1194px) {
+		font-size: 1.15rem;
+	}
+	@media (min-width: 1200px) {
+		font-size: 1.1rem;
+	}
+	@media (min-width: 1440px) {
+		font-size: 1.4rem;
+	}
+}
+
+.paragraph {
+	font-size: .7rem;
+
+	@media (min-width: 480px) {
+		font-size: 1rem;
+	}
+	@media (min-width: 768px) {
+		font-size: .9rem;
+	}
+	@media (min-width: 1024px) {
+		font-size: 1.2rem;
+	}
+	@media (min-width: 1200px) {
+		font-size: 1.3rem;
+	}
+	@media (min-width: 1440px) {
+		font-size: 1.4rem;
+	}
+}
+
+.pad {
+	padding: 2rem;
+	padding-top: 5rem;
+	background-color: #68859c;
+
+	@media (min-width: 768px) {
+		padding-top: 6.5rem;
+	}
+	/* @media (min-width: 1024px) {
+		padding-top: 4rem;
+	} */
+}
+
+.display {
+	display: grid;
+	grid-template-rows: .8fr 1fr;
+	gap: 1rem;
+
+	@media (min-width: 768px) {
+		grid-template-columns: .8fr 1fr;
+		grid-template-rows: none;
+	}
+	@media (min-width: 1024px) {
+		
+	}
+	@media (min-width: 1200px) {
+		/* display: grid;
+    	grid-template-columns: .8fr 1fr; */
+	}
+	/* @media (min-width: 1440px) {
+		font-size: 1.4rem;
+	} */
+}
+
+.photo {
+	width: auto;
+	height: auto;
+	border-radius: 8%;
+	border: 3px solid #34495e;
+	
+	/* @media (min-width: 480px) {
+		font-size: .6rem;
+	} */
+	@media (min-width: 768px) {
+		/* width: 10rem; */
+		/* height: auto; */
+	}
+	/* @media (min-width: 1024px) {
+		
+	} */
+	/* @media (min-width: 1200px) {
+		display: grid;
+    	grid-template-columns: .8fr 1fr;
+	} */
+	/* @media (min-width: 1440px) {
+		font-size: 1.4rem;
+	} */
+}
+
+.box-main {
 	font-size: .6rem;
 
 	@media (min-width: 416px) {
@@ -54,7 +254,7 @@
 	}
 }
 
-.head-sub {
+.box-sub {
 	font-size: .33rem;
 
 	@media (min-width: 416px) {
@@ -116,25 +316,5 @@
 	}
 	@media (min-width: 1440px) {
 		font-size: 1.2rem;
-	}
-}
-
-.paragraph {
-	font-size: .5rem;
-
-	@media (min-width: 480px) {
-		font-size: .6rem;
-	}
-	@media (min-width: 768px) {
-		font-size: .9rem;
-	}
-	@media (min-width: 1024px) {
-		font-size: 1.2rem;
-	}
-	@media (min-width: 1200px) {
-		font-size: 1.3rem;
-	}
-	@media (min-width: 1440px) {
-		font-size: 1.4rem;
 	}
 }

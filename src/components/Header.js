@@ -93,31 +93,28 @@ const Header = () => {
      transitionTimingFunction="ease-in-out" 
      backgroundColor="#2c3e50" 
      ref={headerRef} 
-     zIndex={1000}
-   > 
+     zIndex={1000}> 
      <Box color="white" maxWidth="1280px" margin="0 auto" style={{ color: '#D3D3D3' }}> 
        <HStack 
          px={16} 
          py={4} 
          justifyContent="space-between" 
-         alignItems="center" 
-       > 
+         alignItems="center"> 
          <nav> 
-            <HStack spacing={{ base: 4, md: 8 }}>
+            <HStack spacing={{ base: 2.5, md: 5 }}>
               {socials.map(({ icon, url }) => ( 
                 <a 
                   key={url} 
                   href={url} 
                   target="_blank" 
-                  rel="noopener noreferrer" 
-                > 
+                  rel="noopener noreferrer"> 
                   <FontAwesomeIcon icon={icon} size={isMobile ? "lg" : "2x"} key={url} /> 
                 </a> 
               ))} 
             </HStack> 
          </nav> 
          <nav> 
-          <HStack spacing={{ base: 4, md: 8 }}>
+          <HStack>
              <a 
              className="paragraph"
              href="#projects" 

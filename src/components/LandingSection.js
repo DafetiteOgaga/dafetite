@@ -55,46 +55,36 @@ const links = {
 }
 const name = "Dafetite O. Ogaga";  
 const LandingSection = () => ( 
- <FullScreenSection 
-    style={{paddingTop: "7rem"}}
-    display="grid"
-    gridTemplateColumns=".8fr 1fr"
-    isDarkBackground 
-    backgroundColor="#68859c"
-    p={8}>
-     <VStack
-      spacing={{ base: 2, md: 4 }}> 
-       <Image 
-        borderRadius={{ base: 15, md: 30 }}
-        border="3px solid #34495e"
+  <div className="pad display">
+     <div> 
+       <img 
+       className="photo"
         src={dafe}
          alt="Dafetite" 
          cursor="pointer" 
        boxShadow="lg"
        transition="all 0.3s ease"
-      //  width={{ base: "100px", sm: "150px", md: "200px", lg: "250px", xl: "300px" }}
         _hover={{
           transform: "translateY(-10px)",
           boxShadow: "xl",
         }}/> 
-     </VStack> 
+     </div> 
 
-     <VStack 
+     <div 
       alignItems="start"
-      spacing={0}> 
+      spacing={0}
+      > 
       <h1 className="head-main"
         style={{
-        // fontSize: "2.7rem",
         fontWeight: "bold",
         color: "#e6e6fa",
-      }}
-        >Hello, I am <span style={{color: "#00ced1"}}>{name}</span></h1>
+      }}>
+        Hello, I am <span style={{color: "#00ced1"}}>{name}</span></h1>
       {Object.values(data).map((value, index) => {
         return(
           <h1 className="head-sub"
           key={index}
           style={{
-            // fontSize: "1.1rem",
             fontWeight: "bold",
             color: "#e6e6fa",
           }}>
@@ -106,7 +96,6 @@ const LandingSection = () => (
         <h1 className="head-sub"
         key={index}
           style={{
-          // fontSize: "1.1rem",
           fontWeight: "bold",
           color: "#e6e6fa",
           }}>
@@ -121,8 +110,9 @@ const LandingSection = () => (
           </a> 
         </h1>
       ))} 
-     </VStack> 
- </FullScreenSection> 
+     </div> 
+ {/* </FullScreenSection> */}
+ </div>
 ); 
  
 export default LandingSection;

@@ -16,20 +16,16 @@ const Card = ({ title, description, imageSrc }) => {
         _hover={{
           transform: "translateY(-8px)",
           boxShadow: "xl",
-        }}
-     > 
+        }}> 
        <Image borderRadius="xl" src={imageSrc} alt={title} /> 
-       <VStack spacing={{ base: 2, md: 8 }} p={4} alignItems="flex-start"> 
+       <VStack p={4} alignItems="flex-start"> 
          <HStack justifyContent="space-between" alignItems="center"> 
-           {/* <Heading as="h3" size={ isMobile ? 'xs' : 'md' }>  */}
-             <h1 className="head-main">{title}</h1>
-           {/* </Heading>  */}
+             <h1 className="box-main">{title}</h1>
          </HStack> 
-         {/* <Text color="#64748b" fontSize={ isMobile ? 'xs' : 'lg' }>  */}
-         <h1 className="head-sub" style={{color: "#64748b"}}>
+         <h1 className="box-sub" style={{color: "#64748b"}}>
            {description} 
          </h1> 
-         <HStack spacing={{ base: 4, md: 8 }} alignItems="center"> 
+         <HStack alignItems="center"> 
            <p className="paragraph">See more</p> 
            <FontAwesomeIcon icon={faArrowRight} size={ isMobile ? 'xs' : '1x' } /> 
          </HStack> 
