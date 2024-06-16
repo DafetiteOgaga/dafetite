@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.8bc15527.css",
-    "main.js": "/dafetite/static/js/main.6d56673c.js",
+    "main.js": "/dafetite/static/js/main.f0cf8b1e.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
-    "static/media/C_Dafetite_Ogaga_SE.pdf": "/dafetite/static/media/C_Dafetite_Ogaga_SE.032267a057a80e956acd.pdf",
+    "static/media/C_Dafetite_Ogaga_SE.pdf": "/dafetite/static/media/C_Dafetite_Ogaga_SE.55406713658b06077ff7.pdf",
     "static/media/creonovo-website.png": "/dafetite/static/media/creonovo-website.e1ba1479077b1020e92c.png",
     "static/media/creonovo_restaurant-backend-component.png": "/dafetite/static/media/creonovo_restaurant-backend-component.8ad44ad3d7f9933da8d6.png",
     "static/media/creonovo_restaurant.png": "/dafetite/static/media/creonovo_restaurant.121be8c82aab833d39ec.png",
     "static/media/creonovo-gardens.png": "/dafetite/static/media/creonovo-gardens.15ef5fe97c6b9e852082.png",
     "index.html": "/dafetite/index.html",
     "main.8bc15527.css.map": "/dafetite/static/css/main.8bc15527.css.map",
-    "main.6d56673c.js.map": "/dafetite/static/js/main.6d56673c.js.map",
+    "main.f0cf8b1e.js.map": "/dafetite/static/js/main.f0cf8b1e.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8bc15527.css",
-    "static/js/main.6d56673c.js"
+    "static/js/main.f0cf8b1e.js"
   ]
 }
