@@ -1,8 +1,7 @@
 import React from "react"; 
-import { Avatar, Heading, VStack, Image, Text } from "@chakra-ui/react"; 
-import FullScreenSection from "./FullScreenSection"; 
 import dafe from "../dafetite.jpeg"
 import cv from "./C_Dafetite_Ogaga_SE.pdf"
+import styled from "styled-components"
 
 const data = {
   specializations: { title: "Specializations",
@@ -53,22 +52,28 @@ const links = {
       linkName: "Resume",
       },
 }
+
+const StyledPhotoBox = styled.div`
+  cursor: pointer;
+  box-shadow: large;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: xl;
+  }
+`;
+
 const name = "Dafetite O. Ogaga";  
 const LandingSection = () => ( 
   <div className="pad display">
-     <div> 
+     <StyledPhotoBox> 
        <img 
        className="photo"
         src={dafe}
          alt="Dafetite" 
-         cursor="pointer" 
-       boxShadow="lg"
-       transition="all 0.3s ease"
-        _hover={{
-          transform: "translateY(-10px)",
-          boxShadow: "xl",
-        }}/> 
-     </div> 
+         /> 
+     </StyledPhotoBox> 
 
      <div 
       alignItems="start"
@@ -91,7 +96,6 @@ const LandingSection = () => (
             <span style={{color: "#90ee90"}}>{value.title.toUpperCase()}:</span> {value.details}
           </h1>
         )})}
-
       {Object.values(links).map(( value, index ) => ( 
         <h1 className="head-sub"
         key={index}
@@ -111,7 +115,6 @@ const LandingSection = () => (
         </h1>
       ))} 
      </div> 
- {/* </FullScreenSection> */}
  </div>
 ); 
  

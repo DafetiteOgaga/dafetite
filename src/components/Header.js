@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; 
 import { faGithub, faLinkedin, faMedium, faStackOverflow,
   faFacebook, faFigma, faHashnode, faTwitter } from "@fortawesome/free-brands-svg-icons"; 
-import { Box, HStack, Stack, useBreakpointValue } from "@chakra-ui/react"; 
+import { Box, HStack, useBreakpointValue } from "@chakra-ui/react"; 
  
 const socials = [ 
   { 
