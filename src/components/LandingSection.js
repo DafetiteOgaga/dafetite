@@ -64,7 +64,7 @@ const StyledPhotoBox = styled.div`
   }
 `;
 
-const name = "Dafetite O. Ogaga";  
+const name = "Dafetite O. Ogag";  
 const LandingSection = () => ( 
   <div className="pad display">
      <StyledPhotoBox> 
