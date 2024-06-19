@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.1fd09060.css",
-    "main.js": "/dafetite/static/js/main.01f752e5.js",
+    "main.js": "/dafetite/static/js/main.d46c652f.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/C_Dafetite_Ogaga_SE.pdf": "/dafetite/static/media/C_Dafetite_Ogaga_SE.55406713658b06077ff7.pdf",
@@ -10,16 +10,16 @@
     "static/media/creonovo_restaurant-backend-component.png": "/dafetite/static/media/creonovo_restaurant-backend-component.8ad44ad3d7f9933da8d6.png",
     "static/media/creonovo_restaurant.png": "/dafetite/static/media/creonovo_restaurant.121be8c82aab833d39ec.png",
     "static/media/creonovo-gardens.png": "/dafetite/static/media/creonovo-gardens.15ef5fe97c6b9e852082.png",
-    "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.6503ebe76b8f734af7c2.png",
     "static/media/custom_commands2.png": "/dafetite/static/media/custom_commands2.8d65f6c6819e8b0c181e.png",
     "static/media/Binary_search_in_a_game.png": "/dafetite/static/media/Binary_search_in_a_game.1d186ea5e4359688e8d2.png",
+    "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.353131121c6f3ccada38.png",
     "index.html": "/dafetite/index.html",
     "main.1fd09060.css.map": "/dafetite/static/css/main.1fd09060.css.map",
-    "main.01f752e5.js.map": "/dafetite/static/js/main.01f752e5.js.map",
+    "main.d46c652f.js.map": "/dafetite/static/js/main.d46c652f.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1fd09060.css",
-    "static/js/main.01f752e5.js"
+    "static/js/main.d46c652f.js"
   ]
 }
