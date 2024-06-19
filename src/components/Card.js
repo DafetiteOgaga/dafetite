@@ -17,7 +17,11 @@ const Card = ({ title, description, imageSrc }) => {
           transform: "translateY(-8px)",
           boxShadow: "xl",
         }}> 
-       <Image borderRadius="xl" src={imageSrc} alt={title} /> 
+       {/* <Image borderRadius="xl" src={imageSrc} alt={title} />  */}
+       <img 
+       src={imageSrc}
+       alt={title}
+       className="box-photo" />
        <VStack p={4} alignItems="flex-start"> 
          <HStack justifyContent="space-between" alignItems="center"> 
              <h1 className="box-main">{title}</h1>

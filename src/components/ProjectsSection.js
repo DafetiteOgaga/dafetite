@@ -5,10 +5,11 @@ import Card from "./Card";
  
 const projects = [ 
  { 
-   title: "Creonovo Website Restaurant", 
+   title: "Creonovo Restaurant Website", 
    description: 
-     `An online restaurant and a perfect place to go eat your favorite African meals.
-     Created using ReactJS`, 
+     `An online restaurant and a perfect place in Lagos, Nigeria. Book a reservation, go to
+     relax and eat your favorite African meals. Such as Afang, Edikang-Ikong and Atama
+     soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS`, 
     url: "https://creonovo-restaurant.web.app/",
    getImageSrc: () => require("../images/creonovo-website.png"), 
  }, 
@@ -21,6 +22,41 @@ const projects = [
    getImageSrc: () => require("../images/creonovo_restaurant-backend-component.png"), 
  }, 
  { 
+    title: "Custom Commands", 
+    description: 
+      `This project aims to help with the creation of various commands to automate basic
+      tasks that are used everyday by users of the Unix-like Environments. Create using
+      Python, Bash and C language`, 
+      url: "https://github.com/DafetiteOgaga/custom_commands",
+    getImageSrc: () => require("../images/custom_commands2.png"), 
+  }, 
+ { 
+   title: "Creonovo Gardens", 
+   description: 
+     `A One-stop garden for the lovers of nature. Come and enjoy the beauty, 
+     calmness and feel of nature. Created using HTML and CSS`, 
+     url: "https://github.com/DafetiteOgaga/creonovo-gardens",
+   getImageSrc: () => require("../images/creonovo-gardens.png"), 
+ }, 
+
+
+ { 
+    title: "DSA-LinkedList", 
+    description: 
+      `This program is written in C and creates a linked list based on user input.
+      Then prints out the elements of the list.S. Created using C language.`, 
+    url: "https://github.com/DafetiteOgaga/dsa-linkedlist",
+    getImageSrc: () => require("../images/dsa-linkedlist.png"), 
+  }, 
+  { 
+    title: "Binary Search Game", 
+    description: 
+      `This program is a game and aims to demonstrates the working principle of
+      Binary Search Algorithm while you have fun with it. Created using Python.`, 
+      url: "https://github.com/DafetiteOgaga/Binary_search_in_a_game",
+    getImageSrc: () => require("../images/Binary_search_in_a_game.png"), 
+  }, 
+  { 
     title: "Creonovo Restaurant", 
     description: 
       `An online restaurant well known for its delicious African dishes.
@@ -28,14 +64,14 @@ const projects = [
       url: "https://github.com/DafetiteOgaga/creonovo_restaurant",
     getImageSrc: () => require("../images/creonovo_restaurant.png"), 
   }, 
- { 
-   title: "Creonovo Gardens", 
-   description: 
-     `A One-stop garden for the lovers of nature.
-     Created using HTML and CSS`, 
-     url: "https://github.com/DafetiteOgaga/creonovo-gardens",
-   getImageSrc: () => require("../images/creonovo-gardens.png"), 
- }, 
+  { 
+    title: "PDF2docx Converter", 
+    description: 
+      `Converts pdf files to docx file format. Saves it on your desktop
+      as well. Created using Python`, 
+      url: "https://github.com/DafetiteOgaga/pdf2docx_converter",
+    getImageSrc: () => require("../images/pdf2docx Converter.png"), 
+  }, 
 ]; 
  
 const ProjectsSection = () => { 
