@@ -368,7 +368,7 @@ table {
 .box-photo {
 	border-radius: .5rem;
 	width: 100rem;
-	height: 4rem;
+	height: 6rem;
 
 	@media (min-width: 416px) {
 		height: 7rem;
