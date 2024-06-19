@@ -39,7 +39,6 @@ const projects = [
    getImageSrc: () => require("../images/creonovo-gardens.png"), 
  }, 
 
-
  { 
     title: "DSA-LinkedList", 
     description: 
@@ -71,6 +70,24 @@ const projects = [
       as well. Created using Python`, 
       url: "https://github.com/DafetiteOgaga/pdf2docx_converter",
     getImageSrc: () => require("../images/pdf2docx Converter.png"), 
+  }, 
+
+  { 
+    title: "Figma Design for My Little Lemon Capstone Project", 
+    description: 
+      `Figma prototype design and wireframes for an imaginary online restaurant where you can make
+      reservtions for you and your loved ones. A well known place for its delicious dishes.
+      Created using Figma`, 
+      url: "https://www.figma.com/design/Jo78tKGLI9UtpjAV1VFX8w/Capstone-project?node-id=25-378&t=YkVTrjlAuomzVeLG-1",
+    getImageSrc: () => require("../images/little-lemon-capstone-project-figma-design.png"), 
+  }, 
+  { 
+    title: "The figma design for my imaginary little lemon project", 
+    description: 
+      `This is the figma prototype design and wireframes for an imaginary online restaurant well known
+      for its delicious dishes. Created using Figma`, 
+      url: "https://www.figma.com/design/u7zbSHNIFWE0rwz6fZt178/high-fidelity-visual-design?node-id=0-1&t=3uFdohozHKiRJpxq-1",
+    getImageSrc: () => require("../images/little-lemon-figma-designs.png"), 
   }, 
 ]; 
  
