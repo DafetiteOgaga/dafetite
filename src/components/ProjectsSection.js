@@ -117,8 +117,9 @@ const ProjectsSection = () => {
            description={project.description} 
            imageSrc={project.getImageSrc()}/></a>
            ))} 
-     </Box> 
+     </Box>               
    </FullScreenSection> 
+   
  ); 
 }; 
  

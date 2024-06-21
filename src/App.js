@@ -16,6 +16,7 @@ function App() {
       <Header />
       <LandingSection />
       <ProjectsSection />
+      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="ogagadafetite" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ng.linkedin.com/in/ogagadafetite?trk=profile-badge">Dafetite Ogaga</a></div>
       <Footer />
     </main>
   </ChakraProvider>
