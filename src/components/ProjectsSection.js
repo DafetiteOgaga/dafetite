@@ -3,16 +3,19 @@ import FullScreenSection from "./FullScreenSection";
 import { Box } from "@chakra-ui/react"; 
 import Card from "./Card"; 
  
+const websites = [ 
+  { 
+    title: "Creonovo Restaurant Website", 
+    description: 
+      `An online restaurant and a perfect place in Lagos, Nigeria. Book a reservation, go to
+      relax and eat your favorite African meals. Such as Afang, Edikang-Ikong and Atama
+      soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS`, 
+     url: "https://creonovo-restaurant.web.app/",
+    getImageSrc: () => require("../images/creonovo-website.png"), 
+  }, 
+]
+
 const projects = [ 
- { 
-   title: "Creonovo Restaurant Website", 
-   description: 
-     `An online restaurant and a perfect place in Lagos, Nigeria. Book a reservation, go to
-     relax and eat your favorite African meals. Such as Afang, Edikang-Ikong and Atama
-     soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS`, 
-    url: "https://creonovo-restaurant.web.app/",
-   getImageSrc: () => require("../images/creonovo-website.png"), 
- }, 
  { 
    title: "A Creonovo 'Reserve a table' Backend-component feature", 
    description: 
@@ -99,6 +102,27 @@ const ProjectsSection = () => {
      p={8} 
      alignItems="flex-start"> 
      
+     <h1 className="head-main"
+     style={{color: "#e6e6fa",}}> 
+       My Websites 
+     </h1> 
+     <Box 
+       display="grid" 
+       gridTemplateColumns="repeat(2,minmax(0,1fr))" 
+       gridGap={8}
+       style={{paddingBottom: "2rem"}}> 
+       {websites.map((project, index) => ( 
+         <a
+         key={project.title}
+         href={project.url}>
+          <Card 
+           key={project.title} 
+           title={project.title} 
+           description={project.description} 
+           imageSrc={project.getImageSrc()}/></a>
+           ))} 
+     </Box>               
+
      <h1 className="head-main"
      style={{color: "#e6e6fa",}}> 
        My Projects 
