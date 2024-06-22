@@ -1,6 +1,6 @@
 import React from "react"; 
 import dafe from "../dafetite.jpeg"
-import cv from "./C_Dafetite_Ogaga_SE.pdf"
+import cv from "./Dafetite_Ogaga.pdf"
 import styled from "styled-components"
 
 const data = {
