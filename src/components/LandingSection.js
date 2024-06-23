@@ -43,7 +43,7 @@ const links = {
       url: `https://github.com/DafetiteOgaga/`,
       linkName: "Click to view on Github",
       },
-  certifications: { title: "Certifications",
+  certifications: { title: "Certifications (Meta, Google, IBM, etc)",
       url: `https://www.linkedin.com/in/ogagadafetite/details/certifications/`,
       linkName: "Click to view on LinkedIn",
       },
