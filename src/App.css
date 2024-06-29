@@ -220,8 +220,8 @@ table {
 }
 
 .photo {
-	/* width: auto; */
-	/* height: auto; */
+	width: auto;
+	height: auto;
 	border-radius: 8%;
 	border: 3px solid #34495e;
 	
