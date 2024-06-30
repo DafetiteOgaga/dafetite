@@ -18,7 +18,8 @@ const websites = [
     description: 
       `An online Book club and a perfect place to gain knowledge. Register as a member to
       have access to write and post articles, setup Author profile for yourself and acquire
-      popularity. Yes! we publish and showcase your work. Created using Html, CSS, and JavaScript`, 
+      popularity. Yes! we publish and showcase your work. Created using Html, CSS, and
+      Vanilla JavaScript`, 
      url: "https://dafetiteogaga.github.io/article-hive/",
     getImageSrc: () => require("../images/article-hive.png"), 
   }, 
