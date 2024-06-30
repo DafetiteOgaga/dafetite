@@ -3,16 +3,7 @@ import FullScreenSection from "./FullScreenSection";
 import { Box } from "@chakra-ui/react"; 
 import Card from "./Card"; 
  
-const websites = [ 
-  { 
-    title: "Creonovo Restaurant Website", 
-    description: 
-      `An online restaurant and a perfect place in Lagos, Nigeria. Book a reservation, go to
-      relax and eat your favorite African meals. Such as Afang, Edikang-Ikong and Atama
-      soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS`, 
-     url: "https://creonovo-restaurant.web.app/",
-    getImageSrc: () => require("../images/creonovo-website.png"), 
-  }, 
+const websites = [
   { 
     title: "The Article Hive", 
     description: 
@@ -22,6 +13,15 @@ const websites = [
       Vanilla JavaScript`, 
      url: "https://dafetiteogaga.github.io/article-hive/",
     getImageSrc: () => require("../images/article-hive.png"), 
+  },
+  { 
+    title: "Creonovo Restaurant Website", 
+    description: 
+      `An online restaurant and a perfect place in Lagos, Nigeria. Book a reservation, go to
+      relax and eat your favorite African meals. Such as Afang, Edikang-Ikong and Atama
+      soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS`, 
+     url: "https://creonovo-restaurant.web.app/",
+    getImageSrc: () => require("../images/creonovo-website.png"), 
   }, 
 ]
 
