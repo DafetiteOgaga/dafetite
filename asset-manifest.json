@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dafetite/static/css/main.d4351eb5.css",
-    "main.js": "/dafetite/static/js/main.289e11e7.js",
+    "main.css": "/dafetite/static/css/main.f9950f34.css",
+    "main.js": "/dafetite/static/js/main.a2df4113.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.55406713658b06077ff7.pdf",
@@ -17,12 +17,12 @@
     "static/media/Binary_search_in_a_game.png": "/dafetite/static/media/Binary_search_in_a_game.1d186ea5e4359688e8d2.png",
     "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.353131121c6f3ccada38.png",
     "index.html": "/dafetite/index.html",
-    "main.d4351eb5.css.map": "/dafetite/static/css/main.d4351eb5.css.map",
-    "main.289e11e7.js.map": "/dafetite/static/js/main.289e11e7.js.map",
+    "main.f9950f34.css.map": "/dafetite/static/css/main.f9950f34.css.map",
+    "main.a2df4113.js.map": "/dafetite/static/js/main.a2df4113.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4351eb5.css",
-    "static/js/main.289e11e7.js"
+    "static/css/main.f9950f34.css",
+    "static/js/main.a2df4113.js"
   ]
 }
