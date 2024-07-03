@@ -108,7 +108,7 @@ const Header = () => {
                   href={url} 
                   target="_blank" 
                   rel="noopener noreferrer"> 
-                  <FontAwesomeIcon icon={icon} size={isMobile ? "lg" : "2x"} key={url} /> 
+                  <FontAwesomeIcon className="icons" icon={icon} size={isMobile ? "lg" : "2x"} key={url} /> 
                 </a> 
               ))} 
             </HStack> 

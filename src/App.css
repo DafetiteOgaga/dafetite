@@ -395,3 +395,29 @@ table {
 		height: 20rem;
 	}
 }
+
+.icons {
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.icons:hover {
+	color: #68859c;
+	transform: scale(1.55);
+}
+.icons:active {
+	color: #90ee90;
+	transform: scale(1.09);
+}
+
+.text-anime {
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.text-anime:hover {
+	/* color: #68859c; */
+	transform: scale(1.17);
+}
+.text-anime:active {
+	color: #00ced1;
+	transform: scale(1.09);
+}
