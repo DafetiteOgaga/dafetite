@@ -100,10 +100,12 @@ const LandingSection = () => (
         <h1 className="head-sub"
         key={index}
           style={{
+          display: 'flex',
           fontWeight: "bold",
           color: "#e6e6fa",
           }}>
           <span style={{color: "#90ee90"}}>{value.title.toUpperCase()}: </span> 
+          <div className="text-anime">
           <a 
             key={index} 
             href={value.url} 
@@ -112,6 +114,7 @@ const LandingSection = () => (
             style={{textDecoration: "underline"}}> 
             {value.linkName}
           </a> 
+          </div>
         </h1>
       ))} 
      </div> 

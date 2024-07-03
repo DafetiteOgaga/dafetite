@@ -114,7 +114,7 @@ const ProjectsSection = () => {
      
      <h1 className="head-main"
      style={{color: "#e6e6fa",}}> 
-       My Websites 
+       My Websites/Apps
      </h1> 
      <Box 
        display="grid" 
