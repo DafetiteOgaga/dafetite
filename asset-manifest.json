@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.f9950f34.css",
-    "main.js": "/dafetite/static/js/main.a2df4113.js",
+    "main.js": "/dafetite/static/js/main.b233bf93.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
-    "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.55406713658b06077ff7.pdf",
+    "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.d980ea4adb3633178d34.pdf",
     "static/media/pdf2docx Converter.png": "/dafetite/static/media/pdf2docx Converter.b4eb607d4ddf23db5e81.png",
     "static/media/article-hive.png": "/dafetite/static/media/article-hive.d3041a637c87e0336347.png",
     "static/media/creonovo-website.png": "/dafetite/static/media/creonovo-website.e1ba1479077b1020e92c.png",
@@ -18,11 +18,11 @@
     "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.353131121c6f3ccada38.png",
     "index.html": "/dafetite/index.html",
     "main.f9950f34.css.map": "/dafetite/static/css/main.f9950f34.css.map",
-    "main.a2df4113.js.map": "/dafetite/static/js/main.a2df4113.js.map",
+    "main.b233bf93.js.map": "/dafetite/static/js/main.b233bf93.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9950f34.css",
-    "static/js/main.a2df4113.js"
+    "static/js/main.b233bf93.js"
   ]
 }
