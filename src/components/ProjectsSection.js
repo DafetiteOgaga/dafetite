@@ -3,6 +3,19 @@ import FullScreenSection from "./FullScreenSection";
 import { Box } from "@chakra-ui/react"; 
 import Card from "./Card"; 
  
+const webapp = [
+  { 
+    title: "Article Hive (The WebApp)", 
+    description: 
+      `A fully functional online Book club and a perfect place to gain knowledge. Register as a member to
+      have access to write and post articles, setup Author profile for yourself and acquire
+      popularity. Yes! we publish and showcase your work. Created using Django, Html, CSS,
+      Vanilla JavaScript, and MySQL, `, 
+     url: "https://dafetite.pythonanywhere.com/",
+    getImageSrc: () => require("../images/article-hive-app.png"), 
+  },
+]
+
 const websites = [
   { 
     title: "The Article Hive", 
@@ -114,7 +127,28 @@ const ProjectsSection = () => {
      
      <h1 className="head-main"
      style={{color: "#e6e6fa",}}> 
-       My Websites/Apps
+       My WebApps
+     </h1> 
+     <Box 
+       display="grid" 
+       gridTemplateColumns="repeat(2,minmax(0,1fr))" 
+       gridGap={8}
+       style={{paddingBottom: "2rem"}}> 
+       {webapp.map((project, index) => ( 
+         <a
+         key={project.title}
+         href={project.url}>
+          <Card 
+           key={project.title} 
+           title={project.title} 
+           description={project.description} 
+           imageSrc={project.getImageSrc()}/></a>
+           ))} 
+     </Box>               
+    {/* ..................................... */}
+     <h1 className="head-main"
+     style={{color: "#e6e6fa",}}> 
+       My Websites
      </h1> 
      <Box 
        display="grid" 
@@ -132,7 +166,7 @@ const ProjectsSection = () => {
            imageSrc={project.getImageSrc()}/></a>
            ))} 
      </Box>               
-
+     {/* ..................................... */}
      <h1 className="head-main"
      style={{color: "#e6e6fa",}}> 
        My Projects 
