@@ -124,7 +124,7 @@ const Header = () => {
               ))} 
             </HStack> 
          </nav> 
-         <nav> 
+         {/* <nav> 
           <HStack>
              <a 
              className="paragraph"
@@ -134,7 +134,7 @@ const Header = () => {
                Projects 
              </a> 
            </HStack> 
-         </nav> 
+         </nav> */}
        </HStack> 
      </Box> 
    </Box> 
