@@ -100,8 +100,19 @@ const Header = () => {
          py={4} 
          justifyContent="space-between" 
          alignItems="center"> 
+         {/* <nav> 
+          <HStack>
+             <a 
+             className="paragraph"
+             href="#projects" 
+             style={{ fontSize: isMobile ? 'sm' : 'md' }}> 
+               Social Media and links:
+             </a> 
+           </HStack> 
+         </nav>  */}
          <nav> 
             <HStack spacing={{ base: 2.5, md: 5 }}>
+            <HStack><h1 className="paragraph">Social Media and links:</h1></HStack>
               {socials.map(({ icon, url }) => ( 
                 <a 
                   key={url} 
