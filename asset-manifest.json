@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.f9950f34.css",
-    "main.js": "/dafetite/static/js/main.ccea233f.js",
+    "main.js": "/dafetite/static/js/main.36967feb.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.7e8f65d407ba7d1e0b7d.pdf",
@@ -19,11 +19,11 @@
     "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.353131121c6f3ccada38.png",
     "index.html": "/dafetite/index.html",
     "main.f9950f34.css.map": "/dafetite/static/css/main.f9950f34.css.map",
-    "main.ccea233f.js.map": "/dafetite/static/js/main.ccea233f.js.map",
+    "main.36967feb.js.map": "/dafetite/static/js/main.36967feb.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9950f34.css",
-    "static/js/main.ccea233f.js"
+    "static/js/main.36967feb.js"
   ]
 }
