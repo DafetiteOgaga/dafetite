@@ -30,7 +30,11 @@ const Card = ({ title, description, imageSrc }) => {
            {description} 
          </h1> 
          <HStack alignItems="center"> 
-           <p className="paragraph">See more</p> 
+           <p style={{
+            fontSize: '2.5rem',
+            color: 'black',
+            fontWeight: 'bold',
+           }} className="paragraph">Click here to see more</p> 
            <FontAwesomeIcon icon={faArrowRight} size={ isMobile ? 'xs' : '1x' } /> 
          </HStack> 
        </VStack> 
