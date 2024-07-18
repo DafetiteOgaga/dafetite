@@ -31,7 +31,6 @@ const Card = ({ title, description, imageSrc }) => {
          </h1> 
          <HStack alignItems="center"> 
            <p style={{
-            fontSize: '2.5rem',
             color: 'black',
             fontWeight: 'bold',
            }} className="paragraph">Click here to see more</p> 
