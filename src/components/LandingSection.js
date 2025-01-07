@@ -213,7 +213,8 @@ const LandingSection = () => (
 	<div
 	// alignItems="start"
 	spacing={0}>
-		<h3 className="head-sub aboutme">
+		<h3 className="head-sub aboutme"
+		style={{paddingBottom: '12px',}}>
 			I am a highly skilled and versatile software engineer with expertise
 			in Software development, UI/UX design, Devops, and IT automation.
 			I thrive on curiosity, problem-solving, and exploring new technologies
@@ -290,7 +291,7 @@ const LandingSection = () => (
 						return (
 							<div
 							style={{
-								padding: '0 30px',
+								padding: '0 10px',
 							}}
 							key={ind+val+val+ind}>
 								🔗 {val.spec}: <span>{val.info}</span>
