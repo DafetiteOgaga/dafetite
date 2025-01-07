@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/dafetite/static/css/main.afa5d0f6.css",
+    "main.css": "/dafetite/static/css/main.54ba2bc0.css",
     "main.js": "/dafetite/static/js/main.056ca66e.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
@@ -19,12 +19,12 @@
     "static/media/Binary_search_in_a_game.png": "/dafetite/static/media/Binary_search_in_a_game.1d186ea5e4359688e8d2.png",
     "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.353131121c6f3ccada38.png",
     "index.html": "/dafetite/index.html",
-    "main.afa5d0f6.css.map": "/dafetite/static/css/main.afa5d0f6.css.map",
+    "main.54ba2bc0.css.map": "/dafetite/static/css/main.54ba2bc0.css.map",
     "main.056ca66e.js.map": "/dafetite/static/js/main.056ca66e.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afa5d0f6.css",
+    "static/css/main.54ba2bc0.css",
     "static/js/main.056ca66e.js"
   ]
 }
