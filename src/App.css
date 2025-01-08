@@ -187,10 +187,11 @@ table {
 
 .pad {
 	background-color: #68859c;
+	padding: 5rem 1rem 1rem 1rem;
 
-	@media (min-width: 250px) {
-		padding: 5rem 1rem 1rem 1rem;
-	}
+	/* @media (min-width: 50px) {
+		
+	} */
 	/* @media (min-width: 360px) {
 		padding: 5rem 2rem 1rem 2rem;
 	} */
