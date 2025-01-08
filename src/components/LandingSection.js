@@ -283,8 +283,7 @@ const LandingSection = () => {
 			builds into scalable, user-centric applications and innovative tech
 			solutions.
 		</h3>
-		{/* specializations */}
-		{<div className="logosBox" style={galleryStyle}>
+		{/* {<div className="logosBox" style={galleryStyle}>
 			{imageSources.map((src, index) => (
 				<img
 				key={index}
@@ -294,7 +293,7 @@ const LandingSection = () => {
 				style={imageStyle}
 				/>
 			))}
-		</div>}
+		</div>} */}
 		{Object.values(data).map((value, index) => {
 			console.log(value)
 			return(
@@ -380,22 +379,22 @@ const LandingSection = () => {
 )}
 export default LandingSection;
 
-const galleryStyle = {
-	// margin: "30px 0",
-	display: "flex",
-	flexWrap: "wrap", // Allows wrapping rows
-	gap: "10px", // Adds spacing between images
-	maxWidth: "calc(100px * 15 + 70px)", // Width for 8 images per row + gaps
-	border: "2px solidrgb(186, 195, 204)", // Boundary line around the entire gallery
-	padding: "10px",
-	backgroundColor: "#2c3e5A",
-	borderRadius: "20px",
-};
+// const galleryStyle = {
+// 	// margin: "30px 0",
+// 	display: "flex",
+// 	flexWrap: "wrap", // Allows wrapping rows
+// 	gap: "10px", // Adds spacing between images
+// 	maxWidth: "calc(100px * 15 + 70px)", // Width for 8 images per row + gaps
+// 	border: "2px solidrgb(186, 195, 204)", // Boundary line around the entire gallery
+// 	padding: "10px",
+// 	backgroundColor: "#2c3e5A",
+// 	borderRadius: "20px",
+// };
 
-const imageStyle = {
-	// width: "40px",
-	// height: "40px",
-	// padding: "10px",
-	objectFit: "cover",
-	borderRadius: "10%",
-};
+// const imageStyle = {
+// 	// width: "40px",
+// 	// height: "40px",
+// 	// padding: "10px",
+// 	objectFit: "cover",
+// 	borderRadius: "10%",
+// };
