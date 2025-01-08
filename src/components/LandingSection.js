@@ -3,6 +3,33 @@ import dafe from "../dafetite.jpeg"
 import cv from "./Dafetite_Ogaga.pdf"
 import styled from "styled-components"
 
+const summary = {
+	one: `I am a highly skilled Software and Automation Engineer with expertise
+			in software	development, IT support, and technical engineering. My skills
+			span frontend and backend development, using technologies like Python,
+			JavaScript (ES6), SQL, C, HTML5, and CSS, alongside frameworks such
+			as React.js, Django, and Django REST Framework. Projects like Altaviz
+			Support Limited, a software solution that manages the workflow for the
+			company, bringing all the departments in sync, Article Hive, a
+			platform for readers and authors, and Creonovo Restaurant, a modern
+			dining solution, highlight my ability to build functional, user-friendly
+			applications.`,
+	two: `In automation, I leverage Python, Bash, and PowerShell to streamline
+			workflows and optimize processes. My IT support experience has
+			equipped me to solve complex technical challenges while ensuring a
+			positive user experience. Additionally, I have worked in DevOps,
+			focusing on system administration, configuration management, and
+			containerization with tools like Docker and Kubernetes.`,
+	three: `As a Customer Service and ATM Engineer, I have managed advanced hardware
+			and software systems while maintaining exceptional service delivery.
+			This blend of technical expertise and communication skills defines my
+			professional approach.`,
+	four: `Certified by Meta, Google, IBM, and ALX Africa, I am committed to
+			continuous learning in areas like IT Automation, Advanced React, and
+			UX/UI Design. I thrive in collaborative environments, using technology
+			to deliver impactful solutions and drive innovations.`
+
+}
 const data = {
 	specializations: {
 		title: "Specializations",
@@ -129,7 +156,7 @@ email: { title: "Email",
 	url: `mailto: ogagadafetite@gmail.com`,
 	linkName: "ogagadafetite@gmail.com",
 	},
-projects: { title: "Projects",
+projects: { title: "Projects (with codes)",
 	url: `https://github.com/DafetiteOgaga/`,
 	linkName: "Click to view on Github",
 	},
@@ -264,7 +291,7 @@ const LandingSection = () => {
 		style={{
 		fontWeight: "bold",
 		color: "#2c3e50",
-		}}>Full-Stack Developer | UI/UX Designer | Automation Specialist</h3>
+		}}>Software and Automation Engineer || IT Support || Frontend and Backend Deveoper || DevOps || Software Designer || Customer Service Engineer || ATM Engineer || Data Analyst || Technical Engineer</h3>
 		</div>
 	</div>
 
@@ -272,17 +299,16 @@ const LandingSection = () => {
 	<div
 	// alignItems="start"
 	spacing={0}>
-		<h3 className="head-sub aboutme"
-		style={{paddingBottom: '12px',}}>
-			I am a highly skilled and versatile software engineer with expertise
-			in Software development, UI/UX design, Devops, and IT automation.
-			I thrive on curiosity, problem-solving, and exploring new technologies
-			to push the boundaries of what's possible. My passion for tech extends
-			beyond development into system optimization, process automation, and
-			creating user-focused solutions that deliver measurable value and
-			builds into scalable, user-centric applications and innovative tech
-			solutions.
-		</h3>
+		{Object.values(summary).map((summaryData=>{
+			return (
+				<h3 className="head-sub aboutme"
+				style={{
+					paddingBottom: '12px',
+				}}>
+					{summaryData}
+				</h3>
+			)
+		}))}
 		{/* {<div className="logosBox" style={galleryStyle}>
 			{imageSources.map((src, index) => (
 				<img
