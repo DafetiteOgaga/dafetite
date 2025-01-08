@@ -293,6 +293,35 @@ table {
 		padding: 0 60px;
 	}
 }
+.logosBox {
+	@media (min-width: 360px) {
+		margin: 5px 0;
+	}
+	@media (min-width: 480px) {
+		margin: 10px 0;
+	}
+	@media (min-width: 1200px) {
+		margin: 30px 0;
+	}
+}
+.logoImgStyle {
+	@media (min-width: 360px) {
+		width: 20px;
+		height: 20px;
+	}
+	@media (min-width: 480px) {
+		width: 23px;
+		height: 23px;
+	}
+	@media (min-width: 720px) {
+		width: 27px;
+		height: 27px;
+	}
+	@media (min-width: 1200px) {
+		width: 30px;
+		height: 30px;
+	}
+}
 
 .box-main {
 	font-size: .6rem;

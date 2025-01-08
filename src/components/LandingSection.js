@@ -137,26 +137,82 @@ certifications: { title: "Certifications",
 	url: `https://www.linkedin.com/in/ogagadafetite/details/certifications/`,
 	linkName: "Click to view on LinkedIn",
 	details: {
-		meta: {
-			spec: 'Meta',
-			info: 'Front-End and Back-End Development Specializations',
+		fe: {
+			spec: 'Front-End (Meta)',
+			info: 'Specialization in Front-End Development, including modern web technologies.',
+		},
+		be: {
+			spec: 'Back-End (Meta)',
+			info: 'Specialization in Back-End Development, including server-side frameworks and databases.',
+		},
+		react: {
+			spec: 'Advanced React (Meta)',
+			info: 'Comprehensive knowledge of React for building dynamic web applications.',
+		},
+		uiux: {
+			spec: 'Principles of UX/UI Design (Meta)',
+			info: 'Expertise in designing user-centered interfaces with strong UX principles.',
+		},
+		htmlcss: {
+			spec: 'HTML and CSS in depth (Meta)',
+			info: 'Proficiency in building responsive and accessible web pages using HTML and CSS.',
+		},
+		js: {
+			spec: 'Programming with JavaScript (Meta)',
+			info: 'In-depth knowledge of JavaScript for building dynamic web applications.',
+		},
+		api: {
+			spec: 'APIs (Meta)',
+			info: 'Expertise in creating and consuming APIs for seamless data integration.',
+		},
+		django: {
+			spec: 'Django Web Framework (Meta)',
+			info: 'Advanced knowledge of building robust web applications with Django.',
+		},
+		python: {
+			spec: 'Programming in Python (Meta)',
+			info: 'Comprehensive skills in Python programming for various applications.',
+		},
+		vc: {
+			spec: 'Version Control (Meta)',
+			info: 'Proficiency in using Git for collaborative software development.',
 		},
 		alx: {
 			spec: 'ALX Africa',
-			info: 'Software Engineering Program',
+			info: 'Completion of ALX Software Engineering Program, focused on full-stack development.',
 		},
-		google: {
-			spec: 'Google',
-			info: 'IT Automation with Python',
+		automation: {
+			spec: 'IT Automation with Python (Google)',
+			info: 'Expertise in automating IT tasks using Python scripting.',
 		},
-		ibm: {
-			spec: 'IBM',
-			info: 'nnnnnnnn',
+		itsupport: {
+			spec: 'IT Support (Google)',
+			info: 'Comprehensive knowledge of IT support tools and practices.',
 		},
-		linkedIn: {
+		security: {
+			spec: 'IT Security (Google)',
+			info: 'Understanding of IT security practices and systems for safeguarding data.',
+		},
+		sysadmin: {
+			spec: 'System Administration and IT Infrastructure (Google)',
+			info: 'Knowledge of system administration and IT infrastructure management.',
+		},
+		configmgt: {
+			spec: 'Configuration Management and the Cloud (Google)',
+			info: 'Expertise in managing configurations and deploying cloud solutions.',
+		},
+		c: {
+			spec: 'C Programming (Dartmouth College)',
+			info: 'Proficiency in C programming for systems and application development.',
+		},
+		container: {
+			spec: 'Container and Kubernetes Essentials V2 (IBM)',
+			info: 'Foundational skills in working with containers and Kubernetes for deployment.',
+		},
+		linkedin: {
 			spec: 'LinkedIn',
-			info: 'Front-End Development Specialization',
-		}
+			info: 'Certification in Front-End Development Specialization.',
+		},
 	}
 	},
 cv: { title: "Resume",
@@ -178,7 +234,10 @@ transition: all 0.3s ease;
 `;
 
 const name = "Dafetite O. Ogaga";
-const LandingSection = () => (
+const images = require.context("../images/logos", false,  /\.(png|jpe?g|gif|svg)$/);
+const LandingSection = () => {
+	const imageSources = images.keys().map((key) => images(key));
+	return (
 	<div className="pad display">
 		<div style={{
 			display: "flex",
@@ -225,6 +284,17 @@ const LandingSection = () => (
 			solutions.
 		</h3>
 		{/* specializations */}
+		{<div className="logosBox" style={galleryStyle}>
+			{imageSources.map((src, index) => (
+				<img
+				key={index}
+				src={src}
+				alt={`Image ${index + 1}`}
+				className="logoImgStyle"
+				style={imageStyle}
+				/>
+			))}
+		</div>}
 		{Object.values(data).map((value, index) => {
 			console.log(value)
 			return(
@@ -237,7 +307,7 @@ const LandingSection = () => (
 					fontWeight: "bold",
 					// padding: '50px'
 					}}>
-					{value.title.toUpperCase()+' ☄'}</span><br/> {Object.values(value.details).map((val, ind) =>  {
+					{value.title.toUpperCase()+' ☄'}</span><br/><div>{Object.values(value.details).map((val, ind) =>  {
 					console.log(val)
 					return (
 						<>
@@ -257,9 +327,12 @@ const LandingSection = () => (
 							</span><br/>
 						</>
 					)
-				})}
+				})}</div>
 			</h1>
-			)})}
+			)
+		})}
+		<div>
+		</div>
 		{Object.values(links).map(( value, index ) => (
 			<h1 className="head-sub"
 			key={index+value+index}
@@ -304,7 +377,25 @@ const LandingSection = () => (
 		))}
 	</div>
 </div>
-);
-
+)}
 export default LandingSection;
-// xyz
+
+const galleryStyle = {
+	// margin: "30px 0",
+	display: "flex",
+	flexWrap: "wrap", // Allows wrapping rows
+	gap: "10px", // Adds spacing between images
+	maxWidth: "calc(100px * 15 + 70px)", // Width for 8 images per row + gaps
+	border: "2px solidrgb(186, 195, 204)", // Boundary line around the entire gallery
+	padding: "10px",
+	backgroundColor: "#2c3e5A",
+	borderRadius: "20px",
+};
+
+const imageStyle = {
+	// width: "40px",
+	// height: "40px",
+	// padding: "10px",
+	objectFit: "cover",
+	borderRadius: "10%",
+};
