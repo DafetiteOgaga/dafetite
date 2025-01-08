@@ -297,7 +297,6 @@ const LandingSection = () => {
 
 
 	<div
-	// alignItems="start"
 	spacing={0}>
 		{Object.values(summary).map((summaryData=>{
 			return (
