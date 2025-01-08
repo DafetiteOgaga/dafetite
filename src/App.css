@@ -188,7 +188,7 @@ table {
 .pad {
 	background-color: #68859c;
 
-	@media (min-width: 300px) {
+	@media (min-width: 250px) {
 		padding: 5rem 1rem 1rem 1rem;
 	}
 	/* @media (min-width: 360px) {

@@ -291,7 +291,7 @@ const LandingSection = () => {
 		style={{
 		fontWeight: "bold",
 		color: "#2c3e50",
-		}}>Software and Automation Engineer || IT Support || Frontend and Backend Deveoper || DevOps || Software Designer || Customer Service Engineer || ATM Engineer || Data Analyst || Technical Engineer #2</h3>
+		}}>Software and Automation Engineer || IT Support || Frontend and Backend Deveoper || DevOps || Software Designer || Customer Service Engineer || ATM Engineer || Data Analyst || Technical Engineer #3</h3>
 		</div>
 	</div>
 
