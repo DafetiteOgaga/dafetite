@@ -188,8 +188,14 @@ table {
 .pad {
 	background-color: #68859c;
 
-	@media (min-width: 360px) {
+	@media (min-width: 320px) {
+		padding: 5rem 1rem 1rem 1rem;
+	}
+	/* @media (min-width: 360px) {
 		padding: 5rem 2rem 1rem 2rem;
+	} */
+	@media (min-width: 480px) {
+		padding: 5rem 1.5rem 1rem 1.5rem;
 	}
 	@media (min-width: 768px) {
 		/* padding-top: 6.5rem; */
