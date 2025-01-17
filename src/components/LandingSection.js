@@ -67,14 +67,18 @@ const data = {
 		details: {
 			altavizSUpportLtd: {
 				spec: 'Altaviz Support Limited',
-				info: `A modern day web application that handles the workflow of
-						Altaviz Support Limited, a company that provides ATM services,
-						sales, and support. The Apllication is built with Django and
-						React.js, and it features a user-friendly interface.
-						The application comes with a robust
-						backend, and a secure database management system with role-based
-						access control, chat section. The Aplllication is designed to enhance the company's
-						workflow, improve client trust, and showcase services effectively.`
+				info: `Altaviz, a scalable web application for managing ATM sales,
+						support, and services. Developed with Django for the backend
+						with custom authentication, password reset workflows (using
+						Brevo API), and advanced caching strategies. Built an
+						intuitive React frontend with responsive design, reusable
+						components, and dynamic features like dropdown notifications
+						and form handling. ntegrated RESTful APIs for seamless
+						communication and deployed on PythonAnywhere and ercel with
+						serverless functions. Delivered key features such as dynamic
+						role management and soft delete mechanisms.	Altaviz showcases
+						my expertise in full-stack development, API integration, and
+						deploying nnovative, user-focused solutions.`
 			},
 			articleHive: {
 				spec: 'Article Hive',
