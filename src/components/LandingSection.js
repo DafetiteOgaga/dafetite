@@ -67,18 +67,18 @@ const data = {
 		details: {
 			altavizSUpportLtd: {
 				spec: 'Altaviz Support Limited',
-				info: `Altaviz, a scalable web application for managing ATM sales,
-						support, and services. Developed with Django for the backend
-						with custom authentication, password reset workflows (using
-						Brevo API), and advanced caching strategies. Built an
-						intuitive React frontend with responsive design, reusable
-						components, and dynamic features like dropdown notifications
-						and form handling. ntegrated RESTful APIs for seamless
-						communication and deployed on PythonAnywhere and ercel with
-						serverless functions. Delivered key features such as dynamic
-						role management and soft delete mechanisms.	Altaviz showcases
-						my expertise in full-stack development, API integration, and
-						deploying nnovative, user-focused solutions.`
+				info: `Altaviz, a scalable web application for managing ATM sales, support, and services.
+						Developed with Django for the backend with custom authentication, password reset workflows
+						(using Brevo API), and advanced caching strategies. Built an intuitive React frontend
+						with responsive design, reusable components, and dynamic features like dropdown
+						notifications and form handling.
+
+						Integrated RESTful APIs for seamless communication and deployed on PythonAnywhere and
+						Vercel with serverless functions. Delivered key features such as dynamic role management
+						and soft delete mechanisms.
+
+						Altaviz showcases my expertise in full-stack development, API integration, and deploying
+						innovative, user-focused solutions.`
 			},
 			articleHive: {
 				spec: 'Article Hive',
