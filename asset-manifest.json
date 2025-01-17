@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.fab3b781.css",
-    "main.js": "/dafetite/static/js/main.6953926d.js",
+    "main.js": "/dafetite/static/js/main.3f2f9fa8.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/article-hive-app.png": "/dafetite/static/media/article-hive-app.252e55b21b1e8eb04e12.png",
-    "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.be8857a24b5f6d5875f6.pdf",
+    "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.fdd039086f88d9aa53b0.pdf",
     "static/media/pdf2docx Converter.png": "/dafetite/static/media/pdf2docx Converter.b4eb607d4ddf23db5e81.png",
     "static/media/article-hive.png": "/dafetite/static/media/article-hive.d3041a637c87e0336347.png",
     "static/media/creonovo-website.png": "/dafetite/static/media/creonovo-website.e1ba1479077b1020e92c.png",
@@ -48,11 +48,11 @@
     "static/media/alx3-removebg-preview.png": "/dafetite/static/media/alx3-removebg-preview.3c729dc3799055c3efe5.png",
     "index.html": "/dafetite/index.html",
     "main.fab3b781.css.map": "/dafetite/static/css/main.fab3b781.css.map",
-    "main.6953926d.js.map": "/dafetite/static/js/main.6953926d.js.map",
+    "main.3f2f9fa8.js.map": "/dafetite/static/js/main.3f2f9fa8.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fab3b781.css",
-    "static/js/main.6953926d.js"
+    "static/js/main.3f2f9fa8.js"
   ]
 }
