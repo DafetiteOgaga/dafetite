@@ -114,7 +114,7 @@ const Header = () => {
 			</nav>  */}
 			<nav>
 				<HStack spacing={{ base: 2.5, md: 5 }}>
-				<HStack><h1 className="paragraph">{isMobile?'':`Socials:`}</h1></HStack>
+				<HStack><h1 style={{paddingLeft: isMobile?30:0}} className="paragraph">{isMobile?'':`Socials:`}</h1></HStack>
 				{socials.map(({ icon, url }) => (
 					<a
 					key={url}
