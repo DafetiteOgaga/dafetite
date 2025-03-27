@@ -294,7 +294,7 @@ const LandingSection = () => {
 						<h3 className="head-sub aboutme"
 						style={{
 							paddingBottom: '12px',
-						...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
+						...(isMobile?{fontSize: 22, textAlign: 'center'}:{})}}>
 							{words}
 							<div onClick={toggleExpandSummary}
 							style={responsiveStyles.buttonContainer}>
@@ -509,7 +509,7 @@ const LandingSection = () => {
 						style={{
 						fontWeight: "bold",
 						color: "#e6e6fa",
-						fontSize: isMobile? 22: '',
+						fontSize: isMobile? 25: '',
 					}}>
 						Hello, I am <span style={{color: "lightblue"}}>{name}</span>
 					</h2>
@@ -517,7 +517,7 @@ const LandingSection = () => {
 					style={{
 					fontWeight: "bold",
 					color: "#2c3e50",
-					fontSize: isMobile? 15: '',
+					fontSize: isMobile? 20: '',
 					}}>
 						Software and Automation Engineer || IT Support || Frontend and Backend Deveoper || DevOps || Software Designer || Customer Service Engineer || ATM Engineer || Data Analyst || Technical Engineer
 					</h3>
