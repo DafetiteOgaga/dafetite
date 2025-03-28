@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.0ac3908c.css",
-    "main.js": "/dafetite/static/js/main.e76d635d.js",
+    "main.js": "/dafetite/static/js/main.0508b1b4.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/article-hive-app.png": "/dafetite/static/media/article-hive-app.252e55b21b1e8eb04e12.png",
@@ -48,11 +48,11 @@
     "static/media/alx3-removebg-preview.png": "/dafetite/static/media/alx3-removebg-preview.3c729dc3799055c3efe5.png",
     "index.html": "/dafetite/index.html",
     "main.0ac3908c.css.map": "/dafetite/static/css/main.0ac3908c.css.map",
-    "main.e76d635d.js.map": "/dafetite/static/js/main.e76d635d.js.map",
+    "main.0508b1b4.js.map": "/dafetite/static/js/main.0508b1b4.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ac3908c.css",
-    "static/js/main.e76d635d.js"
+    "static/js/main.0508b1b4.js"
   ]
 }
