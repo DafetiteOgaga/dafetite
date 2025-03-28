@@ -5,6 +5,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const Card = ({ title, description, imageSrc }) => {
 	const isMobile = useBreakpointValue({ base: true, md: false });
 	const numOfWords = 15
+	const link = (title.split(' ').some(word=>word.toLowerCase()==='(mobile'))?'download it':'see more'
+	console.log({link})
+	// console.log(title.split(' '))
 	return (
 		<VStack
 			color="black"
@@ -36,7 +39,7 @@ const Card = ({ title, description, imageSrc }) => {
 					fontWeight: 'bold',
 					fontStyle: 'italic',
 					fontSize: isMobile?14:'',
-					}} className="paragraph">Click here to see more</p>
+					}} className="paragraph">Click here to {link}</p>
 					<FontAwesomeIcon icon={faArrowRight} size={ isMobile ? 'xs' : '1x' } />
 				</HStack>
 			</VStack>
