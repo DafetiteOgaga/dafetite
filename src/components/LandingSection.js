@@ -333,7 +333,7 @@ const LandingSection = () => {
 															<span
 															style={{
 																fontWeight: "normal",
-																color: "honeydew",
+																color: "lightcyan",
 																...(isMobile?{fontSize: 16, textAlign: 'center'}:{})
 																// fontSize: isMobile? 16: '',
 															}}>
@@ -596,7 +596,7 @@ const LandingSection = () => {
 															<span
 															style={{
 																fontWeight: "normal",
-																color: "honeydew",
+																color: "lightcyan",
 																...(isMobile?{fontSize: 16, textAlign: 'center'}:{})
 																// fontSize: isMobile? 16: '',
 															}}>
