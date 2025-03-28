@@ -452,7 +452,8 @@ table {
 }
 
 .box-photo {
-	border-radius: .5rem;
+	border-top-left-radius: .5rem;
+	border-top-right-radius: .5rem;
 	width: 100rem;
 	height: 6rem;
 
@@ -466,18 +467,22 @@ table {
 		height: 10rem;
 	}
 	@media (min-width: 768px) {
-		border-radius: .7rem;
+		border-top-left-radius: 0.7rem;
+		border-top-right-radius: 0.7rem;
 		height: 15rem;
 	}
 	@media (min-width: 1024px) {
-		border-radius: .8rem;
+		border-top-left-radius: 0.8rem;
+		border-top-right-radius: 0.8rem;
 		height: 17rem;
 	}
 	@media (min-width: 1200px) {
-		border-radius: .7rem;
+		border-top-left-radius: 0.7rem;
+		border-top-right-radius: 0.7rem;
 	}
 	@media (min-width: 1440px) {
-		border-radius: .6rem;
+		border-top-left-radius: 0.6rem;
+		border-top-right-radius: 0.6rem;
 		height: 20rem;
 	}
 }
