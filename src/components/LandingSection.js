@@ -310,7 +310,7 @@ const LandingSection = () => {
 						<h3 className="head-sub aboutme"
 						style={{
 							paddingBottom: '12px',
-						...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
+						...(isMobile?{fontSize: 16}:{})}}>
 							{<h1 className="head-sub"
 								// style={{marginBottom: '30px',}}
 								>
@@ -334,7 +334,7 @@ const LandingSection = () => {
 															style={{
 																fontWeight: "normal",
 																color: "lightcyan",
-																...(isMobile?{fontSize: 16, textAlign: 'center'}:{})
+																...(isMobile?{fontSize: 16}:{})
 																// fontSize: isMobile? 16: '',
 															}}>
 																{words}
@@ -359,7 +359,7 @@ const LandingSection = () => {
 					<h3 className="head-sub aboutme"
 						style={{
 							paddingBottom: '12px',
-						...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
+						...(isMobile?{fontSize: 16}:{})}}>
 						{<h1 className="head-sub"
 						style={{
 						display: 'flex',
@@ -463,7 +463,7 @@ const LandingSection = () => {
 												padding: '0 10px',
 												...(isMobile?{
 													fontSize: 16,
-													textAlign: 'center',
+													// textAlign: 'center',
 													marginTop: 10,
 												}:{})
 												// fontSize: isMobile? 16: '',
@@ -597,7 +597,7 @@ const LandingSection = () => {
 															style={{
 																fontWeight: "normal",
 																color: "lightcyan",
-																...(isMobile?{fontSize: 16, textAlign: 'center'}:{})
+																...(isMobile?{fontSize: 16}:{})
 																// fontSize: isMobile? 16: '',
 															}}>
 																{val.info}
@@ -670,7 +670,7 @@ const LandingSection = () => {
 												padding: '0 10px',
 												...(isMobile?{
 													fontSize: 16,
-													textAlign: 'center',
+													// textAlign: 'center',
 													marginTop: 10,
 												}:{})
 												// fontSize: isMobile? 16: '',
@@ -688,7 +688,7 @@ const LandingSection = () => {
 							style={{
 								marginTop: '10px',
 								paddingBottom: '12px',
-							...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
+							...(isMobile?{fontSize: 16}:{})}}>
 							<div onClick={toggleExpandLinks}
 							style={responsiveStyles.buttonContainer}>
 								{isLinksExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextActive}}>Collapse <FiChevronUp size={20} /></p>}
