@@ -3,7 +3,7 @@ import FullScreenSection from "./FullScreenSection";
 import { Box } from "@chakra-ui/react";
 import Card from "./Card";
 
-const webapp = [
+const webapps = [
 	{
 		title: "Altaviz Support Limited",
 		description:
@@ -26,7 +26,44 @@ const webapp = [
 	},
 ]
 
+const versionNumber = require('../../package.json').version;
+const mobileapps = [
+	{
+		title: "Altaviz Support Limited (Mobile App)",
+		// title: versionNumber,
+		description:
+			`A Mobile Application to complete the Altaviz app. It manages the workflow for Altaviz
+			Support Limited. Implemented in it are the same features as the Web App such as Role based
+			Access Control with support for Custodians, Workshop staff, Engineers, Help Desk staff,
+			Supervisors, and Human resource. It is also fast, reliable and effective for managing the
+			workflow of the company. Created using Expo(React Native), Django, and MySQL, `,
+		url: `https://github.com/DafetiteOgaga/altavizMobileReleases/releases/download/${versionNumber}/altavizMobileApp.apk`,
+		getImageSrc: () => require("../images/altaviz_mobile.png"),
+	},
+]
+
 const websites = [
+	{
+		title: "TechFlows Engineering",
+		description:
+			`A tech company that provides solutions to engineering problems including Software
+			development, Computer Hardwares, Security solutions, ATM services, Cloud solutions and
+			IT trainings. We are a team of professionals that are dedicated to providing the best
+			services to our clients. Created using ReactJS`,
+		url: "https://dafetiteogaga.github.io/techflows/",
+		getImageSrc: () => require("../images/techflows.png"),
+	},
+	{
+		title: "Jimmy Ayodele",
+		description:
+			`A personal portfolio website for Jimmy Ayodele. A dedicated space showcasing his works,
+			projects, achievements, skills, and experiences. This platform highlights his expertise,
+			creative journey, and professional accomplishments, providing visitors with insights into
+			his	background, technical abilities, and notable contributions. The website also includes
+			a contact page for collaboration opportunities. Created using ReactJS`,
+		url: "https://dafetiteogaga.github.io/jimmy/",
+		getImageSrc: () => require("../images/jimmy_ayodele.png"),
+	},
 	{
 		title: "The Article Hive",
 		description:
@@ -143,7 +180,29 @@ const ProjectsSection = () => {
 		gridTemplateColumns="repeat(2,minmax(0,1fr))"
 		gridGap={2}
 		style={{paddingBottom: "2rem"}}>
-			{webapp.map((project, index) => (
+			{webapps.map((project, index) => (
+				<a
+				key={project.title}
+				href={project.url}>
+					<Card
+					key={project.title}
+					title={project.title}
+					description={project.description}
+					imageSrc={project.getImageSrc()}/>
+				</a>
+			))}
+		</Box>
+		{/* ..................................... */}
+		<h1 className="head-main"
+		style={{color: "#e6e6fa",}}>
+			My Mobile Apps
+		</h1>
+		<Box
+		display="grid"
+		gridTemplateColumns="repeat(2,minmax(0,1fr))"
+		gridGap={2}
+		style={{paddingBottom: "2rem"}}>
+			{mobileapps.map((project, index) => (
 				<a
 				key={project.title}
 				href={project.url}>
