@@ -8,7 +8,7 @@ import { Box, HStack, useBreakpointValue } from "@chakra-ui/react";
 const skills = [
 	'Software and Automation Engineer',
 	'IT Support',
-	'Frontend and Backend Deveoper',
+	'Frontend and Backend Developer',
 	'Mobile App Developer',
 	'DevOps',
 	'Software Designer',
