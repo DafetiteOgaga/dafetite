@@ -5,12 +5,24 @@ import styled from "styled-components"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { Box, HStack, useBreakpointValue } from "@chakra-ui/react";
 
+const skills = [
+	'Software and Automation Engineer',
+	'IT Support',
+	'Frontend and Backend Deveoper',
+	'Mobile App Developer',
+	'DevOps',
+	'Software Designer',
+	'Customer Service Engineer',
+	'ATM Engineer',
+	'Data Analyst',
+	'Technical Engineer'
+]
 const summary = {
 	one: `I am a highly skilled Software and Automation Engineer with expertise
 			in software	development, IT support, and technical engineering. My skills
-			span frontend and backend development, using technologies like Python,
+			span frontend, backend and mobile app development, using technologies like Python,
 			JavaScript (ES6), SQL, C, HTML5, and CSS, alongside frameworks such
-			as React.js, Django, and Django REST Framework. Projects like Altaviz
+			as React.js, React Native, Expo Go, Django, and Django REST Framework. Projects like Altaviz
 			Support Limited, a software solution that manages the workflow for the
 			company, bringing all the departments in sync, Article Hive, a
 			platform for readers and authors, and Creonovo Restaurant, a modern
@@ -49,6 +61,11 @@ const data = {
 						applications using Django, Django REST Framework,
 						and SQL for database management.`
 			},
+			mobile: {
+				spec: 'Mobile App',
+				info: `Creating visually appealing user
+						interfaces for mobile apps using React Native and Expo Go.`
+			},
 			uiux: {
 				spec: 'UI/UX',
 				info: `Expertise in translating complex requirements into
@@ -68,7 +85,7 @@ const data = {
 			// details: `Frontend, Backend, UI/UX, Automation, IT Support`,
 		details: {
 			altavizSUpportLtd: {
-				spec: 'Altaviz Support Limited',
+				spec: 'Altaviz Support Limited (Web and Mobile Apps)',
 				info: `Altaviz, a scalable web application for managing ATM sales, support, and services.
 						Developed with Django for the backend with custom authentication, password reset workflows
 						(using Brevo API), and advanced caching strategies. Built an intuitive React frontend
@@ -131,7 +148,7 @@ const data = {
 			},
 			FrameWAndLib: {
 				spec: 'Frameworks/Libraries',
-				info: `React.js, Django, Django REST Framework, Bootstrap, Figma`
+				info: `React.js, React Native, Expo Go, Django, Django REST Framework, Bootstrap, Figma`
 			},
 			versionControl: {
 				spec: 'Version Control',
@@ -519,7 +536,7 @@ const LandingSection = () => {
 					color: "#2c3e50",
 					fontSize: isMobile? 15: '',
 					}}>
-						Software and Automation Engineer || IT Support || Frontend and Backend Deveoper || DevOps || Software Designer || Customer Service Engineer || ATM Engineer || Data Analyst || Technical Engineer
+						{skills.join(' || ')}
 					</h3>
 				</div>
 			</div>
