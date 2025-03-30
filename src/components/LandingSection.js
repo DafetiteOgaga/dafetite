@@ -22,7 +22,7 @@ const summary = {
 			in software	development, IT support, and technical engineering. My skills
 			span frontend, backend and mobile app development, using technologies like Python,
 			JavaScript (ES6), SQL, C, HTML5, and CSS, alongside frameworks such
-			as React.js, React Native, Expo Go, Django, and Django REST Framework. Projects like Altaviz
+			as React.js, React Native, Expo, Django, and Django REST Framework. Projects like Altaviz
 			Support Limited, a software solution that manages the workflow for the
 			company, bringing all the departments in sync, Article Hive, a
 			platform for readers and authors, and Creonovo Restaurant, a modern
@@ -64,7 +64,7 @@ const data = {
 			mobile: {
 				spec: 'Mobile App',
 				info: `Creating visually appealing user
-						interfaces for mobile apps using React Native and Expo Go.`
+						interfaces for mobile apps using React Native and Expo.`
 			},
 			uiux: {
 				spec: 'UI/UX',
@@ -148,7 +148,7 @@ const data = {
 			},
 			FrameWAndLib: {
 				spec: 'Frameworks/Libraries',
-				info: `React.js, React Native, Expo Go, Django, Django REST Framework, Bootstrap, Figma`
+				info: `React.js, React Native, Expo, Django, Django REST Framework, Bootstrap, Figma`
 			},
 			versionControl: {
 				spec: 'Version Control',
