@@ -37,7 +37,7 @@ const mobileapps = [
 			Access Control with support for Custodians, Workshop staff, Engineers, Help Desk staff,
 			Supervisors, and Human resource. It is also fast, reliable and effective for managing the
 			workflow of the company. Created using Expo(React Native), Django, and MySQL, `,
-		url: `https://github.com/DafetiteOgaga/altavizMobileReleases/releases/download/${versionNumber}/altavizMobileApp.apk`,
+		url: `https://github.com/DafetiteOgaga/altavizMobileReleases/releases/download/${versionNumber}/altavizMobile-${versionNumber}.apk`,
 		getImageSrc: () => require("../images/altaviz_mobile.png"),
 	},
 ]
