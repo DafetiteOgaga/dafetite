@@ -1,6 +1,6 @@
 {
 	"name": "dafetite",
-	"version": "v20250318.2331",
+	"version": "20250401.1236",
 	"private": true,
 	"dependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.18.0",
