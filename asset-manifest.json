@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.0ac3908c.css",
-    "main.js": "/dafetite/static/js/main.8f9976b5.js",
+    "main.js": "/dafetite/static/js/main.e638c0eb.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
+    "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
+    "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/altaviz_mobile.png": "/dafetite/static/media/altaviz_mobile.170a83ea670822bb9de8.png",
     "static/media/article-hive-app.png": "/dafetite/static/media/article-hive-app.252e55b21b1e8eb04e12.png",
@@ -52,14 +54,12 @@
     "static/media/linkedin7.png": "/dafetite/static/media/linkedin7.a285b03939a0276f9057.png",
     "static/media/alx3-removebg-preview.png": "/dafetite/static/media/alx3-removebg-preview.3c729dc3799055c3efe5.png",
     "index.html": "/dafetite/index.html",
-    "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.3dc23671d92270f1eebf.mp4",
-    "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.46c63396f4cc178c5422.mp4",
     "main.0ac3908c.css.map": "/dafetite/static/css/main.0ac3908c.css.map",
-    "main.8f9976b5.js.map": "/dafetite/static/js/main.8f9976b5.js.map",
+    "main.e638c0eb.js.map": "/dafetite/static/js/main.e638c0eb.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ac3908c.css",
-    "static/js/main.8f9976b5.js"
+    "static/js/main.e638c0eb.js"
   ]
 }
