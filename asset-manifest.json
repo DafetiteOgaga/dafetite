@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.0ac3908c.css",
-    "main.js": "/dafetite/static/js/main.3be5b109.js",
+    "main.js": "/dafetite/static/js/main.8f9976b5.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
     "static/media/altaviz_mobile.png": "/dafetite/static/media/altaviz_mobile.170a83ea670822bb9de8.png",
@@ -14,6 +14,7 @@
     "static/media/creonovo_restaurant-backend-component.png": "/dafetite/static/media/creonovo_restaurant-backend-component.8ad44ad3d7f9933da8d6.png",
     "static/media/creonovo_restaurant.png": "/dafetite/static/media/creonovo_restaurant.121be8c82aab833d39ec.png",
     "static/media/techflows.png": "/dafetite/static/media/techflows.cdc12f18ea50e77ced58.png",
+    "static/media/profilePage.png": "/dafetite/static/media/profilePage.875b79542a38aee39108.png",
     "static/media/jimmy_ayodele.png": "/dafetite/static/media/jimmy_ayodele.33e6ed21b09192d0ab98.png",
     "static/media/little-lemon-figma-designs.png": "/dafetite/static/media/little-lemon-figma-designs.31dbc81484c010ae0c19.png",
     "static/media/little-lemon-capstone-project-figma-design.png": "/dafetite/static/media/little-lemon-capstone-project-figma-design.9520f134e1cd5e27949f.png",
@@ -32,6 +33,7 @@
     "static/media/ja2-removebg-preview.png": "/dafetite/static/media/ja2-removebg-preview.6ee456a475ddee778445.png",
     "static/media/drf-removebg-preview.png": "/dafetite/static/media/drf-removebg-preview.139358cfb29ea4070d75.png",
     "static/media/sql-removebg-preview (1).png": "/dafetite/static/media/sql-removebg-preview (1).71e30bf8d844e93d4653.png",
+    "static/media/mobileHome.png": "/dafetite/static/media/mobileHome.4fa6fd823936230e9af7.png",
     "static/media/bootstrap-removebg-preview.png": "/dafetite/static/media/bootstrap-removebg-preview.129ab78e2d28b19291e9.png",
     "static/media/vscode-removebg-preview.png": "/dafetite/static/media/vscode-removebg-preview.760956f13a325be8de7a.png",
     "static/media/c-removebg-preview.png": "/dafetite/static/media/c-removebg-preview.eb689f487412260c6c7a.png",
@@ -50,12 +52,14 @@
     "static/media/linkedin7.png": "/dafetite/static/media/linkedin7.a285b03939a0276f9057.png",
     "static/media/alx3-removebg-preview.png": "/dafetite/static/media/alx3-removebg-preview.3c729dc3799055c3efe5.png",
     "index.html": "/dafetite/index.html",
+    "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.3dc23671d92270f1eebf.mp4",
+    "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.46c63396f4cc178c5422.mp4",
     "main.0ac3908c.css.map": "/dafetite/static/css/main.0ac3908c.css.map",
-    "main.3be5b109.js.map": "/dafetite/static/js/main.3be5b109.js.map",
+    "main.8f9976b5.js.map": "/dafetite/static/js/main.8f9976b5.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ac3908c.css",
-    "static/js/main.3be5b109.js"
+    "static/js/main.8f9976b5.js"
   ]
 }
