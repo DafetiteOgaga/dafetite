@@ -24,19 +24,22 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 			<img
 			src={imageSrc}
 			alt={title}
-			style={{objectFit: 'cover',}}
+			style={{objectFit: 'cover', ...(isMobile&&type==='video')?{height: 200}:{}}}
 			className="box-photo" />
 			<VStack p={isMobile?2:4} alignItems="flex-start">
 				{!type &&
-				<>
-					<HStack justifyContent="space-between" alignItems="center">
-							<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{}}>{title}</h1>
-					</HStack>
-					<h1 className="box-sub" style={{color: "#64748b", ...(isMobile?{fontSize: 14}:{})}}>
-						{isMobile?(description.split(' ').length>numOfWords)?(description.split(' ').slice(0, numOfWords).join(' ')+'...'):description:description}
-					</h1>
-				</>}
-				<HStack alignItems="center">
+					<>
+						<HStack justifyContent="space-between" alignItems="center">
+								<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{}}>{title}</h1>
+						</HStack>
+						<h1 className="box-sub" style={{color: "#64748b", ...(isMobile?{fontSize: 14}:{})}}>
+							{isMobile?(description.split(' ').length>numOfWords)?(description.split(' ').slice(0, numOfWords).join(' ')+'...'):description:description}
+						</h1>
+					</>}
+				<HStack
+				alignItems="center"
+				h={type==='video'?0:10}
+				>
 					<p style={{
 					color: 'black',
 					fontWeight: 'bold',
