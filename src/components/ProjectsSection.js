@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Card from "./Card";
+// import { HStack, Image, VStack, useBreakpointValue } from "@chakra-ui/react";
 
 const webapps = [
 	{
@@ -39,6 +40,19 @@ const mobileapps = [
 			workflow of the company. Created using Expo(React Native), Django, and MySQL, `,
 		url: `https://github.com/DafetiteOgaga/altavizMobileReleases/releases/download/${versionNumber}/altavizMobile-${versionNumber}.apk`,
 		getImageSrc: () => require("../images/altaviz_mobile.png"),
+	},
+]
+
+const videos = [
+	{
+		thumbnail: require("../altavizVideos/profilePage.png"),
+		videoSrc: require("../altavizVideos/altavizWeb.mp4"),
+		title: "Altaviz Web App",
+	},
+	{
+		thumbnail: require("../altavizVideos/mobileHome.png"),
+		videoSrc: require("../altavizVideos/altavizMobile.mp4"),
+		title: "Altaviz Mobile App",
 	},
 ]
 
@@ -164,15 +178,27 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+	const [selectedVideo, setSelectedVideo] = useState(null);
+	const isMobile = useBreakpointValue({ base: true, md: false });
+	const videoRef = useRef(null);
+	const [isPortrait, setIsPortrait] = useState(false);
+
+	const handleMetadata = () => {
+		const video = videoRef.current;
+		if (video) {
+		const { videoWidth, videoHeight } = video;
+		setIsPortrait(videoHeight > videoWidth);
+		}
+	};
 	return (
 	<FullScreenSection
 	backgroundColor="#2f4f4f"
 	isDarkBackground
 	p={4}
 	alignItems="flex-start">
-
+		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My WebApps
 		</h1>
 		<Box
@@ -194,7 +220,7 @@ const ProjectsSection = () => {
 		</Box>
 		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My Mobile Apps
 		</h1>
 		<Box
@@ -216,7 +242,7 @@ const ProjectsSection = () => {
 		</Box>
 		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My Websites
 		</h1>
 		<Box
@@ -238,7 +264,7 @@ const ProjectsSection = () => {
 		</Box>
 		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My Projects
 		</h1>
 		<Box
@@ -257,6 +283,99 @@ const ProjectsSection = () => {
 				</a>
 			))}
 		</Box>
+		{/* ..................................... */}
+		<h1 className="head-main"
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
+			Videos
+		</h1>
+		<Box
+		display={isMobile?"flex":"grid"}
+		flexDirection={'column'}
+		gridTemplateColumns="repeat(2,minmax(0,1fr))"
+		gridGap={2}
+		style={{paddingBottom: "2rem"}}>
+			{videos.map((project, index) => (
+				<div
+				key={index+project.title}
+				onClick={() => setSelectedVideo(project)}
+				// href={project.url}
+				>
+					<Card
+					key={project.title}
+					title={project.title}
+					description={''}
+					imageSrc={project.thumbnail}
+					type='video'/>
+				</div>
+			))}
+		</Box>
+		
+		{/* Modal */}
+		{selectedVideo && (
+        <div
+			onClick={() => setSelectedVideo(null)}
+			style={{
+				position: "fixed",
+				top: 0,
+				left: 0,
+				width: "100vw",
+				height: "100vh",
+				backgroundColor: "rgba(0, 0, 0, 0.8)",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				zIndex: 999,
+			}}
+        >
+			<div
+				onClick={(e) => e.stopPropagation()}
+				style={{
+				width: isMobile ? "90%" : "70%",
+				backgroundColor: "#000",
+				borderRadius: "10px",
+				overflow: "hidden",
+				position: "relative",
+				}}
+			>
+				<video
+					ref={videoRef}
+					src={selectedVideo.videoSrc}
+					controls
+					autoPlay
+					onLoadedMetadata={handleMetadata}
+					style={{
+						width: (isPortrait&&isMobile)?"100":isPortrait?"35%":"100%",
+						height: "auto",
+						objectFit: "cover",
+						justifySelf: "center",
+					}}
+				/>
+				<button
+					onClick={() => setSelectedVideo(null)}
+					style={{
+						position: "absolute",
+						top: "10px",
+						right: "10px",
+						// background: "#fff",
+						border: "none",
+						borderRadius: "4px",
+						padding: "0.5rem",
+						cursor: "pointer",
+					}}
+				>
+					<span style={{
+						fontSize: isMobile?12:17,
+						border: "1px solid #fff",
+						padding: '3px 5px',
+						borderRadius: 10,
+						backgroundColor: "rgba(0, 0, 0, 0.6)",
+						}}>
+						Close
+					</span>
+				</button>
+			</div>
+        </div>
+		)}
 	</FullScreenSection>
 
 	);
