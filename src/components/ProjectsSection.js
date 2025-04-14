@@ -50,7 +50,7 @@ const videos = [
 		title: "Altaviz Web App",
 	},
 	{
-		thumbnail: require("../altavizVideos/mobileHome.jpg"),
+		thumbnail: require("../altavizVideos/mobileHome.png"),
 		videoSrc: require("../altavizVideos/altavizMobile.mp4"),
 		title: "Altaviz Mobile App",
 	},
@@ -196,9 +196,9 @@ const ProjectsSection = () => {
 	isDarkBackground
 	p={4}
 	alignItems="flex-start">
-
+		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My WebApps
 		</h1>
 		<Box
@@ -220,7 +220,7 @@ const ProjectsSection = () => {
 		</Box>
 		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My Mobile Apps
 		</h1>
 		<Box
@@ -242,7 +242,7 @@ const ProjectsSection = () => {
 		</Box>
 		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My Websites
 		</h1>
 		<Box
@@ -264,7 +264,7 @@ const ProjectsSection = () => {
 		</Box>
 		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			My Projects
 		</h1>
 		<Box
@@ -285,7 +285,7 @@ const ProjectsSection = () => {
 		</Box>
 		{/* ..................................... */}
 		<h1 className="head-main"
-		style={{color: "#e6e6fa",}}>
+		style={{color: "#e6e6fa", fontWeight: "bold", }}>
 			Videos
 		</h1>
 		<Box
