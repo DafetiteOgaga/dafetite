@@ -270,6 +270,7 @@ const ProjectsSection = () => {
 		<Box
 		display="grid"
 		gridTemplateColumns="repeat(2,minmax(0,1fr))"
+		style={{paddingBottom: "2rem"}}
 		gridGap={2}>
 			{projects.map((project, index) => (
 				<a
@@ -293,12 +294,12 @@ const ProjectsSection = () => {
 		flexDirection={'column'}
 		gridTemplateColumns="repeat(2,minmax(0,1fr))"
 		gridGap={2}
-		style={{paddingBottom: "2rem"}}>
+		style={{paddingBottom: "2rem"}}
+		>
 			{videos.map((project, index) => (
 				<div
 				key={index+project.title}
 				onClick={() => setSelectedVideo(project)}
-				// href={project.url}
 				>
 					<Card
 					key={project.title}
