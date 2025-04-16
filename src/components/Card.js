@@ -8,6 +8,7 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 	// const link = (title.split(' ').some(word=>word.toLowerCase()==='(mobile'))?'download it':'see more'
 	const link = (!type)?'see more':(type==='mobile')?'download':'watch'
 	const video = type==='video'
+	const mobileOrWeb = type==='mobile'||!type
 	// console.log({link})
 	// console.log(title.split(' '))
 	return (
@@ -29,7 +30,7 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 			style={{objectFit: 'cover', ...(isMobile&&video)?{height: 200}:{}}}
 			className="box-photo" />
 			<VStack p={isMobile?2:4} alignItems="flex-start">
-				{(!type||type==='mobile') &&
+				{(mobileOrWeb) &&
 					<>
 						<HStack justifyContent="space-between" alignItems="center">
 								<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{}}>{title}</h1>
