@@ -5,7 +5,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const Card = ({ title, description, imageSrc, type=null }) => {
 	const isMobile = useBreakpointValue({ base: true, md: false });
 	const numOfWords = 15
-	const link = (title.split(' ').some(word=>word.toLowerCase()==='(mobile'))?'download it':'see more'
+	// const link = (title.split(' ').some(word=>word.toLowerCase()==='(mobile'))?'download it':'see more'
+	const link = (!type)?'see more':(type==='mobile')?'download':'watch'
+	const video = type==='video'
 	// console.log({link})
 	// console.log(title.split(' '))
 	return (
@@ -24,10 +26,10 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 			<img
 			src={imageSrc}
 			alt={title}
-			style={{objectFit: 'cover', ...(isMobile&&type==='video')?{height: 200}:{}}}
+			style={{objectFit: 'cover', ...(isMobile&&video)?{height: 200}:{}}}
 			className="box-photo" />
 			<VStack p={isMobile?2:4} alignItems="flex-start">
-				{!type &&
+				{(!type||type==='mobile') &&
 					<>
 						<HStack justifyContent="space-between" alignItems="center">
 								<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{}}>{title}</h1>
@@ -38,14 +40,14 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 					</>}
 				<HStack
 				alignItems="center"
-				h={type==='video'?0:10}
+				h={video?0:10}
 				>
 					<p style={{
 					color: 'black',
 					fontWeight: 'bold',
 					fontStyle: 'italic',
 					fontSize: isMobile?14:'',
-					}} className="paragraph">Click here to {type==='video'?'Watch':link}</p>
+					}} className="paragraph">Click here to {link}</p>
 					<FontAwesomeIcon icon={faArrowRight} size={ isMobile ? 'xs' : '1x' } />
 				</HStack>
 			</VStack>
