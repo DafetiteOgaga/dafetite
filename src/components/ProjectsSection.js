@@ -236,7 +236,8 @@ const ProjectsSection = () => {
 					key={project.title}
 					title={project.title}
 					description={project.description}
-					imageSrc={project.getImageSrc()}/>
+					imageSrc={project.getImageSrc()}
+					type='mobile'/>
 				</a>
 			))}
 		</Box>
