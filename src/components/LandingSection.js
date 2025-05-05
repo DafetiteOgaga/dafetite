@@ -3,19 +3,21 @@ import dafe from "../dafetite.jpeg"
 import cv from "./Dafetite_Ogaga.pdf"
 import styled from "styled-components"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import { Box, HStack, useBreakpointValue } from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/react";
 
 const skills = [
 	'Software and Automation Engineer',
+	'Fullstack Developer',
 	'IT Support',
-	'Frontend and Backend Developer',
+	// 'Frontend and Backend Developer',
 	'Mobile App Developer',
-	'DevOps',
-	'Software Designer',
-	'Customer Service Engineer',
-	'ATM Engineer',
-	'Data Analyst',
-	'Technical Engineer'
+	// 'DevOps',
+	'Designer',
+	// 'Software Designer',
+	// 'Customer Service Engineer',
+	'ATM and Technical Engineer',
+	// 'Data Analyst',
+	// 'Technical Engineer'
 ]
 const summary = {
 	one: `I am a highly skilled Software and Automation Engineer with expertise
@@ -743,3 +745,4 @@ const responsiveStyles = {
 		backgroundColor: '#2c3e50',
 	}
 }
+
