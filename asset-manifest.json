@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.0ac3908c.css",
-    "main.js": "/dafetite/static/js/main.438be717.js",
+    "main.js": "/dafetite/static/js/main.e87c5379.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
@@ -15,9 +15,9 @@
     "static/media/altaviz-support-ltd.png": "/dafetite/static/media/altaviz-support-ltd.68ac417a32afc61656d0.png",
     "static/media/creonovo_restaurant-backend-component.png": "/dafetite/static/media/creonovo_restaurant-backend-component.8ad44ad3d7f9933da8d6.png",
     "static/media/creonovo_restaurant.png": "/dafetite/static/media/creonovo_restaurant.121be8c82aab833d39ec.png",
+    "static/media/jimmy_ayodele.png": "/dafetite/static/media/jimmy_ayodele.510f41a907856b763a05.png",
     "static/media/techflows.png": "/dafetite/static/media/techflows.cdc12f18ea50e77ced58.png",
     "static/media/profilePage.png": "/dafetite/static/media/profilePage.875b79542a38aee39108.png",
-    "static/media/jimmy_ayodele.png": "/dafetite/static/media/jimmy_ayodele.33e6ed21b09192d0ab98.png",
     "static/media/little-lemon-figma-designs.png": "/dafetite/static/media/little-lemon-figma-designs.31dbc81484c010ae0c19.png",
     "static/media/little-lemon-capstone-project-figma-design.png": "/dafetite/static/media/little-lemon-capstone-project-figma-design.9520f134e1cd5e27949f.png",
     "static/media/creonovo-gardens.png": "/dafetite/static/media/creonovo-gardens.15ef5fe97c6b9e852082.png",
@@ -55,11 +55,11 @@
     "static/media/alx3-removebg-preview.png": "/dafetite/static/media/alx3-removebg-preview.3c729dc3799055c3efe5.png",
     "index.html": "/dafetite/index.html",
     "main.0ac3908c.css.map": "/dafetite/static/css/main.0ac3908c.css.map",
-    "main.438be717.js.map": "/dafetite/static/js/main.438be717.js.map",
+    "main.e87c5379.js.map": "/dafetite/static/js/main.e87c5379.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ac3908c.css",
-    "static/js/main.438be717.js"
+    "static/js/main.e87c5379.js"
   ]
 }
