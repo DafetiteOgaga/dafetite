@@ -75,7 +75,7 @@ const websites = [
 			creative journey, and professional accomplishments, providing visitors with insights into
 			his	background, technical abilities, and notable contributions. The website also includes
 			a contact page for collaboration opportunities. Created using ReactJS`,
-		url: "https://dafetiteogaga.github.io/jimmy/",
+		url: "https://fijimi65.github.io/fijimiayodele/",
 		getImageSrc: () => require("../images/jimmy_ayodele.png"),
 	},
 	{
