@@ -7,12 +7,15 @@ import { useBreakpointValue } from "@chakra-ui/react";
 
 const skills = [
 	'Software and Automation Engineer',
-	'Fullstack Developer',
-	'IT Support',
+	'Fullstack (Web and Mobile) Developer',
+	// 'IT Support',
 	// 'Frontend and Backend Developer',
-	'Mobile App Developer',
+	// 'Mobile App Developer',
 	// 'DevOps',
-	'Designer',
+	// 'Designer',
+	'IT Support',
+	'Software Tester',
+	'Tutor',
 	// 'Software Designer',
 	// 'Customer Service Engineer',
 	'ATM and Technical Engineer',
@@ -286,7 +289,7 @@ transition: all 0.3s ease;
 `;
 
 const name = "Dafetite O. Ogaga";
-const images = require.context("../images/logos", false,  /\.(png|jpe?g|gif|svg)$/);
+// const images = require.context("../images/logos", false,  /\.(png|jpe?g|gif|svg)$/);
 const LandingSection = () => {
 	const [isSummaryExpanded, setIsSummaryExpanded] = useState(false);
 	const [isDataExpanded, setIsDataExpanded] = useState(false);
@@ -504,7 +507,7 @@ const LandingSection = () => {
 		}
     };
 	const isMobile = useBreakpointValue({ base: true, md: false });
-	const imageSources = images.keys().map((key) => images(key));
+	// const imageSources = images.keys().map((key) => images(key));
 	return (
 		<div className="pad display">
 			{/* image and title */}
