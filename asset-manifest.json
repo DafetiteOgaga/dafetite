@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.0ac3908c.css",
-    "main.js": "/dafetite/static/js/main.0cdc48bc.js",
+    "main.js": "/dafetite/static/js/main.eaa31acb.js",
     "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
+    "static/media/eshuffl.png": "/dafetite/static/media/eshuffl.2ac84ee7342f97fe17d7.png",
     "static/media/altaviz_mobile.png": "/dafetite/static/media/altaviz_mobile.170a83ea670822bb9de8.png",
     "static/media/article-hive-app.png": "/dafetite/static/media/article-hive-app.252e55b21b1e8eb04e12.png",
     "static/media/pdf2docx Converter.png": "/dafetite/static/media/pdf2docx Converter.b4eb607d4ddf23db5e81.png",
@@ -19,19 +20,21 @@
     "static/media/techflows.png": "/dafetite/static/media/techflows.cdc12f18ea50e77ced58.png",
     "static/media/profilePage.png": "/dafetite/static/media/profilePage.875b79542a38aee39108.png",
     "static/media/little-lemon-figma-designs.png": "/dafetite/static/media/little-lemon-figma-designs.31dbc81484c010ae0c19.png",
+    "static/media/article-hive-app1.png": "/dafetite/static/media/article-hive-app1.ae12004110103a4ffa0e.png",
     "static/media/little-lemon-capstone-project-figma-design.png": "/dafetite/static/media/little-lemon-capstone-project-figma-design.9520f134e1cd5e27949f.png",
     "static/media/creonovo-gardens.png": "/dafetite/static/media/creonovo-gardens.15ef5fe97c6b9e852082.png",
+    "static/media/dafetite-ogaga.png": "/dafetite/static/media/dafetite-ogaga.3a63b9f9b19fabae34d5.png",
     "static/media/mobileHome.png": "/dafetite/static/media/mobileHome.4fa6fd823936230e9af7.png",
     "static/media/custom_commands2.png": "/dafetite/static/media/custom_commands2.8d65f6c6819e8b0c181e.png",
     "static/media/Binary_search_in_a_game.png": "/dafetite/static/media/Binary_search_in_a_game.1d186ea5e4359688e8d2.png",
     "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.353131121c6f3ccada38.png",
     "index.html": "/dafetite/index.html",
     "main.0ac3908c.css.map": "/dafetite/static/css/main.0ac3908c.css.map",
-    "main.0cdc48bc.js.map": "/dafetite/static/js/main.0cdc48bc.js.map",
+    "main.eaa31acb.js.map": "/dafetite/static/js/main.eaa31acb.js.map",
     "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ac3908c.css",
-    "static/js/main.0cdc48bc.js"
+    "static/js/main.eaa31acb.js"
   ]
 }
