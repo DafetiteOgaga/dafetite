@@ -9,8 +9,6 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 	const link = (!type)?'see more':(type==='mobile')?'download':'watch'
 	const video = type==='video'
 	const mobileOrWeb = type==='mobile'||!type
-	// console.log({link})
-	// console.log(title.split(' '))
 	return (
 		<VStack
 			color="black"
@@ -36,7 +34,7 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 								<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{}}>{title}</h1>
 						</HStack>
 						<h1 className="box-sub" style={{color: "#64748b", ...(isMobile?{fontSize: 14}:{})}}>
-							{isMobile?(description.split(' ').length>numOfWords)?(description.split(' ').slice(0, numOfWords).join(' ')+'...'):description:description}
+							{isMobile?(description?.split(' ').length>numOfWords)?(description?.split(' ').slice(0, numOfWords).join(' ')+'...'):description:description}
 						</h1>
 					</>}
 				<HStack

@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { useBreakpointValue } from "@chakra-ui/react";
 
+const pcWordLimit = 40
 const skills = [
 	'Software and Automation Engineer',
 	'Fullstack (Web and Mobile) Developer',
@@ -303,11 +304,11 @@ const LandingSection = () => {
     // Function to get the shortened text
     const getShortText = (text, type=null, wordLimit = 12) => {
 		let words = text.split(" ");
-		console.log('length:1', words.length)
-		console.log({words})
+		// console.log('length:1', words.length)
+		// console.log({words})
 		words = words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text
 		// console.log({words})
-		console.log('length2:', words.length)
+		// console.log('length2:', words.length)
 		if (type==='summary') {
 			// words = text.split(" ");
 			// return ;
@@ -367,7 +368,6 @@ const LandingSection = () => {
 										
 									}</div>
 								</h1>}
-							{/* {getShortText(data)} */}
 							<div onClick={toggleExpandData}
 							style={responsiveStyles.buttonContainer}>
 								{!isDataExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextInactive}}>Read More <FiChevronDown size={20} /></p>}
@@ -550,9 +550,9 @@ const LandingSection = () => {
 			<div
 			spacing={0}>
 				{/* summary */}
-				{(isMobile && !isSummaryExpanded) ?
+				{(!isSummaryExpanded) ?
 					<>
-						{getShortText(summary.one, 'summary')}
+						{getShortText(summary.one, 'summary', `${!isMobile && pcWordLimit}`)}
 					</>
 					:
 					<>
@@ -586,9 +586,9 @@ const LandingSection = () => {
 				}
 
 				{/* specializations, projects, tech expertise */}
-				{(isMobile && !isDataExpanded) ?
+				{(!isDataExpanded) ?
 					<>
-						{getShortText(data.specializations.details.frontend.info, 'data')}
+						{getShortText(data.specializations.details.frontend.info, 'data', `${!isMobile && pcWordLimit}`)}
 					</>
 					:
 					<>
@@ -645,9 +645,9 @@ const LandingSection = () => {
 				}
 				
 				{/* links */}
-				{(isMobile && !isLinksExpanded) ?
+				{(!isLinksExpanded) ?
 					<>
-						{getShortText(links.certifications.details.fe.info, 'links')}
+						{getShortText(links.certifications.details.fe.info, 'links', `${!isMobile && pcWordLimit}`)}
 					</>
 					:
 					<>
