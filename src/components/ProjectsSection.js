@@ -229,8 +229,8 @@ const ProjectsSection = () => {
 				</h1>
 				<Box
 				display="grid"
-				gridTemplateColumns="repeat(2,minmax(0,1fr))"
-				gridGap={2}
+				gridTemplateColumns={isMobile?"repeat(2,minmax(0,1fr))":"repeat(3,minmax(0,1fr))"}
+				gridGap={isMobile?2:10}
 				style={{paddingBottom: "2rem"}}>
 					{contentValue.map((project, index) => {
 						// console.log({project})
