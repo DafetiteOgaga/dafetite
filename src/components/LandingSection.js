@@ -5,7 +5,6 @@ import styled from "styled-components"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { useBreakpointValue } from "@chakra-ui/react";
 
-const pcWordLimit = 40
 const skills = [
 	'Software and Automation Engineer',
 	'Fullstack (Web and Mobile) Developer',
@@ -15,8 +14,8 @@ const skills = [
 	// 'DevOps',
 	// 'Designer',
 	'IT Support',
-	'Software Tester',
-	'Tutor',
+	'Automated Software Tester',
+	'Programming Tutor',
 	// 'Software Designer',
 	// 'Customer Service Engineer',
 	'ATM and Technical Engineer',
@@ -24,32 +23,34 @@ const skills = [
 	// 'Technical Engineer'
 ]
 const summary = {
-	one: `I am a highly skilled Software and Automation Engineer with expertise
-			in software	development, IT support, and technical engineering. My skills
-			span frontend, backend and mobile app development, using technologies like Python,
-			JavaScript (ES6), SQL, C, HTML5, and CSS, alongside frameworks such
-			as React.js, React Native, Expo, Django, and Django REST Framework. Projects like Altaviz
-			Support Limited, a software solution that manages the workflow for the
-			company, bringing all the departments in sync, Article Hive, a
-			platform for readers and authors, and Creonovo Restaurant, a modern
-			dining solution, highlight my ability to build functional, user-friendly
-			applications.`,
-	two: `In automation, I leverage Python, Bash, and PowerShell to streamline
-			workflows and optimize processes. My IT support experience has
-			equipped me to solve complex technical challenges while ensuring a
-			positive user experience. Additionally, I have worked in DevOps,
-			focusing on system administration, configuration management, and
-			containerization with tools like Docker and Kubernetes.`,
-	three: `As a Customer Service and ATM Engineer, I have managed advanced hardware
-			and software systems while maintaining exceptional service delivery.
-			This blend of technical expertise and communication skills defines my
-			professional approach.`,
-	four: `Certified by Meta, Google, IBM, and ALX Africa, I am committed to
-			continuous learning in areas like IT Automation, Advanced React, and
-			UX/UI Design. I thrive in collaborative environments, using technology
-			to deliver impactful solutions and drive innovations.`
-
-}
+	one: `I am a highly skilled Software and Automation Engineer with expertise in software
+			development, IT support, testing, and technical engineering. My competencies span
+			frontend, backend, mobile app development, and automation. I work with technologies
+			like Python, JavaScript (ES6), SQL, C, HTML5, and CSS, alongside frameworks and
+			libraries such as React.js, React Native, Expo, Django, Django REST Framework, and
+			Selenium. I develop and test applications using Selenium for automated software
+			testing. Notable projects include Altaviz Support Limited, a comprehensive workflow
+			management system for a multi-departmental company, Article Hive, a platform for
+			authors and readers, and Creonovo Restaurant, a modern dining solution. These projects
+			highlight my ability to build functional, testable, and user-friendly applications.`,
+	two: `In automation, I leverage Python, Bash, and PowerShell to streamline workflows, enhance
+			reliability, and optimize processes. As a Software Tester, I use tools like Selenium
+			to ensure application quality and performance. My IT support experience has equipped
+			me to troubleshoot complex technical issues efficiently, while maintaining a positive
+			and effective user experience. I have also contributed in DevOps roles with a focus
+			on system administration, configuration management, and containerization using tools
+			like Docker and Kubernetes.`,
+	three: `As a Mobile App Developer using Expo and React Native, I craft responsive and
+			performant mobile solutions. Additionally, I serve as a Tutor, especially in Python,
+			JavaScript, and their associated libraries and frameworks. This experience has
+			sharpened my communication skills and deepened my technical understanding, allowing
+			me to mentor others effectively while staying engaged with the latest advancements.`,
+	four: `Certified by Meta, Google, IBM, and ALX Africa, I am dedicated to continuous learning
+			in areas like IT Automation, Advanced React, UX/UI Design, and modern testing practices.
+			I thrive in collaborative, fast-paced environments, consistently using technology to
+			deliver impactful solutions, drive innovation, and contribute meaningfully to team and
+			business goals.`
+};
 const data = {
 	specializations: {
 		title: "Specializations",
@@ -301,11 +302,15 @@ const LandingSection = () => {
 	const toggleExpandData = () => setIsDataExpanded(!isDataExpanded);
 	const toggleExpandLinks = () => setIsLinksExpanded(!isLinksExpanded);
 
+	const isMobile = useBreakpointValue({ base: true, md: false });
+	const WordLimit = isMobile?25:105
+
     // Function to get the shortened text
     const getShortText = (text, type=null, wordLimit = 12) => {
 		let words = text.split(" ");
 		// console.log('length:1', words.length)
 		// console.log({words})
+		// console.log('wordLimit:', wordLimit)
 		words = words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : text
 		// console.log({words})
 		// console.log('length2:', words.length)
@@ -328,6 +333,7 @@ const LandingSection = () => {
 			)
 		} else if (type==='data') {
 			// words = text.split(" ");
+			const itemLength = isMobile?1:2
 			return (
 				<>
 						<h3 className="head-sub aboutme"
@@ -348,24 +354,34 @@ const LandingSection = () => {
 											</span><br/><div>{
 											<>
 												<span
-												
-												className="details1"
+												className={isMobile&&"details1"}
 												style={{fontSize: isMobile? 19: ''}}>
-													🖇 {data.specializations.details.frontend.spec}:
-														<div className="info1" style={isMobile?{display: 'flex'}:{}}>
-															<span
-															style={{
-																fontWeight: "normal",
-																color: "lightcyan",
-																...(isMobile?{fontSize: 16}:{})
-																// fontSize: isMobile? 16: '',
-															}}>
-																{words}
-															</span>
-														</div>
+													{Object.values(data.specializations.details).slice(0, itemLength).map(specialization => {
+														const dataWords = specialization.info;
+														words = dataWords.split(" ");
+														words = words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : dataWords
+														return (
+															<>
+																<span style={{paddingLeft: !isMobile?20:undefined}}>🖇 {specialization.spec}:</span>
+																<div
+																// className="info1"
+																style={isMobile?{display: 'flex'}:{}}>
+																	<span
+																	style={{
+																		fontWeight: "normal",
+																		color: "lightcyan",
+																		paddingBottom: 20,
+																		...(isMobile?{fontSize: 16}:{paddingLeft: 50})
+																		// fontSize: isMobile? 16: '',
+																	}}>
+																		{words}
+																	</span>
+																</div>
+															</>
+														)
+													})}
 												</span><br/>
 											</>
-										
 									}</div>
 								</h1>}
 							<div onClick={toggleExpandData}
@@ -506,7 +522,6 @@ const LandingSection = () => {
 			)
 		}
     };
-	const isMobile = useBreakpointValue({ base: true, md: false });
 	// const imageSources = images.keys().map((key) => images(key));
 	return (
 		<div className="pad display">
@@ -552,7 +567,7 @@ const LandingSection = () => {
 				{/* summary */}
 				{(!isSummaryExpanded) ?
 					<>
-						{getShortText(summary.one, 'summary', `${!isMobile && pcWordLimit}`)}
+						{getShortText(summary.one, 'summary', WordLimit)}
 					</>
 					:
 					<>
@@ -588,7 +603,7 @@ const LandingSection = () => {
 				{/* specializations, projects, tech expertise */}
 				{(!isDataExpanded) ?
 					<>
-						{getShortText(data.specializations.details.frontend.info, 'data', `${!isMobile && pcWordLimit}`)}
+						{getShortText(data.specializations.details.frontend.info, 'data', WordLimit)}
 					</>
 					:
 					<>
@@ -643,11 +658,10 @@ const LandingSection = () => {
 						</h3>
 					</>
 				}
-				
 				{/* links */}
 				{(!isLinksExpanded) ?
 					<>
-						{getShortText(links.certifications.details.fe.info, 'links', `${!isMobile && pcWordLimit}`)}
+						{getShortText(links.certifications.details.fe.info, 'links', WordLimit)}
 					</>
 					:
 					<>
