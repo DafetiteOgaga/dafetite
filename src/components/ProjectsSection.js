@@ -11,7 +11,7 @@ const getImage = (name) => (images(`./${name}`))
 const getVideo = (name) => (videos(`./${name}`))
 
 const versionNumber = require('../../package.json').version;
-const projectheadings = ['In Development', 'My WebApps', 'My Mobile Apps', 'My Websites', 'My Projects', 'Videos'];
+const projectheadings = ['Development in progress...', 'My WebApps', 'My Mobile Apps', 'My Websites', 'My Projects', 'Videos'];
 const cardContents = {
 	inDevelopment: [
 		{
