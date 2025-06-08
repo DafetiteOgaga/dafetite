@@ -4,7 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({ title, description, imageSrc, type=null }) => {
 	const isMobile = useBreakpointValue({ base: true, md: false });
-	const numOfWords = isMobile?15:45
+	const numOfWords = isMobile?15:100
 	// const link = (title.split(' ').some(word=>word.toLowerCase()==='(mobile'))?'download it':'see more'
 	const link = (!type)?'see more':(type==='mobile')?'download':'watch'
 	const video = type==='video'
@@ -33,7 +33,7 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 						<HStack justifyContent="space-between" alignItems="center">
 								<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{}}>{title}</h1>
 						</HStack>
-						<h1 className="box-sub" style={{color: "#64748b", ...(isMobile?{fontSize: 14}:{})}}>
+						<h1 className="box-sub" style={{color: "#64748b", fontSize: isMobile?13:15}}>
 							{(description?.split(' ').length>numOfWords)?
 							(description?.split(' ').slice(0, numOfWords).join(' ')+'...'):
 							description}
