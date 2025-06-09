@@ -27,7 +27,7 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 			alt={title}
 			style={{objectFit: 'cover', ...(isMobile&&video)?{height: 200}:{}}}
 			className="box-photo" />
-			<VStack p={isMobile?2:4} alignItems="flex-start">
+			<VStack p={isMobile?2:4} py={isMobile&&video?6:undefined} alignItems="flex-start">
 				{(mobileOrWeb) &&
 					<>
 						<HStack justifyContent="space-between" alignItems="center">
