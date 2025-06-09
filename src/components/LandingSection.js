@@ -185,11 +185,11 @@ const links = {
 	email: { title: "Email",
 		url: `mailto: ogagadafetite@gmail.com`,
 		linkName: "ogagadafetite@gmail.com",
-		},
+	},
 	projects: { title: "Projects (with codes)",
 		url: `https://github.com/DafetiteOgaga/`,
 		linkName: "View on Github",
-		},
+	},
 	certifications: { title: "Certifications",
 		url: `https://www.linkedin.com/in/ogagadafetite/details/certifications/`,
 		linkName: "View on LinkedIn",
@@ -271,23 +271,23 @@ const links = {
 				info: 'Certification in Front-End Development Specialization.',
 			},
 		}
-		},
+	},
 	cv: { title: "Resume",
 		url: cv,
 		linkName: "Resume",
-		},
+	},
 }
 
 const StyledPhotoBox = styled.div`
-// justify-self: center;
-cursor: pointer;
-box-shadow: large;
-transition: all 0.3s ease;
+	// justify-self: center;
+	cursor: pointer;
+	box-shadow: large;
+	transition: all 0.3s ease;
 
-&:hover {
-	transform: translateY(-10px);
-	box-shadow: xl;
-}
+	&:hover {
+		transform: translateY(-10px);
+		box-shadow: xl;
+	}
 `;
 
 const name = "Dafetite O. Ogaga";
