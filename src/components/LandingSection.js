@@ -185,11 +185,11 @@ const links = {
 	email: { title: "Email",
 		url: `mailto: ogagadafetite@gmail.com`,
 		linkName: "ogagadafetite@gmail.com",
-		},
+	},
 	projects: { title: "Projects (with codes)",
 		url: `https://github.com/DafetiteOgaga/`,
 		linkName: "View on Github",
-		},
+	},
 	certifications: { title: "Certifications",
 		url: `https://www.linkedin.com/in/ogagadafetite/details/certifications/`,
 		linkName: "View on LinkedIn",
@@ -271,23 +271,23 @@ const links = {
 				info: 'Certification in Front-End Development Specialization.',
 			},
 		}
-		},
+	},
 	cv: { title: "Resume",
 		url: cv,
 		linkName: "Resume",
-		},
+	},
 }
 
 const StyledPhotoBox = styled.div`
-// justify-self: center;
-cursor: pointer;
-box-shadow: large;
-transition: all 0.3s ease;
+	// justify-self: center;
+	cursor: pointer;
+	box-shadow: large;
+	transition: all 0.3s ease;
 
-&:hover {
-	transform: translateY(-10px);
-	box-shadow: xl;
-}
+	&:hover {
+		transform: translateY(-10px);
+		box-shadow: xl;
+	}
 `;
 
 const name = "Dafetite O. Ogaga";
@@ -319,85 +319,88 @@ const LandingSection = () => {
 			// return ;
 			return (
 				<>
-						<h3 className="head-sub aboutme"
-						style={{
-							paddingBottom: '12px',
-						...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
+					<h3 className="head-sub aboutme"
+					style={{
+						paddingBottom: '12px',
+						...(isMobile?{fontSize: 16, textAlign: 'center'}:{})
+						}}>
 							{words}
-							<div onClick={toggleExpandSummary}
-							style={responsiveStyles.buttonContainer}>
-								{!isSummaryExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextInactive}}>Read More <FiChevronDown size={20} /></p>}
-							</div>
-						</h3>
-					</>
+						<div onClick={toggleExpandSummary}
+						style={responsiveStyles.buttonContainer}>
+							{!isSummaryExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextInactive}}>Read More <FiChevronDown size={20} /></p>}
+						</div>
+					</h3>
+				</>
 			)
 		} else if (type==='data') {
 			// words = text.split(" ");
 			const itemLength = isMobile?1:2
 			return (
 				<>
-						<h3 className="head-sub aboutme"
-						style={{
-							paddingBottom: '12px',
-							...(isMobile?{fontSize: 16}:{})}}>
-							{<h1 className="head-sub"
-								// style={{marginBottom: '30px',}}
-								>
-									<span
-									style={{
-										color: "turquoise",
-										fontWeight: "bold",
-										fontSize: isMobile? 22: '',
-										// padding: '50px'
-										}}>
-										{data.specializations.title.toUpperCase()+' ☄'}
-											</span><br/><div>{
-											<>
-												<span
-												className={isMobile&&"details1"}
-												style={{fontSize: isMobile? 19: ''}}>
-													{Object.values(data.specializations.details).slice(0, itemLength).map(specialization => {
-														const dataWords = specialization.info;
-														words = dataWords.split(" ");
-														words = words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : dataWords
-														return (
-															<>
-																<span style={{paddingLeft: !isMobile?20:undefined}}>🖇 {specialization.spec}:</span>
-																<div
-																// className="info1"
-																style={isMobile?{display: 'flex'}:{}}>
-																	<span
-																	style={{
-																		fontWeight: "normal",
-																		color: "lightcyan",
-																		paddingBottom: 20,
-																		...(isMobile?{fontSize: 16}:{paddingLeft: 50})
-																		// fontSize: isMobile? 16: '',
-																	}}>
-																		{words}
-																	</span>
-																</div>
-															</>
-														)
-													})}
-												</span><br/>
-											</>
-									}</div>
-								</h1>}
-							<div onClick={toggleExpandData}
-							style={responsiveStyles.buttonContainer}>
-								{!isDataExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextInactive}}>Read More <FiChevronDown size={20} /></p>}
-							</div>
-						</h3>
-					</>
+					<h3 className="head-sub aboutme"
+					style={{
+						paddingBottom: '12px',
+						...(isMobile?{fontSize: 16}:{})
+						}}>
+						{<h1 className="head-sub"
+							// style={{marginBottom: '30px',}}
+							>
+								<span
+								style={{
+									color: "turquoise",
+									fontWeight: "bold",
+									fontSize: isMobile? 22: '',
+									// padding: '50px'
+									}}>
+									{data.specializations.title.toUpperCase()+' ☄'}
+										</span><br/><div>{
+										<>
+											<span
+											className={isMobile&&"details1"}
+											style={{fontSize: isMobile? 19: ''}}>
+												{Object.values(data.specializations.details).slice(0, itemLength).map(specialization => {
+													const dataWords = specialization.info;
+													words = dataWords.split(" ");
+													words = words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : dataWords
+													return (
+														<>
+															<span style={{paddingLeft: !isMobile?20:undefined}}>🖇 {specialization.spec}:</span>
+															<div
+															// className="info1"
+															style={isMobile?{display: 'flex'}:{}}>
+																<span
+																style={{
+																	fontWeight: "normal",
+																	color: "lightcyan",
+																	paddingBottom: 20,
+																	...(isMobile?{fontSize: 16}:{paddingLeft: 50})
+																	// fontSize: isMobile? 16: '',
+																}}>
+																	{words}
+																</span>
+															</div>
+														</>
+													)
+												})}
+											</span><br/>
+										</>
+								}</div>
+							</h1>}
+						<div onClick={toggleExpandData}
+						style={responsiveStyles.buttonContainer}>
+							{!isDataExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextInactive}}>Read More <FiChevronDown size={20} /></p>}
+						</div>
+					</h3>
+				</>
 			)
 		} else if (type==='links') {
 			return (
 				<>
 					<h3 className="head-sub aboutme"
-						style={{
+					style={{
 							paddingBottom: '12px',
-						...(isMobile?{fontSize: 16}:{})}}>
+							...(isMobile?{fontSize: 16}:{})
+						}}>
 						{<h1 className="head-sub"
 						style={{
 						display: 'flex',
@@ -406,7 +409,7 @@ const LandingSection = () => {
 						// alignItems: 'center',
 						}}>
 							<div>
-							<div style={{display: 'flex', alignItems: 'baseline'}}>
+								<div style={{display: 'flex', alignItems: 'baseline'}}>
 									<span style={{
 										color: "turquoise",
 										whiteSpace: 'pre',
@@ -495,22 +498,19 @@ const LandingSection = () => {
 									</div>
 								</div>
 								{(<span>
-									{
-											<div
-											style={{
-												padding: '0 10px',
-												...(isMobile?{
-													fontSize: 16,
-													// textAlign: 'center',
-													marginTop: 10,
-												}:{})
-												// fontSize: isMobile? 16: '',
-											}}
-											>
-												🔗 {links.certifications.details.fe.spec}: <span>{links.certifications.details.fe.info}</span>
-											</div>
-									}</span>)
-								}
+									{<div
+									style={{
+										padding: '0 10px',
+										...(isMobile?{
+											fontSize: 16,
+											// textAlign: 'center',
+											marginTop: 10,
+										}:{})
+										// fontSize: isMobile? 16: '',
+									}}>
+										🔗 {links.certifications.details.fe.spec}: <span>{links.certifications.details.fe.info}</span>
+									</div>}
+								</span>)}
 							</div>
 						</h1>}
 						<div onClick={toggleExpandLinks}
@@ -536,9 +536,8 @@ const LandingSection = () => {
 				<StyledPhotoBox>
 					<img
 					className="photo"
-						src={dafe}
-						alt="Dafetite"
-						/>
+					src={dafe}
+					alt="Dafetite"/>
 				</StyledPhotoBox>
 				{/* title */}
 				<div style={{textAlign: 'center'}}>
@@ -561,7 +560,6 @@ const LandingSection = () => {
 				</div>
 			</div>
 
-
 			<div
 			spacing={0}>
 				{/* summary */}
@@ -576,7 +574,7 @@ const LandingSection = () => {
 							<h3 className="head-sub aboutme"
 							style={{
 								paddingBottom: '12px',
-							...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
+								...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
 								{summaryData}
 								{/* Show truncated text if isMobile is true and not expanded */}
 								{/* {isMobile && !isExpanded ? getShortText(summaryData) : summaryData} */}
@@ -591,7 +589,8 @@ const LandingSection = () => {
 						<h3 className="head-sub aboutme"
 							style={{
 								paddingBottom: '12px',
-							...(isMobile?{fontSize: 16, textAlign: 'center'}:{})}}>
+								...(isMobile?{fontSize: 16, textAlign: 'center'}:{})
+						}}>
 							<div onClick={toggleExpandSummary}
 							style={responsiveStyles.buttonContainer}>
 								{isSummaryExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextActive}}>Collapse <FiChevronUp size={20} /></p>}
@@ -677,46 +676,48 @@ const LandingSection = () => {
 							}}>
 								<div>
 									<div style={{display: 'flex', alignItems: 'baseline'}}>
-								<span style={{
-									color: "turquoise",
-									whiteSpace: 'pre',
-									paddingTop: '5px',
-									fontSize: isMobile? 15: '',
-									}}>{value.title.toUpperCase()}: </span>
-								<div className="text-anime">
-									<a
-										key={index}
-										href={value.url}
-										target="_blank"
-										rel="noopener noreferrer"
-										style={{
-											textDecoration: "underline",
-											color: 'lightcyan',
+										<span style={{
+											color: "turquoise",
+											whiteSpace: 'pre',
+											paddingTop: '5px',
 											fontSize: isMobile? 15: '',
-											}}>
-										{value.linkName}
-									</a>
+											}}>{value.title.toUpperCase()}: </span>
+										<div className="text-anime">
+											<a
+												key={index}
+												href={value.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												style={{
+													textDecoration: "underline",
+													color: 'lightcyan',
+													fontSize: isMobile? 15: '',
+													}}>
+												{value.linkName}
+											</a>
+										</div>
 									</div>
-								</div>
-								{value.details?(<span>{
-									Object.values(value.details).map((val, ind)=>{
-										return (
-											<div
-											style={{
-												padding: '0 10px',
-												...(isMobile?{
-													fontSize: 16,
-													// textAlign: 'center',
-													marginTop: 10,
-												}:{})
-												// fontSize: isMobile? 16: '',
-											}}
-											key={ind+val+val+ind}>
-												🔗 {val.spec}: <span>{val.info}</span>
-											</div>
-										)
-									})
-								}</span>):null}
+									{value.details?
+									(<span>
+										{Object.values(value.details).map((val, ind)=>{
+											return (
+												<div
+												style={{
+													padding: '0 10px',
+													...(isMobile?{
+														fontSize: 16,
+														// textAlign: 'center',
+														marginTop: 10,
+													}:{})
+													// fontSize: isMobile? 16: '',
+												}}
+												key={ind+val+val+ind}>
+													🔗 {val.spec}: <span>{val.info}</span>
+												</div>
+											)
+										})
+										}</span>
+									):null}
 								</div>
 							</h1>
 						))}
@@ -724,7 +725,8 @@ const LandingSection = () => {
 							style={{
 								marginTop: '10px',
 								paddingBottom: '12px',
-							...(isMobile?{fontSize: 16}:{})}}>
+								...(isMobile?{fontSize: 16}:{})
+								}}>
 							<div onClick={toggleExpandLinks}
 							style={responsiveStyles.buttonContainer}>
 								{isLinksExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextActive}}>Collapse <FiChevronUp size={20} /></p>}
