@@ -23,16 +23,16 @@ const skills = [
 	// 'Technical Engineer'
 ]
 const summary = {
-	one: `I am a highly skilled Software and Automation Engineer with expertise in software
+	one: `I am a Software and Automation Engineer with expertise in software
 			development, IT support, testing, and technical engineering. My competencies span
 			frontend, backend, mobile app development, and automation. I work with technologies
 			like Python, JavaScript (ES6), SQL, C, HTML5, and CSS, alongside frameworks and
 			libraries such as React.js, React Native, Expo, Django, Django REST Framework, and
-			Selenium. I develop and test applications using Selenium for automated software
+			Selenium. I develop and test cross-platform applications using Selenium for automated software
 			testing. Notable projects include Altaviz Support Limited, a comprehensive workflow
 			management system for a multi-departmental company, Article Hive, a platform for
 			authors and readers, and Creonovo Restaurant, a modern dining solution. These projects
-			highlight my ability to build functional, testable, and user-friendly applications.`,
+			highlight my ability to build functional, testable, and user-friendly applications using clean code.`,
 	two: `In automation, I leverage Python, Bash, and PowerShell to streamline workflows, enhance
 			reliability, and optimize processes. As a Software Tester, I use tools like Selenium
 			to ensure application quality and performance. My IT support experience has equipped
@@ -339,7 +339,7 @@ const LandingSection = () => {
 						<h3 className="head-sub aboutme"
 						style={{
 							paddingBottom: '12px',
-						...(isMobile?{fontSize: 16}:{})}}>
+							...(isMobile?{fontSize: 16}:{})}}>
 							{<h1 className="head-sub"
 								// style={{marginBottom: '30px',}}
 								>
