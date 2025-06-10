@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, Fragment} from "react";
 import dafe from "../dafetite.jpeg"
 import cv from "./Dafetite_Ogaga.pdf"
 import styled from "styled-components"
@@ -342,50 +342,50 @@ const LandingSection = () => {
 						paddingBottom: '12px',
 						...(isMobile?{fontSize: 16}:{})
 						}}>
-						{<h1 className="head-sub"
-							// style={{marginBottom: '30px',}}
-							>
-								<span
-								style={{
-									color: "turquoise",
-									fontWeight: "bold",
-									fontSize: isMobile? 22: '',
-									// padding: '50px'
-									}}>
-									{data.specializations.title.toUpperCase()+' ☄'}
-										</span><br/><div>{
-										<>
-											<span
-											className={isMobile&&"details1"}
-											style={{fontSize: isMobile? 19: ''}}>
-												{Object.values(data.specializations.details).slice(0, itemLength).map(specialization => {
-													const dataWords = specialization.info;
-													words = dataWords.split(" ");
-													words = words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : dataWords
-													return (
-														<>
-															<span style={{paddingLeft: !isMobile?20:undefined}}>🖇 {specialization.spec}:</span>
-															<div
-															// className="info1"
-															style={isMobile?{display: 'flex'}:{}}>
-																<span
-																style={{
-																	fontWeight: "normal",
-																	color: "lightcyan",
-																	paddingBottom: 20,
-																	...(isMobile?{fontSize: 16}:{paddingLeft: 50})
-																	// fontSize: isMobile? 16: '',
-																}}>
-																	{words}
-																</span>
-															</div>
-														</>
-													)
-												})}
-											</span><br/>
-										</>
-								}</div>
-							</h1>}
+						{<span className="head-sub">
+							<span
+							style={{
+								color: "turquoise",
+								fontWeight: "bold",
+								fontSize: isMobile? 22: '',
+								// padding: '50px'
+								}}>
+								{data.specializations.title.toUpperCase()+' ☄'}
+							</span><br/>
+							<div>
+								{<>
+									<span
+									className={isMobile?"details1":""}
+									style={{fontSize: isMobile? 19: ''}}>
+										{Object.values(data.specializations.details).slice(0, itemLength).map((specialization, specIndex) => {
+											const dataWords = specialization.info;
+											words = dataWords.split(" ");
+											words = words.length > wordLimit ? words.slice(0, wordLimit).join(" ") + "..." : dataWords
+											return (
+												<Fragment key={`${specIndex}${words}`}>
+													<span style={{paddingLeft: !isMobile?20:undefined}}>🖇 {specialization.spec}:</span>
+													<div
+													// className="info1"
+													style={isMobile?{display: 'flex'}:{}}>
+														<span
+														style={{
+															fontWeight: "normal",
+															color: "lightcyan",
+															paddingBottom: 20,
+															...(isMobile?{fontSize: 16}:{paddingLeft: 50})
+															// fontSize: isMobile? 16: '',
+														}}>
+															{words}
+														</span>
+													</div>
+												</Fragment>
+											)
+										})}
+									</span>
+									<br/>
+								</>}
+							</div>
+						</span>}
 						<div onClick={toggleExpandData}
 						style={responsiveStyles.buttonContainer}>
 							{!isDataExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextInactive}}>Read More <FiChevronDown size={20} /></p>}
@@ -401,7 +401,7 @@ const LandingSection = () => {
 							paddingBottom: '12px',
 							...(isMobile?{fontSize: 16}:{})
 						}}>
-						{<h1 className="head-sub"
+						{<span className="head-sub"
 						style={{
 						display: 'flex',
 						fontWeight: "bold",
@@ -512,7 +512,7 @@ const LandingSection = () => {
 									</div>}
 								</span>)}
 							</div>
-						</h1>}
+						</span>}
 						<div onClick={toggleExpandLinks}
 						style={responsiveStyles.buttonContainer}>
 							{!isLinksExpanded && <p style={{...responsiveStyles.buttonText, ...responsiveStyles.buttonTextInactive}}>Read More <FiChevronDown size={20} /></p>}
