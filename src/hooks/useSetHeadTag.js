@@ -4,7 +4,7 @@ function useSetHeadTag() {
 	// console.log('useSetHeadTag called');
 	useEffect(() => {
 		if (process.env.NODE_ENV === 'development') {
-			const localUrl = '/dafetite/dafeWhiteTransp180pxy.png';
+			const localUrl = '/dafetite/dafeWhiteBlack180pxy.png';
 
 			document.querySelector('link[sizes="32x32"]').href = localUrl;
 			document.querySelector('link[sizes="16x16"]').href = localUrl;
