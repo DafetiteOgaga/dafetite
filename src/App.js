@@ -10,8 +10,10 @@ import DafetiteSchema from './schemas/dafetiteSchema';
 // import WebsiteSchema from './schemas/websiteSchema';
 // import { AlertProvider } from "./context/alertContext";
 // import Alert from "./components/Alert";
+import { useSetHeadTag } from './hooks/useSetHeadTag'
 
 function App() {
+  useSetHeadTag()
   return (
     <ChakraProvider>
       <DafetiteSchema />
