@@ -148,13 +148,15 @@ const organizationAndPerson = {
 		]
 	}
 }
-const organization = {
+const dafe = {
 	"@context": "https://schema.org",
-	"@type": "Organization",
+	"@type": "Person",
 	"name": "Dafetite Ogaga",
-	"jobTitle": "Software and Automation Engineer",
 	"url": "https://dafetiteogaga.github.io/dafetite/",
 	"logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	"image": "https://dafetiteogaga.github.io/dafetite/dafe.png",
+	"jobTitle": "Software and Automation Engineer",
+	"description": "Software and Automation Engineer skilled in fullstack (web and mobile) development, IT support, automated software testing, and programming tutoring.",
 	"sameAs": [
 		"https://www.linkedin.com/in/ogagadafetite/",
 		"https://github.com/DafetiteOgaga"
@@ -171,7 +173,7 @@ const website = {
 const DafetiteSchema = () => (
 	<Helmet>
 		<script type="application/ld+json">
-		{JSON.stringify(organization)}
+		{JSON.stringify(dafe)}
 		</script>
 		<script type="application/ld+json">
 			{JSON.stringify(website)}
