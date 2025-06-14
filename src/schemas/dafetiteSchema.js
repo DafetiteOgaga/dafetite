@@ -128,29 +128,53 @@ const credentialList = Object.values(certifications).map(cert => ({
 	recognizedBy: cert.recognizedBy
 }));
 
+const organizationAndPerson = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Dafetite Ogaga",
+	"url": "https://dafetiteogaga.github.io/dafetite/",
+	"logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	"sameAs": [
+		"https://www.linkedin.com/in/ogagadafetite/",
+		"https://github.com/DafetiteOgaga"
+	],
+	"founder": {
+		"@type": "Person",
+		"name": "Dafetite Ogaga",
+		"jobTitle": "Software and Automation Engineer",
+		"sameAs": [
+			"https://www.linkedin.com/in/ogagadafetite/",
+			"https://github.com/DafetiteOgaga"
+		]
+	}
+}
+const organization = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Dafetite Ogaga",
+	"jobTitle": "Software and Automation Engineer",
+	"url": "https://dafetiteogaga.github.io/dafetite/",
+	"logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	"sameAs": [
+		"https://www.linkedin.com/in/ogagadafetite/",
+		"https://github.com/DafetiteOgaga"
+	],
+	"hasCredential": credentialList
+}
+const website = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Dafetite Ogaga's Website",
+	"url": "https://dafetiteogaga.github.io/dafetite/"
+}
+
 const DafetiteSchema = () => (
 	<Helmet>
 		<script type="application/ld+json">
-		{JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": "Person",
-			"name": "Dafetite Ogaga",
-			"jobTitle": "Software and Automation Engineer",
-			"url": "https://dafetiteogaga.github.io/dafetite/",
-			"sameAs": [
-			"https://www.linkedin.com/in/ogagadafetite/",
-			"https://github.com/DafetiteOgaga"
-			],
-			"hasCredential": credentialList
-		})}
+		{JSON.stringify(organization)}
 		</script>
 		<script type="application/ld+json">
-			{JSON.stringify({
-				"@context": "https://schema.org",
-				"@type": "WebSite",
-				"name": "Dafetite Ogaga's Website",
-				"url": "https://dafetiteogaga.github.io/dafetite/"
-			})}
+			{JSON.stringify(website)}
 		</script>
 	</Helmet>
 );
