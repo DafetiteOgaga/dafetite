@@ -272,7 +272,8 @@ const links = {
 			},
 		}
 	},
-	cv: { title: "Resume",
+	cv: {
+		title: "Resume",
 		url: cv,
 		linkName: "Resume",
 	},
@@ -463,14 +464,15 @@ const LandingSection = () => {
 									</span>
 									<div className="text-anime">
 										<a
-											href={links.cv.url}
-											target="_blank"
-											rel="noopener noreferrer"
-											style={{
-												textDecoration: "underline",
-												color: 'lightcyan',
-												fontSize: isMobile? 15: '',
-												}}>
+										href={links.cv.url}
+										// download
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{
+											textDecoration: "underline",
+											color: 'lightcyan',
+											fontSize: isMobile? 15: '',
+										}}>
 											{links.cv.linkName}
 										</a>
 									</div>
