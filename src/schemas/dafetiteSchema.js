@@ -160,7 +160,15 @@ const dafe = {
 	"description": "Software and Automation Engineer skilled in fullstack (web and mobile) development, IT support, automated software testing, and programming tutoring.",
 	"sameAs": [
 		"https://www.linkedin.com/in/ogagadafetite/",
-		"https://github.com/DafetiteOgaga"
+		"https://github.com/DafetiteOgaga",
+		"https://x.com/dafetite_ogaga",
+		"https://web.facebook.com/ogaga01",
+		"https://www.instagram.com/ogagadafetite/",
+		"https://www.youtube.com/@ogagadafetite9847",
+		"https://stackoverflow.com/users/19809880/dafetite",
+		"https://medium.com/@ogagadafetite",
+		"https://hashnode.com/@Dafetite",
+		"https://www.upwork.com/freelancers/~01b8518a3f4c591e32",
 	],
 	"hasCredential": credentialList
 }
