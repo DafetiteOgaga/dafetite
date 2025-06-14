@@ -153,8 +153,9 @@ const dafe = {
 	"@type": "Person",
 	"name": "Dafetite Ogaga",
 	"url": "https://dafetiteogaga.github.io/dafetite/",
-	"logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
-	"image": "https://dafetiteogaga.github.io/dafetite/dafe.png",
+	// "logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	"image": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	// "image": "https://dafetiteogaga.github.io/dafetite/dafe.png",
 	"jobTitle": "Software and Automation Engineer",
 	"description": "Software and Automation Engineer skilled in fullstack (web and mobile) development, IT support, automated software testing, and programming tutoring.",
 	"sameAs": [
