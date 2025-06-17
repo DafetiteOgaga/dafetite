@@ -114,7 +114,7 @@ const Header = () => {
 			</HStack>
 			</nav>  */}
 			<nav>
-				<HStack spacing={{ base: 2.5, md: 5 }}>
+				<HStack spacing={{ base: 2.5, md: 5 }} justifyContent={"center"}>
 				{/* <HStack><h1 style={{paddingLeft: isMobile?30:0}} className="paragraph">{isMobile?'': */}
 					<img src={logo} alt="dafetite logo" className={isMobile?"dafetiteLogoMobile":"dafetiteLogo"} />
 					{/* }</h1></HStack> */}
