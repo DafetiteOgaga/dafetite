@@ -512,3 +512,23 @@ table {
 	color: #00ced1;
 	transform: scale(1.09);
 }
+
+/* .b-g { */
+	/* margin-bottom: -2px; */
+	/* background-image: url(../src/myLogos/dafeWhiteTransp.png); */
+	/* background-image: url(../src/myLogos/dafeWhiteTransp.png); */
+	/* background-repeat: no-repeat; */
+	/* background-size: contain; */
+	/* width: 100%; */
+	/* overflow: hidden; */
+	/* background-attachment: fixed; */
+/* } */
+
+.dafetiteLogo {
+	width: 10%;
+	margin: 0 -2% 0 0;
+}
+.dafetiteLogoMobile {
+	width: 15%;
+	margin: 0 -2% 0 0;
+}

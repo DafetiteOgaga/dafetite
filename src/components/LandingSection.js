@@ -27,7 +27,7 @@ const summary = {
 			development, IT support, testing, and technical engineering. My competencies span
 			frontend, backend, mobile app development, and automation. I work with technologies
 			like Python, JavaScript (ES6), SQL, C, HTML5, and CSS, alongside frameworks and
-			libraries such as React.js, React Native, Expo, Django, Django REST Framework, and
+			libraries such as React.js, Express, MongoDB, React Native, Expo, Django, Django REST Framework, and
 			Selenium. I develop and test cross-platform applications using Selenium for automated software
 			testing. Notable projects include Altaviz Support Limited, a comprehensive workflow
 			management system for a multi-departmental company, Article Hive, a platform for
@@ -527,8 +527,13 @@ const LandingSection = () => {
 	// const imageSources = images.keys().map((key) => images(key));
 	return (
 		<div className="pad display">
+			{/* <div className="logo_container">
+				<img src={logo} alt="dafetite logo" className="dafetiteLogo" />
+			</div> */}
 			{/* image and title */}
-			<div style={{
+			<div
+			// className="b-g"
+			style={{
 				display: "flex",
 				flexDirection: 'column',
 				alignItems: "center",
