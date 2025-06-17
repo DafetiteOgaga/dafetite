@@ -4,6 +4,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faMedium, faStackOverflow,
 	faFacebook, faFigma, faHashnode, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, useBreakpointValue } from "@chakra-ui/react";
+import logo from "../myLogos/dafeWhiteTransp.png"
 // import { useIsmobile } from "../hooks/useIsmobile";
 
 const socials = [
@@ -98,7 +99,7 @@ const Header = () => {
 		zIndex={1000}>
 		<Box color="white" maxWidth="1280px" margin="0 auto" style={{ color: '#D3D3D3' }}>
 		<HStack
-			px={isMobile?10:16}
+			px={isMobile?4:16}
 			py={4}
 			justifyContent="space-between"
 			alignItems="center">
@@ -114,16 +115,18 @@ const Header = () => {
 			</nav>  */}
 			<nav>
 				<HStack spacing={{ base: 2.5, md: 5 }}>
-				<HStack><h1 style={{paddingLeft: isMobile?30:0}} className="paragraph">{isMobile?'':`Socials:`}</h1></HStack>
-				{socials.map(({ icon, url }) => (
-					<a
-					key={url}
-					href={url}
-					target="_blank"
-					rel="noopener noreferrer">
-					<FontAwesomeIcon className="icons" icon={icon} size={isMobile ? "lg" : "2x"} key={url} />
-					</a>
-				))}
+				{/* <HStack><h1 style={{paddingLeft: isMobile?30:0}} className="paragraph">{isMobile?'': */}
+					<img src={logo} alt="dafetite logo" className={isMobile?"dafetiteLogoMobile":"dafetiteLogo"} />
+					{/* }</h1></HStack> */}
+					{socials.map(({ icon, url }) => (
+						<a
+						key={url}
+						href={url}
+						target="_blank"
+						rel="noopener noreferrer">
+						<FontAwesomeIcon className="icons" icon={icon} size={isMobile ? "lg" : "2x"} key={url} />
+						</a>
+					))}
 				</HStack>
 			</nav>
 			{/* <nav>

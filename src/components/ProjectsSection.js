@@ -23,7 +23,7 @@ const cardContents = {
 				database to improve students learning experiences. Schools/Teachers/Tutors also have a
 				scramble question section, which allows the type/upload questions and download a scrambled
 				questions and answers in varying types (upto 26 types). Created using Express, MongoDB,
-				and ReactJS`,
+				and ReactJS.`,
 			url: "https://eshufl-frontend.vercel.app/",
 			getImageSrc: getImage("eshuffl.png"),
 		},
@@ -35,7 +35,7 @@ const cardContents = {
 				`A Web Application that manages the workflow for Altaviz Support Limited. A Role based
 				Access Control application with support for Custodians, Workshop staff, Engineers, Help Desk
 				staff, Supervisors, and Human resource. It is a fast, reliable and effective solution for
-				managing the workflow of the company. Created using Django, ReactJS, and MySQL, `,
+				managing the workflow of the company. Created using Django, ReactJS, and MySQL.`,
 			url: "https://altaviz-frontend.vercel.app/",
 			getImageSrc: getImage("altaviz-support-ltd.png"),
 		},
@@ -45,7 +45,7 @@ const cardContents = {
 				`A fully functional online Book club and a perfect place to gain knowledge. Register as a member to
 				have access to write and post articles, setup Author profile for yourself and acquire
 				popularity. Yes! we publish and showcase your work. Created using Django, Html, CSS,
-				Vanilla JavaScript, and MySQL, `,
+				Vanilla JavaScript, and MySQL.`,
 			url: "https://dafetite.pythonanywhere.com/",
 			getImageSrc: getImage("article-hive-app.png"),
 		},
@@ -59,7 +59,7 @@ const cardContents = {
 				Support Limited. Implemented in it are the same features as the Web App such as Role based
 				Access Control with support for Custodians, Workshop staff, Engineers, Help Desk staff,
 				Supervisors, and Human resource. It is also fast, reliable and effective for managing the
-				workflow of the company. Created using Expo(React Native), Django, and MySQL, `,
+				workflow of the company. Created using Expo(React Native), Django, and MySQL.`,
 			url: `https://github.com/DafetiteOgaga/altavizMobileReleases/releases/download/${versionNumber}/altavizMobile-${versionNumber}.apk`,
 			getImageSrc: getImage("altaviz_mobile.png"),
 		},
@@ -71,7 +71,7 @@ const cardContents = {
 				`A tech company that provides solutions to engineering problems including Software
 				development, Computer Hardwares, Security solutions, ATM services, Cloud solutions and
 				IT trainings. We are a team of professionals that are dedicated to providing the best
-				services to our clients. Created using ReactJS`,
+				services to our clients. Created using ReactJS.`,
 			url: "https://dafetiteogaga.github.io/techflows/",
 			getImageSrc: getImage("techflows.png"),
 		},
@@ -82,7 +82,7 @@ const cardContents = {
 				projects, achievements, skills, and experiences. This platform highlights his expertise,
 				creative journey, and professional accomplishments, providing visitors with insights into
 				his	background, technical abilities, and notable contributions. The website also includes
-				a contact page for collaboration opportunities. Created using ReactJS`,
+				a contact page for collaboration opportunities. Created using ReactJS.`,
 			url: "https://fijimi65.github.io/fijimiayodele/",
 			getImageSrc: getImage("jimmy_ayodele.png"),
 		},
@@ -92,7 +92,7 @@ const cardContents = {
 				`An online Book club and a perfect place to gain knowledge. Register as a member to
 				have access to write and post articles, setup Author profile for yourself and acquire
 				popularity. Yes! we publish and showcase your work. Created using Html, CSS, and
-				Vanilla JavaScript`,
+				Vanilla JavaScript.`,
 			url: "https://dafetiteogaga.github.io/article-hive/",
 			getImageSrc: getImage("article-hive.png"),
 		},
@@ -101,7 +101,7 @@ const cardContents = {
 			description:
 				`An online restaurant and a perfect place in Lagos, Nigeria. Book a reservation, go to
 				relax and eat your favorite African meals. Such as Afang, Edikang-Ikong and Atama
-				soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS`,
+				soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS.`,
 			url: "https://creonovo-restaurant.web.app/",
 			getImageSrc: getImage("creonovo-website.png"),
 		},
@@ -111,7 +111,7 @@ const cardContents = {
 			title: "A Creonovo 'Reserve a table' Backend-component feature",
 			description:
 				`A 'Reserve a table' feature for the creonovo backend website 🔥️.
-				Created using Django web framework and Django Rest framework`,
+				Created using Django web framework and Django Rest framework.`,
 				url: "https://github.com/DafetiteOgaga/creonovo_restaurant-backend-component",
 			getImageSrc: getImage("creonovo_restaurant-backend-component.png"),
 		},
@@ -120,7 +120,7 @@ const cardContents = {
 			description:
 			`This project aims to help with the creation of various commands to automate basic
 			tasks that are used everyday by users of the Unix-like Environments. Create using
-			Python, Bash and C language`,
+			Python, Bash and C language.`,
 			url: "https://github.com/DafetiteOgaga/custom_commands",
 			getImageSrc: getImage("custom_commands2.png"),
 		},
@@ -128,7 +128,7 @@ const cardContents = {
 			title: "Creonovo Gardens",
 			description:
 				`A One-stop garden for the lovers of nature. Come and enjoy the beauty,
-				calmness and feel of nature. Created using HTML and CSS`,
+				calmness and feel of nature. Created using HTML and CSS.`,
 				url: "https://github.com/DafetiteOgaga/creonovo-gardens",
 			getImageSrc: getImage("creonovo-gardens.png"),
 		},
@@ -152,7 +152,7 @@ const cardContents = {
 			title: "Creonovo Restaurant",
 			description:
 			`An online restaurant well known for its delicious African dishes.
-			Created using Django web framework and Django Rest framework`,
+			Created using Django web framework and Django Rest framework.`,
 			url: "https://github.com/DafetiteOgaga/creonovo_restaurant",
 			getImageSrc: getImage("creonovo_restaurant.png"),
 		},
@@ -160,7 +160,7 @@ const cardContents = {
 			title: "PDF2docx Converter",
 			description:
 			`Converts pdf files to docx file format. Saves it on your desktop
-			as well. Created using Python`,
+			as well. Created using Python.`,
 			url: "https://github.com/DafetiteOgaga/pdf2docx_converter",
 			getImageSrc: getImage("pdf2docx Converter.png"),
 		},
@@ -170,7 +170,7 @@ const cardContents = {
 			description:
 			`Figma prototype design and wireframes for an imaginary online restaurant where you can make
 			reservtions for you and your loved ones. A well known place for its delicious dishes.
-			Created using Figma`,
+			Created using Figma.`,
 			url: "https://www.figma.com/design/Jo78tKGLI9UtpjAV1VFX8w/Capstone-project?node-id=25-378&t=YkVTrjlAuomzVeLG-1",
 			getImageSrc: getImage("little-lemon-capstone-project-figma-design.png"),
 		},
@@ -178,7 +178,7 @@ const cardContents = {
 			title: "The figma design for my imaginary little lemon project",
 			description:
 			`This is the figma prototype design and wireframes for an imaginary online restaurant well known
-			for its delicious dishes. Created using Figma`,
+			for its delicious dishes. Created using Figma.`,
 			url: "https://www.figma.com/design/u7zbSHNIFWE0rwz6fZt178/high-fidelity-visual-design?node-id=0-1&t=3uFdohozHKiRJpxq-1",
 			getImageSrc: getImage("little-lemon-figma-designs.png"),
 		},
