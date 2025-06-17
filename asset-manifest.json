@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/dafetite/static/css/main.0ac3908c.css",
-    "main.js": "/dafetite/static/js/main.80ced318.js",
-    "static/js/453.505ff450.chunk.js": "/dafetite/static/js/453.505ff450.chunk.js",
+    "main.css": "/dafetite/static/css/main.4b703eee.css",
+    "main.js": "/dafetite/static/js/main.f651ec9b.js",
+    "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
     "static/media/dafetite.jpeg": "/dafetite/static/media/dafetite.de43f13a40d007c93175.jpeg",
@@ -28,13 +28,14 @@
     "static/media/custom_commands2.png": "/dafetite/static/media/custom_commands2.8d65f6c6819e8b0c181e.png",
     "static/media/Binary_search_in_a_game.png": "/dafetite/static/media/Binary_search_in_a_game.1d186ea5e4359688e8d2.png",
     "static/media/dsa-linkedlist.png": "/dafetite/static/media/dsa-linkedlist.353131121c6f3ccada38.png",
+    "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
-    "main.0ac3908c.css.map": "/dafetite/static/css/main.0ac3908c.css.map",
-    "main.80ced318.js.map": "/dafetite/static/js/main.80ced318.js.map",
-    "453.505ff450.chunk.js.map": "/dafetite/static/js/453.505ff450.chunk.js.map"
+    "main.4b703eee.css.map": "/dafetite/static/css/main.4b703eee.css.map",
+    "main.f651ec9b.js.map": "/dafetite/static/js/main.f651ec9b.js.map",
+    "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ac3908c.css",
-    "static/js/main.80ced318.js"
+    "static/css/main.4b703eee.css",
+    "static/js/main.f651ec9b.js"
   ]
 }
