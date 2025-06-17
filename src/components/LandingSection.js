@@ -21,7 +21,7 @@ const skills = [
 	'ATM and Technical Engineer',
 	// 'Data Analyst',
 	// 'Technical Engineer'
-	// 'Technical Eng
+	// 'Technical En
 ]
 const summary = {
 	one: `I am a Software and Automation Engineer with expertise in software
