@@ -292,7 +292,7 @@ const StyledPhotoBox = styled.div`
 `;
 
 const name = "Dafetite O. Ogaga";
-// const images = require.context("../images/logos", false,  /\.(png|jpe?g|gif|svg)$/);
+// const images = require.context("../images/logos", false,  /\.(png|jpe?g|gif|svg)$/)
 const LandingSection = () => {
 	const [isSummaryExpanded, setIsSummaryExpanded] = useState(false);
 	const [isDataExpanded, setIsDataExpanded] = useState(false);

@@ -5,7 +5,7 @@ import { faGithub, faLinkedin, faMedium, faStackOverflow,
 	faFacebook, faFigma, faHashnode, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, useBreakpointValue } from "@chakra-ui/react";
 import logo from "../myLogos/dafeWhiteTransp.png"
-// import { useIsmobile } from "../hooks/useIsmobile";
+// import { useIsmobile } from "../hooks/useIsmobile"
 
 const socials = [
 	{
@@ -101,7 +101,7 @@ const Header = () => {
 		<HStack
 			px={isMobile?4:16}
 			py={4}
-			justifyContent="space-between"
+			justifyContent="center"
 			alignItems="center">
 			{/* <nav>
 			<HStack>
@@ -116,7 +116,7 @@ const Header = () => {
 			<nav>
 				<HStack spacing={{ base: 2.5, md: 5 }} justifyContent={"center"}>
 				{/* <HStack><h1 style={{paddingLeft: isMobile?30:0}} className="paragraph">{isMobile?'': */}
-					<img src={logo} alt="dafetite logo" className={isMobile?"dafetiteLogoMobile":"dafetiteLogo"} />
+					<img src={logo} alt="dafetite ogaga" className={isMobile?"dafetiteLogoMobile":"dafetiteLogo"} />
 					{/* }</h1></HStack> */}
 					{socials.map(({ icon, url }) => (
 						<a
