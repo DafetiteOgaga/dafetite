@@ -544,7 +544,7 @@ const LandingSection = () => {
 					<img
 					className="photo"
 					src={dafe}
-					alt="Dafetite"/>
+					alt="Dafetite Ogaga"/>
 				</StyledPhotoBox>
 				{/* title */}
 				<div style={{textAlign: 'center'}}>
