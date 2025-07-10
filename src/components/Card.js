@@ -31,7 +31,7 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 				{(mobileOrWeb) &&
 					<>
 						<HStack justifyContent="space-between" alignItems="center">
-								<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{}}>{title}</h1>
+								<h1 className="box-main" style={isMobile?{fontSize: 16, textAlign: 'center'}:{fontSize: 26}}>{title}</h1>
 						</HStack>
 						<h1 className="box-sub" style={{color: "#64748b", fontSize: isMobile?13:15}}>
 							{(description?.split(' ').length>numOfWords)?
@@ -47,7 +47,7 @@ const Card = ({ title, description, imageSrc, type=null }) => {
 					color: 'black',
 					fontWeight: 'bold',
 					fontStyle: 'italic',
-					fontSize: isMobile?14:'',
+					fontSize: isMobile?14:16,
 					}} className="paragraph">Click here to {link}</p>
 					<FontAwesomeIcon icon={faArrowRight} size={ isMobile ? 'xs' : '1x' } />
 				</HStack>
