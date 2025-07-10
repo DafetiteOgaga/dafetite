@@ -205,9 +205,9 @@ table {
 	@media (min-width: 1200px) {
 		padding: 6.4rem;
 	}
-	/* @media (min-width: 1440px) {
-		padding: 6.4rem;
-	} */
+	@media (min-width: 1440px) {
+		padding: 6rem 14rem 6rem 14rem;
+	}
 	/* @media (min-width: 1024px) {
 		padding-top: 4rem;
 	} */
