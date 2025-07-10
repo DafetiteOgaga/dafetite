@@ -108,14 +108,6 @@ const cardContents = {
 	],
 	projects: [
 		{
-			title: "A Creonovo 'Reserve a table' Backend-component feature",
-			description:
-				`A 'Reserve a table' feature for the creonovo backend website 🔥️.
-				Created using Django web framework and Django Rest framework.`,
-				url: "https://github.com/DafetiteOgaga/creonovo_restaurant-backend-component",
-			getImageSrc: getImage("creonovo_restaurant-backend-component.png"),
-		},
-		{
 			title: "Custom Commands",
 			description:
 			`This project aims to help with the creation of various commands to automate basic
@@ -123,6 +115,14 @@ const cardContents = {
 			Python, Bash and C language.`,
 			url: "https://github.com/DafetiteOgaga/custom_commands",
 			getImageSrc: getImage("custom_commands2.png"),
+		},
+		{
+			title: "A Creonovo 'Reserve a table' Backend-component feature",
+			description:
+				`A 'Reserve a table' feature for the creonovo backend website 🔥️.
+				Created using Django web framework and Django Rest framework.`,
+				url: "https://github.com/DafetiteOgaga/creonovo_restaurant-backend-component",
+			getImageSrc: getImage("creonovo_restaurant-backend-component.png"),
 		},
 		{
 			title: "Creonovo Gardens",
