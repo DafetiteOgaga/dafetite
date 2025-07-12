@@ -15,7 +15,7 @@ const projectheadings = ['Development in progress...', 'My WebApps', 'My Mobile 
 const cardContents = {
 	inDevelopment: [
 		{
-			title: "Dafetite (Temporary Name)",
+			title: "StuddieBudie",
 			description:
 				`A Web Application designed and developed for students in basic and secondary schools. The
 				application covers all the subjects of every class, allowing students to take online tests
@@ -24,8 +24,8 @@ const cardContents = {
 				scramble question section, which allows the type/upload questions and download a scrambled
 				questions and answers in varying types (upto 26 types). Created using Express, MongoDB,
 				and ReactJS.`,
-			url: "https://dafetiteogaga.github.io/eshuflFrontend/",
-			getImageSrc: getImage("eshuffl.png"),
+			url: "https://dafetiteogaga.github.io/studdiebudie_frontend/",
+			getImageSrc: getImage("studdiebudie.png"),
 		},
 	],
 	webapps: [
