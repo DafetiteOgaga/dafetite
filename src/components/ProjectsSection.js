@@ -24,7 +24,7 @@ const cardContents = {
 				scramble question section, which allows the type/upload questions and download a scrambled
 				questions and answers in varying types (upto 26 types). Created using Express, MongoDB,
 				and ReactJS.`,
-			url: "https://eshufl-frontend.vercel.app/",
+			url: "https://dafetiteogaga.github.io/eshuflFrontend/",
 			getImageSrc: getImage("eshuffl.png"),
 		},
 	],
