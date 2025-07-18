@@ -1,6 +1,6 @@
 // hooks/BackgroundSlideshow.jsx
 import React, { useContext, useEffect, useState, createContext } from 'react';
-import backgd1 from '../img/diagoona-bg-1.jpg';
+import { useLocation } from 'react-router-dom';
 import bg1 from '../img/diagoona-bg-1.jpg';
 import bg2 from '../img/diagoona-bg-2.jpg';
 import bg3 from '../img/diagoona-bg-3.jpg';
@@ -42,11 +42,11 @@ const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
 
 	// call "after" logic manually when image changes
 	useEffect(() => {
-		console.log('Slide changed to index:', currentIndex);
+		// console.log('Slide changed to index:', currentIndex);
 		// You can fire events here like jQuery's 'backstretch.after'
 	}, [currentIndex]);
 
-	console.log("\nCurrent background image:", bgImgs[currentIndex], "\nat index:", currentIndex);
+	// console.log("\nCurrent background image:", bgImgs[currentIndex], "\nat index:", currentIndex);
 	const value = {
 		current: bgImgs[currentIndex],
 		currentIndex,
@@ -60,6 +60,16 @@ const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
 };
 
 const BackgroundSlideshow = () => {
+	const path = useLocation().pathname.split('/').pop();
+	// console.log("Current path in BackgroundSlideshow:", path); // Debugging line to check the current path
+	let extendDiagonal;
+	if (path === 'projects') {
+		extendDiagonal = {LRwidth: '40%', Rwidth: '60%'};
+	} else if (path === 'contact') {
+		extendDiagonal = {LRwidth: '60%', Rwidth: '40%'};
+	} else {
+		extendDiagonal = {LRwidth: '50%', Rwidth: '50%'};
+	}
 	const { current, displayHeight, displayWidth } = useBackground()
 	const tmBgLeftStyle = displayWidth > 768
     ? {
@@ -100,8 +110,8 @@ const BackgroundSlideshow = () => {
 
 			{/* Diagonal background */}
 			<div className="tm-bg right-slide-in">
-				<div className="tm-bg-left" style={tmBgLeftStyle}></div>
-				<div className="tm-bg-right"></div>
+				<div className="tm-bg-left" style={{...tmBgLeftStyle, ...{width: extendDiagonal.LRwidth}}}></div>
+				<div className="tm-bg-right" style={{...{width: extendDiagonal.Rwidth}}}></div>
 			</div>
 		</>
 	)
