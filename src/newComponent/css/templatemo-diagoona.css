@@ -148,12 +148,18 @@ p { line-height: 1.9; }
 
 .tm-content {
     max-height: 510px;
+    height: 100%;
     overflow-y: auto;
     max-width: 660px;
     padding-right: 20px;
+    transition: margin-left 0.5s ease-in-out, max-width 0.5s ease-in-out;
+    /* margin-left: auto;  Adjusts the left margin to center the content */
 }
 
-.tm-about { max-width: 525px; }
+.tm-about {
+    /* max-width: 525px; */
+    /* max-width: 60%; /* Adjusts the width of the project section */
+}
 
 ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -167,6 +173,7 @@ p { line-height: 1.9; }
 }
 
 .tm-content-title { font-size: 1.8rem; }
+.tm-project-content-title { font-size: 1.6rem; }
 hr { border-top: 1px solid white; }
 
 .btn {
@@ -207,9 +214,27 @@ hr { border-top: 1px solid white; }
 }
 
 /* Service */ 
-.tm-service-text { max-width: 365px; }
-.tm-service-img { margin-right: 25px; }
-.tm-service-img-r { margin-left: 25px; }
+.tm-service-text {
+    /* max-width: 365px; */
+}
+.tm-service-img {
+    margin-right: 25px;
+    width: 28%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.tm-service-img-r {
+    margin-left: 25px;
+    width: 28%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.remove-margin-bottom {
+    margin-bottom: 0 !important;
+  }
 
 /* Contact */
 .form-control,
@@ -240,7 +265,7 @@ textarea {
 .tm-contact-main { max-width: 690px; }
 
 .tm-contact {
-    max-width: 420px;
+    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -254,6 +279,17 @@ textarea {
 }
 .italiced {
     font-style: italic;
+}
+.h-aligned {
+    display: flex;
+    align-items: center;
+}
+.link-hover {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+.link-hover:hover {
+    transform: translateY(0%) scaleX(1.02); /* Combine with the animation */
 }
 
 .dafetite {
