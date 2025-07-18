@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const navigation = [
 	{ name: "home", link: "/new" },
 	{ name: "projects", link: "/new/projects" },
-	{ name: "services", link: "/new/services" },
+	{ name: "videos", link: "/new/videos" },
 	{ name: "contact", link: "/new/contact" }
 ]
 function NavigationBar() {
