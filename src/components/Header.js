@@ -130,15 +130,7 @@ const Header = () => {
 				</HStack>
 			</nav>
 			{/* <nav>
-			<HStack>
-				<a
-				className="paragraph"
-				href="#projects"
-				onClick={handleClick("projects")}
-				style={{ fontSize: isMobile ? 'sm' : 'md' }}>
-				Projects
-				</a>
-			</HStack>
+			["2xs","xs","sm","lg","xl","2xl","1x","2x","3x","4x","5x","6x","7x","8x","9x","10x"]
 			</nav> */}
 		</HStack>
 		</Box>
