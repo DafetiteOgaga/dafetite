@@ -47,11 +47,11 @@
 
 @keyframes fadeInFromBottom {
     0% {
-        transform: translateY(20%);
+        transform: translateY(20%) scaleX(1);
         opacity: 0;
     }
     100% {
-        transform: translateY(0%);
+        transform: translateY(0%) scaleX(1);
         opacity: 1;
     }
 }
