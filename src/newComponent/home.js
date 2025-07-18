@@ -45,9 +45,6 @@ function Home() {
 										</div>
 									)
 								})}
-								{/* <p className="mb-5">{item.text}</p> */}
-								{/* {!last && <hr className="mb-5"/>} */}
-								{/* <p className="mb-5">Diagoona is Bootstrap v4.4.1 layout. This BG is 50% transparent. You can set the background images auto play settings (true or false in line number 33) in templatemo-script.js file in js folder.</p> */}
 							</Fragment>
 						)
 					})
@@ -70,9 +67,6 @@ function Home() {
 										</div>
 									)
 								})}
-								{/* <p className="mb-5">{item.text}</p> */}
-								{/* {!last && <hr className="mb-5"/>} */}
-								{/* <p className="mb-5">Diagoona is Bootstrap v4.4.1 layout. This BG is 50% transparent. You can set the background images auto play settings (true or false in line number 33) in templatemo-script.js file in js folder.</p> */}
 							</Fragment>
 						)
 					})}
@@ -95,9 +89,6 @@ function Home() {
 										</div>
 									)
 								})}
-								{/* <p className="mb-5">{item.text}</p> */}
-								{/* {!last && <hr className="mb-5"/>} */}
-								{/* <p className="mb-5">Diagoona is Bootstrap v4.4.1 layout. This BG is 50% transparent. You can set the background images auto play settings (true or false in line number 33) in templatemo-script.js file in js folder.</p> */}
 							</Fragment>
 						)
 					})}
@@ -133,9 +124,6 @@ function Home() {
 										</div>
 									)
 								})}
-								{/* <p className="mb-5">{item.text}</p> */}
-								{/* {!last && <hr className="mb-5"/>} */}
-								{/* <p className="mb-5">Diagoona is Bootstrap v4.4.1 layout. This BG is 50% transparent. You can set the background images auto play settings (true or false in line number 33) in templatemo-script.js file in js folder.</p> */}
 							</Fragment>
 						)
 					})
