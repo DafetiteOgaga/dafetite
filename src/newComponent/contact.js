@@ -6,7 +6,7 @@ function Contact () {
 		<>
 			<main className="tm-col-right fade-in-from-bottom tm-contact-main">
 				{/* <!-- contact --> */}
-				<section className="tm-content tm-contact">
+				<section className="tm-content tm-contact fade-in-from-bottom">
 					<h2 className="mb-4 tm-content-title">Contact Us</h2>
 					{/* <p className="mb-85">
 						Etiam et egestas arcu. Fusce congue quis elit vitae commodo. Cras neque mauris,
