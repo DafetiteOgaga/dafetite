@@ -93,7 +93,8 @@ p { line-height: 1.9; }
 
 .tm-bg-controls-wrapper {
     display: inline-block;
-    margin-left: -150px;
+    padding-left: 4%;
+    /* margin-left: -150px; */
 }
 
 .tm-bg-control {
