@@ -1,4 +1,12 @@
+// projects and videos component
+const images = require.context('../images', false, /\.(png|jpe?g|svg)$/);
+const getImage = (name) => (images(`./${name}`))
+const versionNumber = require('../../package.json').version;
+// videos component
+const videos = require.context('../altavizVideos', false, /\.(mp4|webm|ogg|png|jpe?g|svg)$/);
+const getVideo = (name) => (videos(`./${name}`))
 
+// home component
 const professionalSummary = [
 	{
 		text: `
@@ -192,11 +200,225 @@ const education = [
 	},
 ]
 
+// projects component
+const projectCardsContent = [
+	{
+		status: 'WebApps',
+		content: [
+			{
+				title: "Altaviz Support Limited",
+				description:
+					`A Web Application that manages the workflow for Altaviz Support Limited. A Role based
+					Access Control application with support for Custodians, Workshop staff, Engineers, Help Desk
+					staff, Supervisors, and Human resource. It is a fast, reliable and effective solution for
+					managing the workflow of the company. Created using Django, ReactJS, and MySQL.`,
+				url: "https://altaviz-frontend.vercel.app/",
+				getImageSrc: getImage("altaviz-support-ltd.png"),
+			},
+			{
+				title: "Article Hive (The WebApp)",
+				description:
+					`A fully functional online Book club and a perfect place to gain knowledge. Register as a member to
+					have access to write and post articles, setup Author profile for yourself and acquire
+					popularity. Yes! we publish and showcase your work. Created using Django, Html, CSS,
+					Vanilla JavaScript, and MySQL.`,
+				url: "https://dafetite.pythonanywhere.com/",
+				getImageSrc: getImage("article-hive-app.png"),
+			},
+		],
+	},
+	{
+		status: 'Mobile Apps',
+		content: [
+			{
+				title: "Altaviz Support Limited (Mobile App)",
+				// title: versionNumber,
+				description:
+					`A Mobile Application to complete the Altaviz app. It manages the workflow for Altaviz
+					Support Limited. Implemented in it are the same features as the Web App such as Role based
+					Access Control with support for Custodians, Workshop staff, Engineers, Help Desk staff,
+					Supervisors, and Human resource. It is also fast, reliable and effective for managing the
+					workflow of the company. Created using Expo(React Native), Django, and MySQL.`,
+				url: `https://github.com/DafetiteOgaga/altavizMobileReleases/releases/download/${versionNumber}/altavizMobile-${versionNumber}.apk`,
+				getImageSrc: getImage("altaviz_mobile.png"),
+			},
+		],
+	},
+	{
+		status: 'Websites',
+		content: [
+			{
+				title: "TechFlows Engineering",
+				description:
+					`A tech company that provides solutions to engineering problems including Software
+					development, Computer Hardwares, Security solutions, ATM services, Cloud solutions and
+					IT trainings. We are a team of professionals that are dedicated to providing the best
+					services to our clients. Created using ReactJS.`,
+				url: "https://dafetiteogaga.github.io/techflows/",
+				getImageSrc: getImage("techflows.png"),
+			},
+			{
+				title: "Jimmy Ayodele",
+				description:
+					`A personal portfolio website for Jimmy Ayodele. A dedicated space showcasing his works,
+					projects, achievements, skills, and experiences. This platform highlights his expertise,
+					creative journey, and professional accomplishments, providing visitors with insights into
+					his	background, technical abilities, and notable contributions. The website also includes
+					a contact page for collaboration opportunities. Created using ReactJS.`,
+				url: "https://fijimi65.github.io/fijimiayodele/",
+				getImageSrc: getImage("jimmy_ayodele.png"),
+			},
+			{
+				title: "The Article Hive",
+				description:
+					`An online Book club and a perfect place to gain knowledge. Register as a member to
+					have access to write and post articles, setup Author profile for yourself and acquire
+					popularity. Yes! we publish and showcase your work. Created using Html, CSS, and
+					Vanilla JavaScript.`,
+				url: "https://dafetiteogaga.github.io/article-hive/",
+				getImageSrc: getImage("article-hive.png"),
+			},
+			{
+				title: "Creonovo Restaurant Website",
+				description:
+					`An online restaurant and a perfect place in Lagos, Nigeria. Book a reservation, go to
+					relax and eat your favorite African meals. Such as Afang, Edikang-Ikong and Atama
+					soups with Fufu, Pounded yam, Eba, etc. Created using ReactJS.`,
+				url: "https://creonovo-restaurant.web.app/",
+				getImageSrc: getImage("creonovo-website.png"),
+			},
+		],
+	},
+	{
+		status: 'Projects',
+		content: [
+			{
+				title: "Custom Commands",
+				description:
+				`This project aims to help with the creation of various commands to automate basic
+				tasks that are used everyday by users of the Unix-like Environments. Create using
+				Python, Bash and C language.`,
+				url: "https://github.com/DafetiteOgaga/custom_commands",
+				getImageSrc: getImage("custom_commands2.png"),
+			},
+			{
+				title: "A Creonovo 'Reserve a table' Backend-component feature",
+				description:
+					`A 'Reserve a table' feature for the creonovo backend website 🔥️.
+					Created using Django web framework and Django Rest framework.`,
+					url: "https://github.com/DafetiteOgaga/creonovo_restaurant-backend-component",
+				getImageSrc: getImage("creonovo_restaurant-backend-component.png"),
+			},
+			{
+				title: "Creonovo Gardens",
+				description:
+					`A One-stop garden for the lovers of nature. Come and enjoy the beauty,
+					calmness and feel of nature. Created using HTML and CSS.`,
+					url: "https://github.com/DafetiteOgaga/creonovo-gardens",
+				getImageSrc: getImage("creonovo-gardens.png"),
+			},
+			{
+				title: "DSA-LinkedList",
+				description:
+				`This program is written in C and creates a linked list based on user input.
+				Then prints out the elements of the list.S. Created using C language.`,
+				url: "https://github.com/DafetiteOgaga/dsa-linkedlist",
+				getImageSrc: getImage("dsa-linkedlist.png"),
+			},
+			{
+				title: "Binary Search Game",
+				description:
+				`This program is a game and aims to demonstrates the working principle of
+				Binary Search Algorithm while you have fun with it. Created using Python.`,
+				url: "https://github.com/DafetiteOgaga/Binary_search_in_a_game",
+				getImageSrc: getImage("Binary_search_in_a_game.png"),
+			},
+			{
+				title: "Creonovo Restaurant",
+				description:
+				`An online restaurant well known for its delicious African dishes.
+				Created using Django web framework and Django Rest framework.`,
+				url: "https://github.com/DafetiteOgaga/creonovo_restaurant",
+				getImageSrc: getImage("creonovo_restaurant.png"),
+			},
+			{
+				title: "PDF2docx Converter",
+				description:
+				`Converts pdf files to docx file format. Saves it on your desktop
+				as well. Created using Python.`,
+				url: "https://github.com/DafetiteOgaga/pdf2docx_converter",
+				getImageSrc: getImage("pdf2docx Converter.png"),
+			},
+			{
+				title: "Figma Design for My Little Lemon Capstone Project",
+				description:
+				`Figma prototype design and wireframes for an imaginary online restaurant where you can make
+				reservtions for you and your loved ones. A well known place for its delicious dishes.
+				Created using Figma.`,
+				url: "https://www.figma.com/design/Jo78tKGLI9UtpjAV1VFX8w/Capstone-project?node-id=25-378&t=YkVTrjlAuomzVeLG-1",
+				getImageSrc: getImage("little-lemon-capstone-project-figma-design.png"),
+			},
+			{
+				title: "The figma design for my imaginary little lemon project",
+				description:
+				`This is the figma prototype design and wireframes for an imaginary online restaurant well known
+				for its delicious dishes. Created using Figma.`,
+				url: "https://www.figma.com/design/u7zbSHNIFWE0rwz6fZt178/high-fidelity-visual-design?node-id=0-1&t=3uFdohozHKiRJpxq-1",
+				getImageSrc: getImage("little-lemon-figma-designs.png"),
+			},
+		],
+	},
+]
+
+// videos component
+const videoCardsContent = [
+	{
+		status: 'Videos',
+		content: [
+			{
+				thumbnail: getVideo("profilePage.png"),
+				videoSrc: getVideo("altavizWeb.mp4"),
+				title: "Altaviz Web App",
+				description: `A comprehensive browser-based platform for managing ATM support, user profiles,
+					service requests, and performance dashboards — built with React and Django for seamless
+					operations.`
+			},
+			{
+				thumbnail: getVideo("mobileHome.png"),
+				videoSrc: getVideo("altavizMobile.mp4"),
+				title: "Altaviz Mobile App",
+				description: `A mobile-first solution that empowers engineers and custodians to track, update,
+					and resolve ATM service tasks on the go — designed for speed, clarity, and real-time updates.`
+			},
+		],
+	},
+	{
+		status: 'In development...',
+		content: [
+			{
+				title: "StuddieBudie",
+				description:
+					`A Web Application designed and developed for students in basic and secondary schools. The
+					application covers all the subjects of every class, allowing students to take online tests
+					and get graded accordingly. Teachers/Tutors can equally contribute questions to the
+					database to improve students learning experiences. Schools/Teachers/Tutors also have a
+					scramble question section, which allows the type/upload questions and download a scrambled
+					questions and answers in varying types (upto 26 types). Created using Express, MongoDB,
+					and ReactJS.`,
+				url: "https://dafetiteogaga.github.io/studdiebudie_frontend/",
+				getImageSrc: getImage("studdiebudie.png"),
+			},
+		],
+	},
+]
+
 export {
 		professionalSummary,
 		professionalExperience,
 		professionalProjects,
 		professionalCertification,
 		professionalSkills,
-		education
+		education,
+		projectCardsContent,
+		videoCardsContent
 }
