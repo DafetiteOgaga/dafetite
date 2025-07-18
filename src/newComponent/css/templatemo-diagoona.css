@@ -50,7 +50,7 @@ p { line-height: 1.9; }
     font-size: 1.3rem;
     font-weight: 400;
     color: white;    
-    padding-bottom: 30px;    
+    /* padding-bottom: 30px; Adjusts the height of the nav links to center it */
 }
 
 .nav-item { margin-right: 60px; }
@@ -76,11 +76,15 @@ p { line-height: 1.9; }
 .tm-bg-left,
 .tm-bg-right {
     position: relative;
-    width: 50%;
+    width: 40%; /* Adjusts the width of the diagonal background */
     height: 100%;
+    transition: width 0.5s ease-in-out;
 }
 
-.tm-bg-right { background-color: rgba(0,0,0,0.5); }
+.tm-bg-right {
+    background-color: rgba(0,0,0,0.5);
+    width: 60%; /* Adjusts the width of the diagonal background for the right side */
+}
 
 .tm-bg-left {
     border-right: 230px solid rgba(0,0,0,0.5);
@@ -113,28 +117,39 @@ p { line-height: 1.9; }
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  
+    justify-content: space-between;
 }
 
-.tm-row { display: flex; }
+.tm-row {
+    display: flex;
+}
+.tm-row-baseline-align {
+    align-items: baseline;
+}
 
 .tm-col-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 50%;
     height: 100%;
-    padding-left: 40px;  
+    padding-left: 40px;
     padding-right: 40px;
 }
 
 .tm-col-right {
+    margin: 0;
     width: 50%;
     height: 100%;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: contents;
 }
 
 .tm-content {
+    max-height: 510px;
+    overflow-y: auto;
     max-width: 660px;
-    margin-top: 50px;
     padding-right: 20px;
 }
 
@@ -151,11 +166,11 @@ p { line-height: 1.9; }
     box-shadow: 0 0 1px rgba(255,255,255,.8);
 }
 
-.tm-content-title { font-size: 1.5rem; }
+.tm-content-title { font-size: 1.8rem; }
 hr { border-top: 1px solid white; }
 
 .btn {
-    padding: 10px 25px;
+    padding: 8px 20px;
     border-radius: 0;
 }
 
@@ -171,12 +186,14 @@ hr { border-top: 1px solid white; }
 }
 
 .btn-primary:hover {
-    background-color: #9CC;
-    color: black;
+    /* background-color: #9CC;
+    color: black; */
+    border: 1px solid white;
+    background-color: transparent;
 }
 
 .tm-site-footer {
-    padding: 40px 0 20px;
+    padding: 5px 0 10px;
     max-width: 660px;
     font-size: 0.95rem;
 }
@@ -231,6 +248,69 @@ textarea {
 .form-control::-webkit-input-placeholder { color: white; } /* Edge */  
 .form-control:-ms-input-placeholder { color: white; } /* Internet Explorer 10-11 */  
 .form-control::placeholder { color: white; }
+
+.underlined {
+    text-decoration: underline;
+}
+.italiced {
+    font-style: italic;
+}
+
+.dafetite {
+    width: 80%;
+    transition: transform 0.5s ease;
+}
+
+.icon-bar {
+    padding-left: 20px;
+}
+.icon-bar:hover {
+    transform: scale(1.05); /* Zoom in */
+}
+
+.dafetite-profile {
+    width: 60%;
+    height: 50%;
+    border-radius: 3%;
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    /* background-size: contain; */
+}
+.profile-container {
+    padding: 3% 0 0 4%;
+    /* background-size: cover; */
+}
+.image-fade {
+    /* width: 100%; */
+    /* height: auto;s */
+    /* display: block; */
+    mask-image:
+        /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
+        zlinear-gradient(to top, transparent, black 15%, black 100%, transparent);
+    -webkit-mask-image:
+        /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
+        linear-gradient(to top, transparent, black 15%, black 100%, transparent);
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
+}
+
+.icons {
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.icons:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+.awesome-icons {
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.awesome-icons:hover {
+	transform: scale(1.45);
+}
+.awesome-icons:active {
+	transform: scale(1.09);
+}
 
 @media (max-width: 1200px) {
     .nav-item { margin-right: 30px; }
@@ -296,7 +376,7 @@ textarea {
     .tm-bg { flex-direction: column; }
 
     .tm-bg-left {
-        height: 200px;        
+        height: 200px;
         border-bottom: 50px solid rgba(0,0,0,0.5);
         border-right: 0;
         border-top: 0;
@@ -329,6 +409,7 @@ textarea {
     .tm-logo { margin-right: 15px; }
     .tm-sitename { font-size: 1.8rem; }
     .tm-slogon { font-size: 0.8rem; }
+    .tm-skills-slogon { font-size: 20rem; }
 }
 
 @media (max-width: 450px), (min-width: 768px) and (max-width: 830px), (min-width: 992px) and (max-width: 1040px) {
