@@ -8,8 +8,8 @@ import bg3 from '../img/diagoona-bg-3.jpg';
 const BackgroundContext = createContext(null);
 
 const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
-  const bgImgs = [bg1, bg2, bg3]; // Add more images as needed
-//   const bgImgs = [bg3]; // Add more images as needed
+//   const bgImgs = [bg1, bg2, bg3]; // Add more images as needed
+  const bgImgs = [bg3]; // Add more images as needed
 
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [paused] = useState(!autoplay);
@@ -63,12 +63,15 @@ const BackgroundSlideshow = () => {
 	const path = useLocation().pathname.split('/').pop();
 	// console.log("Current path in BackgroundSlideshow:", path); // Debugging line to check the current path
 	let extendDiagonal;
-	if (path === 'projects') {
-		extendDiagonal = {LRwidth: '40%', Rwidth: '60%'};
-	} else if (path === 'contact') {
-		extendDiagonal = {LRwidth: '60%', Rwidth: '40%'};
+	if (path.toLowerCase() === 'projects') {
+		extendDiagonal = {LRwidth: '40%', Rwidth: '60%', tmMarginLeft: '-150px', tmMaxWidth: '60%', tmMaxHeight: '550px'};
+	} else if (path.toLowerCase() === 'contact') {
+		extendDiagonal = {LRwidth: '60%', Rwidth: '40%', tmMarginLeft: 'auto', tmMaxWidth: '525px', tmMaxHeight: '510px'};
+	} else if (path.toLowerCase() === 'videos') {
+		console.log("Videos path detected");
+		extendDiagonal = {LRwidth: '50%', Rwidth: '50%', tmMarginLeft: 'auto', tmMaxWidth: '525px', tmMaxHeight: '550px'};
 	} else {
-		extendDiagonal = {LRwidth: '50%', Rwidth: '50%'};
+		extendDiagonal = {LRwidth: '50%', Rwidth: '50%', tmMarginLeft: 'auto', tmMaxWidth: '525px', tmMaxHeight: '510px'};
 	}
 	const { current, displayHeight, displayWidth } = useBackground()
 	const tmBgLeftStyle = displayWidth > 768
@@ -80,6 +83,30 @@ const BackgroundSlideshow = () => {
         borderLeft: `${displayWidth}px solid transparent`,
         borderTop: '0',
 	};
+	// adjust section element dynamically
+	useEffect(() => {
+		console.log("Applying styles for path:", path);
+		const sectionElementProjects = document.getElementById('section-projects-id');
+		const sectionElementVideos = document.getElementById('section-videos-id');
+	
+		// Reset any previously applied styles
+		if (sectionElementProjects) {
+			sectionElementProjects.style.marginLeft = '0';
+			sectionElementProjects.style.maxWidth = '100%';
+			sectionElementProjects.style.maxHeight = 'initial';
+		}
+	
+		// Now apply current path-specific styles
+		if (sectionElementProjects && path === 'projects') {
+			sectionElementProjects.style.marginLeft = extendDiagonal.tmMarginLeft;
+			sectionElementProjects.style.maxWidth = extendDiagonal.tmMaxWidth;
+			sectionElementProjects.style.maxHeight = extendDiagonal.tmMaxHeight;
+		}
+		if (sectionElementVideos && path === 'videos') {
+			sectionElementVideos.style.maxHeight = extendDiagonal.tmMaxHeight;
+		}
+	}, [path]);
+	
 	return (
 		<>
 			{/* <div style={slideshowStyle}></div> */}
