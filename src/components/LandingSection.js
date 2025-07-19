@@ -1,6 +1,6 @@
 import React, {useState, Fragment} from "react";
 import dafe from "../dafetite.png"
-import cv from "./Dafetite_Ogaga.pdf"
+import cv from "../Dafetite_Ogaga.pdf"
 import styled from "styled-components"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { useBreakpointValue } from "@chakra-ui/react";
