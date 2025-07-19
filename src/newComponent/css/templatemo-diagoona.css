@@ -15,7 +15,7 @@ body {
     /* background-color: #2C353C; */
 }
 
-a { 
+a {
     transition: all 0.3s ease; 
     text-decoration: none;
 }
@@ -34,7 +34,7 @@ p { line-height: 1.9; }
     border-radius: 0;
     transform: skewX(-15deg);
     background-color: rgba(0,0,0,0.5);
-    color: white;    
+    color: white;
 }
 
 .navbar-toggler i { transform: skewX(15deg); }
@@ -49,7 +49,7 @@ p { line-height: 1.9; }
 .navbar-expand-lg .navbar-nav .tm-nav-link {
     font-size: 1.3rem;
     font-weight: 400;
-    color: white;    
+    color: white;
     /* padding-bottom: 30px; Adjusts the height of the nav links to center it */
 }
 
@@ -192,12 +192,33 @@ hr { border-top: 1px solid white; }
     color: black;
     border: 0;
 }
-
 .btn-primary:hover {
-    /* background-color: #9CC;
-    color: black; */
     border: 1px solid white;
     background-color: transparent;
+}
+
+.resume {
+    color: white;
+    border: 1px solid white;
+    padding: 4px 6px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-left: 0.5%;
+    border-radius: 5px;
+    line-height: 1px;
+    /* transform: skewX(-15deg); */
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.resume:hover {
+    border: 1px solid #9CC;
+    background-color: transparent;
+    color: #9CC;
+    font-size: 0.97rem;
+}
+.resume:active {
+    font-size: 1rem;
 }
 
 .tm-site-footer {
@@ -318,9 +339,6 @@ textarea {
     /* background-size: cover; */
 }
 .image-fade {
-    /* width: 100%; */
-    /* height: auto;s */
-    /* display: block; */
     mask-image:
         /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
         zlinear-gradient(to top, transparent, black 15%, black 100%, transparent);
@@ -348,6 +366,23 @@ textarea {
 .awesome-icons:active {
 	transform: scale(1.09);
 }
+.tm-slogon {
+    font-size: 0.8rem;
+    line-height: 0;
+    font-size: 0.85rem;
+    margin-top: -1rem;
+}
+.flex-display {
+    display: flex;
+}
+.skill-slogon {
+    line-height: 1.2rem;
+    font-size: 1rem;
+}
+.tm-profile-name {
+    font-size: 36px;
+    margin: 0;
+}
 
 @media (max-width: 1200px) {
     .nav-item { margin-right: 30px; }
@@ -358,7 +393,7 @@ textarea {
     }
 }
 
-@media (max-width: 992px) {    
+@media (max-width: 992px) {
     .tm-nav {
         position: absolute;
         background: rgba(0, 0, 0, 0.8);
@@ -394,7 +429,10 @@ textarea {
 }
 
 @media (max-width: 768px) {
-    .tm-row { flex-direction: column; }
+    .tm-row {
+        flex-direction: column;
+        padding-top: 0.5rem !important;
+    }
 
     .tm-col-left,
     .tm-col-right,
@@ -402,13 +440,53 @@ textarea {
     .tm-bg-right {
         width: 100%;
     }
+    .tm-col-left {
+        width: 65%;
+        padding: 0 8px;
+    }
+    .icon-bar {
+        padding-left: 0;
+    }
+    .dafetite {
+        width: 50%;
+        /* height: 40%; */
+        /* margin-bottom: 20px; */
+    }
 
     #tm-main-nav {
         position: fixed;
-        top: 50px;
-        right: 40px;
+        top: auto;
+        right: 15px;
         padding-bottom: 0;
-    }  
+    }
+
+    .dafetite-profile {
+        width: 142%;
+        z-index: -10;
+        position: relative;
+    }
+    .profile-container {
+        padding: 0;
+    }
+    .image-fade {
+        mask-image:
+            /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
+            zlinear-gradient(to top, transparent, black 40%, black 100%, transparent);
+        -webkit-mask-image:
+            /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
+            linear-gradient(to top, transparent, black 40%, black 100%, transparent);
+        mask-composite: intersect;
+        -webkit-mask-composite: destination-in;
+    }
+    /* .flex-display {
+        flex-direction: row;
+    } */
+    
+    .tm-col-left-content {
+        margin-top: -80px;
+        width: 140%;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
     
     .tm-bg { flex-direction: column; }
 
@@ -445,8 +523,54 @@ textarea {
 @media (max-width: 460px) {
     .tm-logo { margin-right: 15px; }
     .tm-sitename { font-size: 1.8rem; }
-    .tm-slogon { font-size: 0.8rem; }
+    .tm-slogon {
+        font-size: 0.7rem;
+        padding-left: 8px;
+    }
     .tm-skills-slogon { font-size: 20rem; }
+    .tm-nav {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .tm-profile-name {
+        font-size: 1.45rem;
+        /* line-height: 1.2; */
+        margin-top: 0;
+    }
+    .tm-col-left {
+        width: 72%;
+        padding: 0 8px;
+    }
+    .skill-slogon {
+        line-height: 1.2rem;
+        font-size: 1rem;
+    }
+    .tm-content {
+        margin-top: 0;
+    }
+
+    .top-container-mobile {
+        /* height: 300px; */
+        z-index: 1;
+    }
+    .scroll-container-mobile {
+        /* top: 300px; */
+        position: absolute;
+        top: 64%;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+        transition: top 0.3s ease;
+        z-index: 2;
+        border-top: 2px solid #ddd;
+        background-color: rgba(0, 0, 0, 0.5);
+        will-change: top;
+    }
+    /* Slide up to overlay 70-80% of the top container */
+    .scroll-container-mobile.overlay {
+        /* covers 220px out of 300px, i.e. ~73% */
+        top: 60px;
+    }
 }
 
 @media (max-width: 450px), (min-width: 768px) and (max-width: 830px), (min-width: 992px) and (max-width: 1040px) {
