@@ -1,5 +1,5 @@
-import React, { Fragment, useState } from "react";
-import { Link } from 'react-router-dom';
+import React, { Fragment, useState, useEffect, useRef } from "react";
+import { Link, useOutletContext } from 'react-router-dom';
 import {
 	professionalSummary,
 	professionalExperience,
@@ -10,12 +10,37 @@ import {
 } from '../entry/Entry';
 
 function Home() {
-	console.log("Home component loaded");
+	// console.log("Home component loaded");
 	const [showMore, setShowMore] = useState(false);
+	const { scrollRef, isOverlayed, setIsOverlayed } = useOutletContext();
+  const lastScrollTop = useRef(0);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+
+    const handleScroll = () => {
+      const st = el.scrollTop;
+
+      if (st < lastScrollTop.current && !isOverlayed) {
+        setIsOverlayed(true);
+      } else if (st > lastScrollTop.current && isOverlayed) {
+        setIsOverlayed(false);
+      }
+
+      lastScrollTop.current = st <= 0 ? 0 : st;
+    };
+
+    el.addEventListener('scroll', handleScroll);
+    return () => el.removeEventListener('scroll', handleScroll);
+  }, [isOverlayed, setIsOverlayed, scrollRef]);
 	return (
 		<main className="tm-col-right">
 			<div style={{display: 'flex', flexDirection: 'column'}}>
-				<section className="tm-content">
+				<section
+				className={`tm-content scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
+				ref={scrollRef}
+				// className="" id="scroll-container-mobile"
+				>
 				<h2 className="tm-content-title fade-in-from-bottom"><strong>Professional Summary</strong></h2>
 					{/* Summary */}
 					{professionalSummary.map((item, index) => {
@@ -30,7 +55,8 @@ function Home() {
 					})}
 
 					{/* Experiences */}
-					{showMore &&
+					{/* {showMore && */}
+					{true &&
 					professionalExperience.map((item, index) => {
 						// const last = professionalExperience.length - 1 === index;
 						return (
@@ -92,6 +118,7 @@ function Home() {
 							</Fragment>
 						)
 					})}
+					<p style={{marginBottom: -15}}><strong>More on LinkedIn...</strong></p>
 				</>}
 				{/* Skills */}
 				{showMore &&
@@ -129,7 +156,7 @@ function Home() {
 					})
 				}
 				</section>
-				<div>
+				<div style={{display: 'flex'}}>
 					<span style={{borderRadius: 5}}
 					onClick={()=> setShowMore(prev=>!prev)}
 					className="btn btn-primary right-fade-in">{showMore?'Collapse':'Read More...'}</span>
