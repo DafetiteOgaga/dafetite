@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faMedium, faStackOverflow,
 	faFacebook, faFigma, faHashnode, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useIsMobile } from '../hooks/IsMobile';
 // import dafe from '../myLogos/dafeWhiteTransp180pxy.png'
 
 const socials = [
@@ -47,43 +48,45 @@ const socials = [
 ];
 
 function SiteIconAndSocials() {
+	const isMobile = useIsMobile();
 	return (
 		<div className="tm-col-left">
-			<div className="tm-site-header media left-slide-in">
+			<div className={`tm-site-header ${!isMobile?'media':undefined} left-slide-in`}>
 				{/* <i className="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i> */}
 				<Link to="/new" style={{color: 'inherit'}} className="media-body icon-bar">
 					{/* <h1 className="tm-sitename text-uppercase">diagoona</h1> */}
 					<img src={dafetite} alt="Dafetite Ogaga" className="tm-sitename dafetite" />
-					<p style={{
-						lineHeight: 0,
-						fontSize: '0.85rem',
-						marginTop: '-1rem',
-						// fontWeight: 300,
-					}} className="tm-slogon">we rise by lifting others...</p>
+					<p className="tm-slogon">we rise by lifting others...</p>
 				</Link>
 			</div>
-			<div className='right-fade-in'>
-				{socials.map(({ icon, url }) => (
-					<Link
-					key={url}
-					to={url}
-					// to={'##none##'}
-					className="icons"
-					target="_blank"
-					style={{
-						color: 'inherit',
-						padding: '0.5rem',
-						borderRadius: 5,
-					}}
-					rel="noopener noreferrer">
-					<FontAwesomeIcon
-					key={url}
-					className='awesome-icons'
-					size='lg'
-					icon={icon} />
-					</Link>
-				))}
-			</div>
+			{!isMobile && <Socials />}
+		</div>
+	)
+}
+
+function Socials () {
+	return (
+		<div className='right-fade-in'>
+			{socials.map(({ icon, url }) => (
+				<Link
+				key={url}
+				to={url}
+				// to={'##none##'}
+				className="icons"
+				target="_blank"
+				style={{
+					color: 'inherit',
+					padding: '0.5rem',
+					borderRadius: 5,
+				}}
+				rel="noopener noreferrer">
+				<FontAwesomeIcon
+				key={url}
+				className='awesome-icons'
+				size='lg'
+				icon={icon} />
+				</Link>
+			))}
 		</div>
 	)
 }
