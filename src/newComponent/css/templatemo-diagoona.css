@@ -533,6 +533,7 @@ textarea {
         /* top: auto; */
         /* right: 25px; */
         /* padding-bottom: 0; */
+        padding-right: 5%;
         z-index: 3;
     }
     .tm-logo { margin-right: 15px; }
