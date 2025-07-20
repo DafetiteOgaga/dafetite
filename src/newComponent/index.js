@@ -9,11 +9,8 @@ import { Footer } from './footer';
 import dafetite from '../dafetite.png';
 import resume from '../Dafetite_Ogaga.pdf';
 import { useIsMobile } from '../hooks/IsMobile';
+import { names, email, skills } from '../entry/Entry';
 
-const skills = [
-	'Software and Automation Engineer', 'Fullstack (Web and Mobile) Developer', 'IT Support',
-	'Automated Software Tester', 'Programming Tutor', 'ATM and Technical Engineer'
-]
 function Index () {
 	const isMobile = useIsMobile();
 	// console.log("Index component loaded");
@@ -135,9 +132,9 @@ function PersonalInfo() {
 		<div>
 				<h1 style={{animationDelay: '0.s'}}
 				className="tm-sitename text-uppercase tm-profile-name flip-and-fade-in">
-					Dafetite O. Ogaga
+					{names}
 				</h1>
-				<p className='italiced underlined right-slide-in tm-email'>Email: <strong>ogagadafetite@gmail.com</strong></p>
+				<p className='italiced underlined right-slide-in tm-email'>Email: <strong>{email}</strong></p>
 			{isMobile &&
 				<div style={{marginBottom: '1.3rem'}}>
 					<GetResume />
