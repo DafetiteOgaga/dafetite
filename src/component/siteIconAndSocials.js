@@ -57,7 +57,7 @@ function SiteIconAndSocials() {
 				<Link to="/" style={{color: 'inherit'}} className="media-body icon-bar">
 					{/* <h1 className="tm-sitename text-uppercase">diagoona</h1> */}
 					<img src={dafetite} alt="Dafetite Ogaga" className="tm-sitename dafetite" />
-					<p className="tm-slogon">{wrblo}</p>
+					<p style={isMobile?{}:{marginLeft: 18, marginTop: -25}} className="tm-slogon">{wrblo}</p>
 				</Link>
 			</div>
 			{!isMobile && <Socials />}
