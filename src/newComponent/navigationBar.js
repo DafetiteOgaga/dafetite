@@ -17,29 +17,29 @@ function NavigationBar() {
 	useEffect(() => {
 		if (isMobileMenuOpen) setIsMobileMenuOpen(false);
 	}, [currentPage])
-	// // Close menu on outside click
-	// useEffect(() => {
-	// 	const handleClickOutside = (event) => {
-	// 		if (
-	// 			menuWrapperRef.current &&
-	// 			!menuWrapperRef.current.contains(event.target)
-	// 		) {
-	// 			setIsMobileMenuOpen(false);
-	// 		}
-	// 	};
-	// 	if (isMobileMenuOpen) {
-	// 		document.addEventListener('mousedown', handleClickOutside);
-	// 	} else {
-	// 		document.removeEventListener('mousedown', handleClickOutside);
-	// 	}
-	// 	return () => {
-	// 		document.removeEventListener('mousedown', handleClickOutside);
-	// 	};
-	// }, [isMobileMenuOpen]);
+	// Close menu on outside click
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (
+				menuWrapperRef.current &&
+				!menuWrapperRef.current.contains(event.target)
+			) {
+				setIsMobileMenuOpen(false);
+			}
+		};
+		if (isMobileMenuOpen) {
+			document.addEventListener('mousedown', handleClickOutside);
+		} else {
+			document.removeEventListener('mousedown', handleClickOutside);
+		}
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [isMobileMenuOpen]);
 	return (
 		<div className="tm-col-right">
 			<nav className="navbar navbar-expand-lg" id="tm-main-nav">
-				{/* <div ref={menuWrapperRef}> */}
+				<div ref={menuWrapperRef}>
 					<button
 					onClick={(e) => {
 						e.stopPropagation();
@@ -53,7 +53,7 @@ function NavigationBar() {
 						:
 						isMobileMenuOpen &&
 						<MenuItems currentPage={currentPage} />}
-				{/* </div> */}
+				</div>
 			</nav>
 		</div>
 	)
