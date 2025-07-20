@@ -121,8 +121,8 @@ const BackgroundSlideshow = () => {
 				top: 0,
 				left: 0,
 				height: '100vh',
-				width: '100vw',
-				overflow: 'hidden',
+				width: '100%',
+				overflowX: 'hidden',
 				zIndex: -20,
 			}}
 			>
