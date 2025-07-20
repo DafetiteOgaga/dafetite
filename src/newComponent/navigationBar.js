@@ -38,7 +38,7 @@ function NavigationBar() {
 	}, [isMobileMenuOpen]);
 	return (
 		<div className="tm-col-right">
-			<nav className="navbar navbar-expand-lg tm-main-nav">
+			<nav className="navbar navbar-expand-lg tm-main-nav fade-in-from-bottom">
 				{/* <div><p style={{color: 'magenta', fontWeight: 'bolder'}}>one</p></div> */}
 				<div ref={menuWrapperRef}>
 					{/* <div><p style={{color: 'yellow', fontWeight: 'bolder'}}>two</p></div> */}
