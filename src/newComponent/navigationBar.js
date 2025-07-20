@@ -13,6 +13,7 @@ function NavigationBar() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const pathSegments = useLocation().pathname.split("/");
 	const currentPage = pathSegments.at(-1);
+	const menuWrapperRef = useRef(null);
 	const menuRef = useRef(null);
 	useEffect(() => {
 		if (isMobileMenuOpen) setIsMobileMenuOpen(false);
@@ -21,8 +22,8 @@ function NavigationBar() {
 	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (
-				menuRef.current &&
-				!menuRef.current.contains(event.target)
+				menuWrapperRef.current &&
+				!menuWrapperRef.current.contains(event.target)
 			) {
 				setIsMobileMenuOpen(false);
 			}
@@ -39,29 +40,34 @@ function NavigationBar() {
 	return (
 		<div className="tm-col-right">
 			<nav className="navbar navbar-expand-lg" id="tm-main-nav">
-				<button
-				onClick={() => setIsMobileMenuOpen(prev=>!prev)}
-				className="navbar-toggler" type="button">
-					<span><i className={`fas ${!isMobileMenuOpen?'fa-bars':'fa-times'}`}></i></span>
-				</button>
-				{!isMobile ?
-					<MenuItems currentPage={currentPage} menuRef={menuRef} />
-					:
-					isMobileMenuOpen &&
-					<MenuItems currentPage={currentPage} menuRef={menuRef} />}
+				<div ref={menuWrapperRef}>
+					<button
+					onClick={(e) => {
+						e.stopPropagation();
+						setIsMobileMenuOpen(prev=>!prev);
+					}}
+					className="navbar-toggler" type="button">
+						<span><i className={`fas ${!isMobileMenuOpen?'fa-bars':'fa-times'}`}></i></span>
+					</button>
+					{!isMobile ?
+						<MenuItems currentPage={currentPage} />
+						:
+						isMobileMenuOpen &&
+						<MenuItems currentPage={currentPage} />}
+				</div>
 			</nav>
 		</div>
 	)
 }
 
-function MenuItems({currentPage, menuRef}) {
+function MenuItems({currentPage}) {
 	const isMobile = useIsMobile();
 	// console.log("Is mobile:", isMobile); // Debugging line to check if it's mobile
 	// const pathSegments = useLocation().pathname.split("/");
 	// const currentPage = pathSegments.at(-1);
 	// console.log("currentPage path in NavigationBar:", currentPage); // Debugging line to check the currentPage path
 	return (
-		<div className="tm-nav" ref={menuRef} id="navbar-nav">
+		<div className="tm-nav" id="navbar-nav">
 			<ul className="navbar-nav text-uppercase">
 				{navigation.map((item, index) => {
 					// console.log("Navigation item:", item); // Debugging line to check each navigation item
