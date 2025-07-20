@@ -44,6 +44,13 @@
 	transform-origin: center;
 	opacity: 0;
 }
+.flip-and-fade-in-faster {
+	animation: flipIn 0.2s ease-out forwards;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	transform-origin: center;
+	opacity: 0;
+}
 
 @keyframes fadeInFromBottom {
     0% {
