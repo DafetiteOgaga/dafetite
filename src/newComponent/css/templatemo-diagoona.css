@@ -531,7 +531,7 @@ textarea {
     .tm-main-nav {
         position: fixed;
         top: auto;
-        right: 50px;
+        right: 100px;
         padding-bottom: 0;
         z-index: 3;
     }
