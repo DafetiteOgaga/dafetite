@@ -1,16 +1,22 @@
 import React, {Fragment, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { useIsMobile } from '../hooks/IsMobile';
 import { videoCardsContent } from '../entry/Entry';
+import { RenderImage } from './project';
 
 function Videos () {
+	const { scrollRef, isOverlayed } = useOutletContext();
 	// console.log("Videos component loaded");
 	const [selectedVideo, setSelectedVideo] = useState(null);
 	// console.log('BackgroundSlideshow is:', BackgroundSlideshow);
+	const isMobile = useIsMobile();
 	return (
 		<>
 			<main className="tm-col-right">
-				<section id='section-videos-id' className="tm-content">
+				<section id='section-videos-id'
+				className={`tm-content scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
+				ref={scrollRef}
+				>
 				{videoCardsContent.map((item, index) => {
 					const video = item.status.toLowerCase() === 'videos';
 					const animationDelay = '0s'
@@ -37,15 +43,16 @@ function Videos () {
 															<h2 style={{marginTop: -7}} className="mb-0 tm-project-content-title"><strong>{content.title}</strong></h2>
 															<p style={{lineHeight: 1.4}}>{content.description}</p>
 														</div>
-														<img src={content.thumbnail} alt={content.thumbnail} className={"tm-service-img-r"}/>
+														<RenderImage content={content.thumbnail} reverse={true}/>
 													</>
 													:
 													<>
-														<img src={content.thumbnail} alt={content.thumbnail} className={"tm-service-img"}/>
+														{!isMobile && <RenderImage content={content.thumbnail} reverse={false}/>}
 														<div className="media-body tm-service-text">
 															<h2 style={{marginTop: -7}} className="mb-0 tm-project-content-title"><strong>{content.title}</strong></h2>
 															<p style={{lineHeight: 1.4}}>{content.description}</p>
 														</div>
+														{isMobile && <RenderImage content={content.thumbnail} reverse={false}/>}
 													</>}
 												</div>
 												:
@@ -61,15 +68,16 @@ function Videos () {
 															<h2 style={{marginTop: -7}} className="mb-0 tm-project-content-title"><strong>{content.title}</strong></h2>
 															<p style={{lineHeight: 1.4}}>{content.description}</p>
 														</div>
-														<img src={content.getImageSrc} alt={content.getImageSrc} className={"tm-service-img-r"}/>
+														<RenderImage content={content.getImageSrc} reverse={true}/>
 													</>
 													:
 													<>
-														<img src={content.getImageSrc} alt={content.getImageSrc} className={"tm-service-img"}/>
+														{!isMobile && <RenderImage content={content.getImageSrc} reverse={false}/>}
 														<div className="media-body tm-service-text">
 															<h2 style={{marginTop: -7}} className="mb-0 tm-project-content-title"><strong>{content.title}</strong></h2>
 															<p style={{lineHeight: 1.4}}>{content.description}</p>
 														</div>
+														{isMobile && <RenderImage content={content.getImageSrc} reverse={false}/>}
 													</>}
 												</Link>}
 										</div>

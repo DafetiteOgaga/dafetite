@@ -11,7 +11,7 @@ import { OldPortfolio } from './components/oldPortfolio';
 
 function App() {
   const path = useLocation().pathname;
-  console.log("Current path:", path); // Debugging line to check the current path
+  // console.log("Current path:", path); // Debugging line to check the current path
   const isMainSite = path === '/';
   return (
     <>

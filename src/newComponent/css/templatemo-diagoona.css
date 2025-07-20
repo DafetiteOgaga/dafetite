@@ -135,7 +135,7 @@ p { line-height: 1.9; }
     width: 50%;
     height: 100%;
     padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .tm-col-right {
@@ -166,7 +166,6 @@ p { line-height: 1.9; }
     -webkit-appearance: none;
     width: 10px;
 }
-  
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: rgba(255,255,255,.8);
@@ -383,6 +382,9 @@ textarea {
     font-size: 36px;
     margin: 0;
 }
+.tm-site-header-socials {
+    margin-left: -50px;
+}
 
 @media (max-width: 1200px) {
     .nav-item { margin-right: 30px; }
@@ -458,6 +460,7 @@ textarea {
         top: auto;
         right: 15px;
         padding-bottom: 0;
+        z-index: 2;
     }
 
     .dafetite-profile {
@@ -483,7 +486,7 @@ textarea {
     } */
     
     .tm-col-left-content {
-        margin-top: -80px;
+        margin-top: -85px;
         width: 140%;
         background-color: rgba(0, 0, 0, 0.2);
     }
@@ -546,30 +549,69 @@ textarea {
     }
     .tm-content {
         margin-top: 0;
+        padding-left: 20px;
     }
 
+    /* .fixed-for-mobile {
+        position: fixed;
+        top: 0;
+    } */
+    .tm-content-title { font-size: 1.6rem; }
     .top-container-mobile {
-        /* height: 300px; */
+        position: sticky; /* FIXED */
+        top: 0;
+        left: 0;
+        width: 100%;
         z-index: 1;
     }
+    /* .top-container-mobile.scrolling {
+        background-color: rgba(0, 0, 0, 0.7);
+    } */
     .scroll-container-mobile {
-        /* top: 300px; */
-        position: absolute;
-        top: 64%;
-        left: 0;
-        right: 0;
-        height: calc(100vh - 100px);
-        overflow-y: auto;
-        transition: top 0.3s ease;
-        z-index: 2;
-        border-top: 2px solid #ddd;
-        background-color: rgba(0, 0, 0, 0.5);
-        will-change: top;
+        position: relative;
+        z-index: 1;
+        /* margin-top: 100vh; */
+        transition: transform 1.5s ease, z-index 0.5s ease;
     }
     /* Slide up to overlay 70-80% of the top container */
     .scroll-container-mobile.overlay {
-        /* covers 220px out of 300px, i.e. ~73% */
-        top: 60px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(100px); /* Adjust overlap height */
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-bottom: 18%;
+        /* border-top: 2px solid #ddd; */
+    }
+    .tm-footer-zindexed {
+        /* position: relative; */
+        /* z-index: 1; */
+        /* text-align: center; */
+        margin-right: 8%;
+        text-wrap: nowrap;
+    }
+    .tm-service-img,
+    .tm-service-img-r {
+        width: 100%;
+    }
+    .tm-bg-left {
+        height: 105px;
+        border-bottom: 50px solid rgba(0,0,0,0.6);
+    }
+    .tm-bg-right {
+        height: 100%;
+        /* border-bottom: 50px solid rgba(0,0,0,0.2); */
+    }
+    .tm-site-header-socials {
+        /* margin-left: 2%; */
+        margin: auto;
+        /* justify-self: baseline; */
+        /* position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 20px; */
     }
 }
 

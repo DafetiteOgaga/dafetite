@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import bg1 from '../newComponent/img/diagoona-bg-1.jpg';
 import bg2 from '../newComponent/img/diagoona-bg-2.jpg';
 import bg3 from '../newComponent/img/diagoona-bg-3.jpg';
+import { useIsMobile } from './IsMobile';
 // import bg from '../newComponent/img/diagoona-bg-4.jpg'; // Assuming this is the correct path for bg4
 
 const BackgroundContext = createContext(null);
@@ -61,6 +62,7 @@ const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
 };
 
 const BackgroundSlideshow = () => {
+	const isMobile = useIsMobile();
 	const path = useLocation().pathname.split('/').pop();
 	// console.log("Current path in BackgroundSlideshow:", path); // Debugging line to check the current path
 	let extendDiagonal;
@@ -86,25 +88,27 @@ const BackgroundSlideshow = () => {
 	};
 	// adjust section element dynamically
 	useEffect(() => {
-		// console.log("Applying styles for path:", path);
-		const sectionElementProjects = document.getElementById('section-projects-id');
-		const sectionElementVideos = document.getElementById('section-videos-id');
-	
-		// Reset any previously applied styles
-		if (sectionElementProjects) {
-			sectionElementProjects.style.marginLeft = '0';
-			sectionElementProjects.style.maxWidth = '100%';
-			sectionElementProjects.style.maxHeight = 'initial';
-		}
-	
-		// Now apply current path-specific styles
-		if (sectionElementProjects && path === 'projects') {
-			sectionElementProjects.style.marginLeft = extendDiagonal.tmMarginLeft;
-			sectionElementProjects.style.maxWidth = extendDiagonal.tmMaxWidth;
-			sectionElementProjects.style.maxHeight = extendDiagonal.tmMaxHeight;
-		}
-		if (sectionElementVideos && path === 'videos') {
-			sectionElementVideos.style.maxHeight = extendDiagonal.tmMaxHeight;
+		if (!isMobile) {
+			// console.log("Applying styles for path:", path);
+			const sectionElementProjects = document.getElementById('section-projects-id');
+			const sectionElementVideos = document.getElementById('section-videos-id');
+		
+			// Reset any previously applied styles
+			if (sectionElementProjects) {
+				sectionElementProjects.style.marginLeft = '0';
+				sectionElementProjects.style.maxWidth = '100%';
+				sectionElementProjects.style.maxHeight = 'initial';
+			}
+		
+			// Now apply current path-specific styles
+			if (sectionElementProjects && path === 'projects') {
+				sectionElementProjects.style.marginLeft = extendDiagonal.tmMarginLeft;
+				sectionElementProjects.style.maxWidth = extendDiagonal.tmMaxWidth;
+				sectionElementProjects.style.maxHeight = extendDiagonal.tmMaxHeight;
+			}
+			if (sectionElementVideos && path === 'videos') {
+				sectionElementVideos.style.maxHeight = extendDiagonal.tmMaxHeight;
+			}
 		}
 	}, [path]);
 	
@@ -139,7 +143,7 @@ const BackgroundSlideshow = () => {
 			{/* Diagonal background */}
 			<div className="tm-bg right-slide-in">
 				<div className="tm-bg-left" style={{...tmBgLeftStyle, ...{width: extendDiagonal.LRwidth}}}></div>
-				<div className="tm-bg-right" style={{...{width: extendDiagonal.Rwidth}}}></div>
+				<div className="tm-bg-right" style={{...{width: isMobile?'100%':extendDiagonal.Rwidth}}}></div>
 			</div>
 		</>
 	)

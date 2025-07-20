@@ -12,35 +12,27 @@ import {
 function Home() {
 	// console.log("Home component loaded");
 	const [showMore, setShowMore] = useState(false);
-	const { scrollRef, isOverlayed, setIsOverlayed } = useOutletContext();
-  const lastScrollTop = useRef(0);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-
-    const handleScroll = () => {
-      const st = el.scrollTop;
-
-      if (st < lastScrollTop.current && !isOverlayed) {
-        setIsOverlayed(true);
-      } else if (st > lastScrollTop.current && isOverlayed) {
-        setIsOverlayed(false);
-      }
-
-      lastScrollTop.current = st <= 0 ? 0 : st;
-    };
-
-    el.addEventListener('scroll', handleScroll);
-    return () => el.removeEventListener('scroll', handleScroll);
-  }, [isOverlayed, setIsOverlayed, scrollRef]);
+	const { scrollRef, isOverlayed } = useOutletContext();
+	const moreDetailsHandler = () => {
+		setShowMore(prev => {
+			const newValue = !prev;
+			if (!newValue) {
+				// Scroll to top
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth', // smooth scroll
+				});
+			}
+			return newValue;
+		});
+	}
 	return (
 		<main className="tm-col-right">
 			<div style={{display: 'flex', flexDirection: 'column'}}>
-				<section
-				className={`tm-content scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
-				ref={scrollRef}
-				// className="" id="scroll-container-mobile"
-				>
+			<section
+			className={`tm-content scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
+			ref={scrollRef}
+			>
 				<h2 className="tm-content-title fade-in-from-bottom"><strong>Professional Summary</strong></h2>
 					{/* Summary */}
 					{professionalSummary.map((item, index) => {
@@ -55,8 +47,8 @@ function Home() {
 					})}
 
 					{/* Experiences */}
-					{/* {showMore && */}
-					{true &&
+					{showMore &&
+					// {true &&
 					professionalExperience.map((item, index) => {
 						// const last = professionalExperience.length - 1 === index;
 						return (
@@ -155,12 +147,19 @@ function Home() {
 						)
 					})
 				}
-				</section>
+				{isOverlayed &&
 				<div style={{display: 'flex'}}>
 					<span style={{borderRadius: 5}}
-					onClick={()=> setShowMore(prev=>!prev)}
+					onClick={moreDetailsHandler}
 					className="btn btn-primary right-fade-in">{showMore?'Collapse':'Read More...'}</span>
-				</div>
+				</div>}
+				</section>
+				{!isOverlayed &&
+				<div style={{display: 'flex'}}>
+					<span style={{borderRadius: 5}}
+					onClick={moreDetailsHandler}
+					className="btn btn-primary right-fade-in">{showMore?'Collapse':'Read More...'}</span>
+				</div>}
 			</div>
 		</main>
 	)

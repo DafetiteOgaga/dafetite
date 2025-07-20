@@ -1,12 +1,16 @@
 import React from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 function Contact () {
+	const { scrollRef, isOverlayed } = useOutletContext();
 	console.log("Contact component loaded");
 	return (
 		<>
 			<main className="tm-col-right fade-in-from-bottom tm-contact-main">
 				{/* <!-- contact --> */}
-				<section className="tm-content tm-contact fade-in-from-bottom">
+				<section className={`tm-content tm-contact fade-in-from-bottom scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
+				ref={scrollRef}
+				>
 					<h2 className="mb-4 tm-content-title">Contact Us</h2>
 					{/* <p className="mb-85">
 						Etiam et egestas arcu. Fusce congue quis elit vitae commodo. Cras neque mauris,
