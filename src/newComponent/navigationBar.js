@@ -38,7 +38,7 @@ function NavigationBar() {
 	}, [isMobileMenuOpen]);
 	return (
 		<div className="tm-col-right">
-			<nav className="navbar navbar-expand-lg" id="tm-main-nav">
+			<nav className="navbar navbar-expand-lg tm-main-nav">
 				<div ref={menuWrapperRef}>
 					<button
 					onClick={(e) => {
