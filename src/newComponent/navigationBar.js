@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import { Link, useLocation } from 'react-router-dom';
 import { useIsMobile } from "../hooks/IsMobile";
 
@@ -11,6 +11,31 @@ const navigation = [
 function NavigationBar() {
 	const isMobile = useIsMobile();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const pathSegments = useLocation().pathname.split("/");
+	const currentPage = pathSegments.at(-1);
+	const menuRef = useRef(null);
+	useEffect(() => {
+		if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+	}, [currentPage])
+	// Close menu on outside click
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (
+				menuRef.current &&
+				!menuRef.current.contains(event.target)
+			) {
+				setIsMobileMenuOpen(false);
+			}
+		};
+		if (isMobileMenuOpen) {
+			document.addEventListener('mousedown', handleClickOutside);
+		} else {
+			document.removeEventListener('mousedown', handleClickOutside);
+		}
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [isMobileMenuOpen]);
 	return (
 		<div className="tm-col-right">
 			<nav className="navbar navbar-expand-lg" id="tm-main-nav">
@@ -20,33 +45,33 @@ function NavigationBar() {
 					<span><i className={`fas ${!isMobileMenuOpen?'fa-bars':'fa-times'}`}></i></span>
 				</button>
 				{!isMobile ?
-					<MenuItems />
+					<MenuItems currentPage={currentPage} menuRef={menuRef} />
 					:
 					isMobileMenuOpen &&
-					<MenuItems />}
+					<MenuItems currentPage={currentPage} menuRef={menuRef} />}
 			</nav>
 		</div>
 	)
 }
 
-function MenuItems() {
+function MenuItems({currentPage, menuRef}) {
 	const isMobile = useIsMobile();
-	console.log("Is mobile:", isMobile); // Debugging line to check if it's mobile
-	const pathSegments = useLocation().pathname.split("/");
-	const currentPage = pathSegments.at(-1);
+	// console.log("Is mobile:", isMobile); // Debugging line to check if it's mobile
+	// const pathSegments = useLocation().pathname.split("/");
+	// const currentPage = pathSegments.at(-1);
 	// console.log("currentPage path in NavigationBar:", currentPage); // Debugging line to check the currentPage path
 	return (
-		<div className="tm-nav" id="navbar-nav">
+		<div className="tm-nav" ref={menuRef} id="navbar-nav">
 			<ul className="navbar-nav text-uppercase">
 				{navigation.map((item, index) => {
 					// console.log("Navigation item:", item); // Debugging line to check each navigation item
 					const isActive = currentPage === item.name || (currentPage === "new" && item.name === "home");
 					// console.log(`Is "${item.name}" active?`, isActive); // Debugging line to check if the item is active
-					const animetionDelay = `${0.4 + index * 0.4}s`;
-					console.log("Animation delay for:", item.name, ':', animetionDelay); // Debugging line to check animation delay
+					const animetionDelay = isMobile?`${0.1 + index * 0.1}s`:`${0.4 + index * 0.4}s`;
+					// console.log("Animation delay for:", item.name, ':', animetionDelay); // Debugging line to check animation delay
 					return (
 						<li key={index}
-						className={`nav-item ${isActive && 'active'} ${!isMobile?'flip-and-fade-in':undefined}`}
+						className={`nav-item ${isActive && 'active'} ${!isMobile?'flip-and-fade-in':'flip-and-fade-in-faster'}`}
 						style={{ animationDelay: animetionDelay }}>
 							<Link to={item.link}
 							className="nav-link tm-nav-link">{item.name}
