@@ -69,14 +69,16 @@ p { line-height: 1.9; }
 }
 
 /* Page Background */
+/* problem 1 */
 .tm-bg {
     position: fixed;
     left: 0;
     right: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     display: flex;
     z-index: -15;
+    overflow-x: hidden;
 }
 
 .tm-bg-left,
@@ -85,6 +87,7 @@ p { line-height: 1.9; }
     width: 40%; /* Adjusts the width of the diagonal background */
     height: 100%;
     transition: width 0.5s ease-in-out;
+    overflow-x: hidden;
 }
 
 .tm-bg-right {
@@ -94,7 +97,7 @@ p { line-height: 1.9; }
 
 .tm-bg-left {
     border-right: 230px solid rgba(0,0,0,0.5);
-    border-top: 100vh solid transparent;
+    border-top: 100% solid transparent;
 }
 
 .tm-bg-controls-wrapper {
@@ -118,13 +121,14 @@ p { line-height: 1.9; }
 }
 
 .tm-container {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* overflow-x: hidden; */
 }
 
 .tm-row {
@@ -246,7 +250,7 @@ hr { border-top: 1px solid white; }
     color: #9CC;
 }
 
-/* Service */ 
+/* Service */
 .tm-service-text {
     /* max-width: 365px; */
 }
@@ -267,11 +271,11 @@ hr { border-top: 1px solid white; }
 
 .remove-margin-bottom {
     margin-bottom: 0 !important;
-  }
+}
 
 /* Contact */
 .form-control,
-textarea {    
+textarea {
     color: white;
     background-color: transparent;
     background-clip: padding-box;
@@ -288,7 +292,7 @@ textarea {
 
 .form-control:focus {
     color: white;
-    background-color: transparent;    
+    background-color: transparent;
     box-shadow: none;
     border-color: #9CC;
     outline: none;
@@ -303,8 +307,8 @@ textarea {
     margin-right: auto;
 }
 
-.form-control::-webkit-input-placeholder { color: white; } /* Edge */  
-.form-control:-ms-input-placeholder { color: white; } /* Internet Explorer 10-11 */  
+.form-control::-webkit-input-placeholder { color: white; } /* Edge */
+.form-control:-ms-input-placeholder { color: white; } /* Internet Explorer 10-11 */
 .form-control::placeholder { color: white; }
 
 .underlined {
@@ -414,6 +418,7 @@ textarea {
         color: white;
         top: 44px;
         right: 4px;
+        overflow-x: hidden;
     }
 
     .navbar-expand-lg .navbar-nav .tm-nav-link {
@@ -471,6 +476,7 @@ textarea {
         width: 142%;
         z-index: -10;
         position: relative;
+        overflow-x: hidden;
     }
     .profile-container {
         padding: 0;
@@ -529,10 +535,6 @@ textarea {
 
 @media (max-width: 460px) {
     .tm-main-nav {
-        /* position: fixed; */
-        /* top: auto; */
-        /* right: 25px; */
-        /* padding-bottom: 0; */
         padding-right: 5%;
         z-index: 3;
     }
@@ -564,17 +566,14 @@ textarea {
         padding-left: 20px;
     }
 
-    /* .fixed-for-mobile {
-        position: fixed;
-        top: 0;
-    } */
     .tm-content-title { font-size: 1.6rem; }
     .top-container-mobile {
-        position: sticky; /* FIXED */
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1;
+        overflow-x: hidden;
     }
     /* .top-container-mobile.scrolling {
         background-color: rgba(0, 0, 0, 0.7);
@@ -582,7 +581,7 @@ textarea {
     .scroll-container-mobile {
         position: relative;
         z-index: 1;
-        /* margin-top: 100vh; */
+        overflow-x: hidden;
         transition: transform 1.5s ease, z-index 0.5s ease;
     }
     /* Slide up to overlay 70-80% of the top container */
@@ -596,12 +595,14 @@ textarea {
         background-color: rgba(0, 0, 0, 0.7);
         padding-bottom: 18%;
         /* border-top: 2px solid #ddd; */
+        overflow-x: hidden;
     }
     .tm-footer-zindexed {
         /* position: relative; */
         /* z-index: 1; */
         /* text-align: center; */
-        margin-right: 8%;
+        /* overflow-x: hidden; */
+        margin-right: 16%;
         text-wrap: nowrap;
     }
     .tm-service-img,
@@ -609,12 +610,12 @@ textarea {
         width: 100%;
     }
     .tm-bg-left {
-        height: 105px;
+        height: 50%;
         border-bottom: 50px solid rgba(0,0,0,0.6);
     }
     .tm-bg-right {
-        height: 100%;
-        /* border-bottom: 50px solid rgba(0,0,0,0.2); */
+        height: 550%;
+        border-bottom: 50px solid rgba(0,0,0,0.2);
     }
     .tm-site-header-socials {
         margin: auto;
