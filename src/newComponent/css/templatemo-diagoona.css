@@ -16,7 +16,7 @@ body {
 }
 
 a {
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     text-decoration: none;
 }
 
@@ -466,7 +466,7 @@ textarea {
         top: auto;
         right: 20px;
         padding-bottom: 0;
-        z-index: 2;
+        z-index: 3;
     }
 
     .dafetite-profile {
@@ -586,7 +586,7 @@ textarea {
         left: 0;
         width: 100%;
         transform: translateY(100px); /* Adjust overlap height */
-        z-index: 2;
+        z-index: 4;
         background-color: rgba(0, 0, 0, 0.7);
         padding-bottom: 18%;
         /* border-top: 2px solid #ddd; */
