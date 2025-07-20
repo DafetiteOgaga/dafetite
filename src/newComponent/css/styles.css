@@ -1,0 +1,403 @@
+/*
+
+TemplateMo 550 Diagoona
+
+https://templatemo.com/tm-550-diagoona
+
+*/
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    overflow-x: hidden;
+    color: white;
+    /* background-color: #2C353C; */
+}
+
+a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+ul { padding: 0; }
+a:hover { text-decoration: none; }
+button:focus { outline: none; }
+p { line-height: 1.9; }
+.tm-logo { margin-right: 20px; }
+.tm-slogan { font-size: 0.8rem; }
+
+/* Navigation */
+.navbar-toggler {
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 0;
+    transform: skewX(-15deg);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+
+    /* padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem; */
+}
+.navbar-toggler i { transform: skewX(15deg); }
+
+.navbar-expand-lg {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link { padding: 0; }
+
+.navbar-expand-lg .navbar-nav .tm-nav-link {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
+    /* padding-bottom: 30px; Adjusts the height of the nav links to center it */
+}
+
+.nav-item { margin-right: 60px; }
+
+.nav-item:last-child { margin-right: 0; }
+
+.nav-item.active .tm-nav-link,
+.nav-item:hover .tm-nav-link {
+    color: #9CC;
+}
+
+/* Page Background */
+/* problem 1 */
+.tm-bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    z-index: -15;
+    overflow-x: hidden;
+}
+
+.tm-bg-left,
+.tm-bg-right {
+    position: relative;
+    width: 40%; /* Adjusts the width of the diagonal background */
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    overflow-x: hidden;
+}
+
+.tm-bg-right {
+    background-color: rgba(0,0,0,0.5);
+    width: 60%; /* Adjusts the width of the diagonal background for the right side */
+}
+
+.tm-bg-left {
+    border-right: 230px solid rgba(0,0,0,0.5);
+    border-top: 100% solid transparent;
+}
+
+.tm-bg-controls-wrapper {
+    display: inline-block;
+    padding-left: 4%;
+    /* margin-left: -150px; */
+}
+
+.tm-bg-control {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 6px;
+    cursor: pointer;
+}
+
+.tm-bg-control.active,
+.tm-bg-control:hover {
+    background-color: white;
+}
+
+.tm-container {
+    /* width: 100%; */
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow-x: hidden; */
+}
+
+.tm-row {
+    display: flex;
+}
+.tm-row-baseline-align {
+    align-items: baseline;
+}
+
+.tm-col-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.tm-col-right {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: contents;
+}
+
+.tm-content {
+    max-height: 510px;
+    height: 100%;
+    overflow-y: auto;
+    max-width: 660px;
+    padding-right: 20px;
+    transition: margin-left 0.5s ease-in-out, max-width 0.5s ease-in-out;
+    /* margin-left: auto;  Adjusts the left margin to center the content */
+}
+
+.tm-about {
+    /* max-width: 525px; */
+    /* max-width: 60%; /* Adjusts the width of the project section */
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.8);
+    box-shadow: 0 0 1px rgba(255,255,255,.8);
+}
+
+.tm-content-title { font-size: 1.8rem; }
+.tm-project-content-title { font-size: 1.6rem; }
+hr { border-top: 1px solid white; }
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 0;
+}
+
+.btn-big {
+    padding: 9px 40px;
+    font-size: 1.2rem;;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    border: 0;
+}
+.btn-primary:hover {
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.resume-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -0.5rem;
+}
+.resume {
+    color: white;
+    border: 1px solid white;
+    /* padding: 4px 6px; */
+    /* margin: 5px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-size: 1rem; */
+    /* margin-left: 0.5%; */
+    border-radius: 5px;
+    /* line-height: 1px; */
+    /* transform: skewX(-15deg); */
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.resume:hover {
+    border: 1px solid #9CC;
+    background-color: transparent;
+    color: #9CC;
+    font-size: 0.97rem;
+}
+.resume:active {
+    font-size: 1rem;
+}
+
+.tm-site-footer {
+    padding: 5px 0 10px;
+    max-width: 660px;
+    font-size: 0.95rem;
+}
+
+.tm-col-footer { padding-left: 0; }
+.tm-text-link { color: white; }
+
+.tm-text-link:hover,
+.tm-text-link:focus {
+    color: #9CC;
+}
+
+/* Service */
+.tm-service-text {
+    /* max-width: 365px; */
+}
+.tm-service-img {
+    margin-right: 25px;
+    width: 28%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.tm-service-img-r {
+    margin-left: 25px;
+    width: 28%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.remove-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+/* Contact */
+.form-control,
+textarea {
+    color: white;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 1px solid #999A9B;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 10px 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.form-control:focus {
+    color: white;
+    background-color: transparent;
+    box-shadow: none;
+    border-color: #9CC;
+    outline: none;
+}
+
+.mb-85 { margin-bottom: 85px; }
+.tm-contact-main { max-width: 690px; }
+
+.tm-contact {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-control::-webkit-input-placeholder { color: white; } /* Edge */
+.form-control:-ms-input-placeholder { color: white; } /* Internet Explorer 10-11 */
+.form-control::placeholder { color: white; }
+
+.underlined {
+    text-decoration: underline;
+}
+.italiced {
+    font-style: italic;
+}
+.h-aligned {
+    display: flex;
+    align-items: center;
+}
+.link-hover {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+}
+.link-hover:hover {
+    transform: translateY(0%) scaleX(1.02); /* Combine with the animation */
+}
+
+.dafetite {
+    width: 80%;
+    transition: transform 0.5s ease;
+}
+
+.icon-bar {
+    padding-left: 20px;
+}
+.icon-bar:hover {
+    transform: scale(1.05); /* Zoom in */
+}
+
+.dafetite-profile {
+    width: 60%;
+    height: 50%;
+    border-radius: 3%;
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    /* background-size: contain; */
+}
+.profile-container {
+    padding: 3% 0 0 4%;
+    /* background-size: cover; */
+}
+.image-fade {
+    mask-image:
+        /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
+        zlinear-gradient(to top, transparent, black 15%, black 100%, transparent);
+    -webkit-mask-image:
+        /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
+        linear-gradient(to top, transparent, black 15%, black 100%, transparent);
+    mask-composite: intersect;
+    -webkit-mask-composite: destination-in;
+}
+
+.icons {
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.icons:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+.awesome-icons {
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.awesome-icons:hover {
+	transform: scale(1.45);
+}
+.awesome-icons:active {
+	transform: scale(1.09);
+}
+.tm-slogon {
+    font-size: 0.8rem;
+    line-height: 0;
+    font-size: 0.85rem;
+    margin-top: -1rem;
+}
+.flex-display {
+    display: flex;
+}
+.skill-slogon {
+    line-height: 1.2rem;
+    font-size: 1rem;
+}
+.tm-profile-name {
+    font-size: 36px;
+    margin: 0;
+}
+.tm-site-header-socials {
+    margin-left: -50px;
+}
