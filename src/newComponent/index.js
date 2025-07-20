@@ -67,8 +67,10 @@ function Index () {
 						// className='tm-row-baseline-align'
 						>
 						<div className="tm-row pt-4">
-							<SiteIconAndSocials />
-							<NavigationBar />
+							<div style={{display: 'flex', justifyContent: isMobile?'space-around':'normal', width: '100%'}}>
+								<SiteIconAndSocials />
+								<NavigationBar />
+							</div>
 							{isMobile && <Socials />}
 						</div>
 						</div>

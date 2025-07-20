@@ -529,10 +529,10 @@ textarea {
 
 @media (max-width: 460px) {
     .tm-main-nav {
-        position: fixed;
-        top: auto;
-        right: 10px;
-        padding-bottom: 0;
+        /* position: fixed; */
+        /* top: auto; */
+        /* right: 25px; */
+        /* padding-bottom: 0; */
         z-index: 3;
     }
     .tm-logo { margin-right: 15px; }
