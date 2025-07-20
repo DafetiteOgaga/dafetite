@@ -10,8 +10,8 @@ import { useIsMobile } from './IsMobile';
 const BackgroundContext = createContext(null);
 
 const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
-  const bgImgs = [bg1, bg2, bg3]; // Add more images as needed
-//   const bgImgs = [bg3]; // Add more images as needed
+//   const bgImgs = [bg1, bg2, bg3]; // Add more images as needed
+  const bgImgs = [bg1]; // Add more images as needed
 
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [paused] = useState(!autoplay);
