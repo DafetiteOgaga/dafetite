@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dafetite/static/css/main.8f5a88b4.css",
-    "main.js": "/dafetite/static/js/main.4e7bd90b.js",
+    "main.css": "/dafetite/static/css/main.aeeafecc.css",
+    "main.js": "/dafetite/static/js/main.0c7caffe.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
@@ -48,12 +48,12 @@
     "static/media/fa-regular-400.woff2": "/dafetite/static/media/fa-regular-400.6ef3de51365cc036b952.woff2",
     "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
-    "main.8f5a88b4.css.map": "/dafetite/static/css/main.8f5a88b4.css.map",
-    "main.4e7bd90b.js.map": "/dafetite/static/js/main.4e7bd90b.js.map",
+    "main.aeeafecc.css.map": "/dafetite/static/css/main.aeeafecc.css.map",
+    "main.0c7caffe.js.map": "/dafetite/static/js/main.0c7caffe.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f5a88b4.css",
-    "static/js/main.4e7bd90b.js"
+    "static/css/main.aeeafecc.css",
+    "static/js/main.0c7caffe.js"
   ]
 }
