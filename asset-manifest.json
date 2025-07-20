@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dafetite/static/css/main.b7b5770d.css",
-    "main.js": "/dafetite/static/js/main.b7fffbd3.js",
+    "main.css": "/dafetite/static/css/main.0631e2b8.css",
+    "main.js": "/dafetite/static/js/main.84bc178b.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
@@ -48,12 +48,12 @@
     "static/media/fa-regular-400.woff2": "/dafetite/static/media/fa-regular-400.6ef3de51365cc036b952.woff2",
     "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
-    "main.b7b5770d.css.map": "/dafetite/static/css/main.b7b5770d.css.map",
-    "main.b7fffbd3.js.map": "/dafetite/static/js/main.b7fffbd3.js.map",
+    "main.0631e2b8.css.map": "/dafetite/static/css/main.0631e2b8.css.map",
+    "main.84bc178b.js.map": "/dafetite/static/js/main.84bc178b.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7b5770d.css",
-    "static/js/main.b7fffbd3.js"
+    "static/css/main.0631e2b8.css",
+    "static/js/main.84bc178b.js"
   ]
 }
