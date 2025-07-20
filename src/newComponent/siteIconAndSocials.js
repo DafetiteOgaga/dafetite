@@ -65,6 +65,7 @@ function SiteIconAndSocials() {
 }
 
 function Socials () {
+	const isMobile = useIsMobile();
 	return (
 		<div className='tm-site-header-socials right-fade-in'>
 			{socials.map(({ icon, url }) => (
