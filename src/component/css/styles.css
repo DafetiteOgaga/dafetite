@@ -35,13 +35,10 @@ p { line-height: 1.9; }
     transform: skewX(-15deg);
     background-color: rgba(0,0,0,0.5);
     color: white;
-
-    /* padding: .25rem .75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: .25rem; */
+}
+.navbar-toggler:hover {
+    transform: rotate3d(0, 0, 1, 15deg) skewX(-15deg);
+    /* transform: scaleY(1.05); */
 }
 .navbar-toggler i { transform: skewX(15deg); }
 
@@ -108,10 +105,10 @@ p { line-height: 1.9; }
 
 .tm-bg-control {
     display: inline-block;
-    width: 14px;
+    width: 25px;
     height: 14px;
     background-color: rgba(255,255,255,0.5);
-    margin: 6px;
+    /* margin: 6px; */
     cursor: pointer;
 }
 
@@ -162,7 +159,7 @@ p { line-height: 1.9; }
     height: 100%;
     overflow-y: auto;
     max-width: 660px;
-    padding-right: 20px;
+    padding-right: 25px;
     transition: margin-left 0.5s ease-in-out, max-width 0.5s ease-in-out;
     /* margin-left: auto;  Adjusts the left margin to center the content */
 }
@@ -317,6 +314,12 @@ textarea {
 .italiced {
     font-style: italic;
 }
+.bolded {
+    font-weight: bold;
+}
+.bolder {
+    font-weight: 900;
+}
 .h-aligned {
     display: flex;
     align-items: center;
@@ -332,6 +335,9 @@ textarea {
 .dafetite {
     width: 80%;
     transition: transform 0.5s ease;
+}
+.dafetite:hover {
+    transform: scale(1.05);
 }
 
 .icon-bar {
@@ -400,4 +406,7 @@ textarea {
 }
 .tm-site-header-socials {
     margin-left: -50px;
+}
+.submit {
+    border-radius: 5px;
 }

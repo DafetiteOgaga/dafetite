@@ -6,6 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faMedium, faStackOverflow,
 	faFacebook, faFigma, faHashnode, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useIsMobile } from '../hooks/IsMobile';
+import { wrblo } from '../entry/Entry';
 // import dafe from '../myLogos/dafeWhiteTransp180pxy.png'
 
 const socials = [
@@ -53,10 +54,10 @@ function SiteIconAndSocials() {
 		<div className="tm-col-left">
 			<div className={`tm-site-header ${!isMobile?'media':undefined} left-slide-in`}>
 				{/* <i className="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i> */}
-				<Link to="/new" style={{color: 'inherit'}} className="media-body icon-bar">
+				<Link to="/" style={{color: 'inherit'}} className="media-body icon-bar">
 					{/* <h1 className="tm-sitename text-uppercase">diagoona</h1> */}
 					<img src={dafetite} alt="Dafetite Ogaga" className="tm-sitename dafetite" />
-					<p className="tm-slogon">we rise by lifting others...</p>
+					<p className="tm-slogon">{wrblo}</p>
 				</Link>
 			</div>
 			{!isMobile && <Socials />}

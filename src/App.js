@@ -1,23 +1,18 @@
 import './App.css';
 import './global.css';
-import './newComponent/css/bootstrap.min.css';
-import './newComponent/fontawesome/css/all.min.css';
-import './newComponent/css/styles.css';
-import './newComponent/css/responsive.css';
-import './newComponent/css/motion.css';
-import AppRoutes from './newComponent/routes/Route';
-import { useLocation } from 'react-router-dom';
-
-import { OldPortfolio } from './components/oldPortfolio';
+import './component/css/bootstrap.min.css';
+import './component/fontawesome/css/all.min.css';
+import './component/css/styles.css';
+import './component/css/responsive.css';
+import './component/css/motion.css';
+import { AppRoutes } from './routes/Route';
+import { useSetHeadTag } from './hooks/useSetHeadTag';
 
 function App() {
-  const path = useLocation().pathname;
-  // console.log("Current path:", path); // Debugging line to check the current path
-  const isMainSite = path === '/';
+  useSetHeadTag()
   return (
     <>
       <AppRoutes />
-      {isMainSite && <OldPortfolio />}
     </>
   );
 }

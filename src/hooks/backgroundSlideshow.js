@@ -1,17 +1,17 @@
 // hooks/BackgroundSlideshow.jsx
 import React, { useContext, useEffect, useState, createContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import bg1 from '../newComponent/img/diagoona-bg-1.jpg';
-import bg2 from '../newComponent/img/diagoona-bg-2.jpg';
-import bg3 from '../newComponent/img/diagoona-bg-3.jpg';
+import bg1 from '../component/img/diagoona-bg-1.jpg';
+import bg2 from '../component/img/diagoona-bg-2.jpg';
+import bg3 from '../component/img/diagoona-bg-3.jpg';
 import { useIsMobile } from './IsMobile';
 // import bg from '../newComponent/img/diagoona-bg-4.jpg'; // Assuming this is the correct path for bg4
 
 const BackgroundContext = createContext(null);
 
 const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
-//   const bgImgs = [bg1, bg2, bg3]; // Add more images as needed
-  const bgImgs = [bg1]; // Add more images as needed
+  const bgImgs = [bg1, bg2, bg3]; // Add more images as needed
+//   const bgImgs = [bg1]; // Add more images as needed
 
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [paused] = useState(!autoplay);
@@ -159,7 +159,10 @@ const ManualBackgroundSelector = () => {
 			{/* Manual background selectors */}
 			<div className="tm-col-left text-center">
 				<ul className="tm-bg-controls-wrapper">
-					{allBackgrounds.map((_, idx) => (
+					{allBackgrounds.map((_, idx) => {
+						const first = idx === 0;
+						const last = idx === allBackgrounds.length - 1;
+						return (
 						<li	key={idx}
 							className='tm-bg-control'
 							onClick={() => handleControlClick(idx)}
@@ -169,11 +172,15 @@ const ManualBackgroundSelector = () => {
 							// 	height: 10,
 							// 	margin: 5,
 							// 	borderRadius: '50%',
+							borderTopLeftRadius: first ? 5 : 0,
+							borderBottomLeftRadius: first ? 5 : 0,
+							borderTopRightRadius: last ? 5 : 0,
+							borderBottomRightRadius: last ? 5 : 0,
 								backgroundColor: idx === currentIndex ? 'white' : 'gray',
 							// 	cursor: 'pointer',
 							}}
 						/>
-					))}
+					)})}
 				</ul>
 			</div>
 		</>

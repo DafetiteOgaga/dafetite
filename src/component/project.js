@@ -33,7 +33,8 @@ function Project () {
 														{/* {!isMobile && <RenderImage content={content} reverse={true}/>} */}
 														<div className="media-body tm-service-text">
 															<h2 style={{marginTop: -7}} className="mb-0 tm-project-content-title"><strong>{content.title}</strong></h2>
-															<p style={{lineHeight: 1.4}}>{content.description}</p>
+															<p style={{lineHeight: 1.4, marginBottom: 0}}>{content.description}</p>
+															<p style={{lineHeight: 1.4}}><span className='text-uppercase bolded'>Stacks:</span> <span className='italiced underlined'>{content.stack}</span></p>
 														</div>
 														<RenderImage content={content.getImageSrc} reverse={true}/>
 													</>
@@ -42,7 +43,8 @@ function Project () {
 														{!isMobile && <RenderImage content={content.getImageSrc} reverse={false}/>}
 														<div className="media-body tm-service-text">
 															<h2 style={{marginTop: -7}} className="mb-0 tm-project-content-title"><strong>{content.title}</strong></h2>
-															<p style={{lineHeight: 1.4}}>{content.description}</p>
+															<p style={{lineHeight: 1.4,  marginBottom: 0}}>{content.description}</p>
+															<p style={{lineHeight: 1.4}}><span className='text-uppercase bolded'>Stacks:</span> <span className='italiced underlined'>{content.stack}</span></p>
 														</div>
 														{isMobile && <RenderImage content={content.getImageSrc} reverse={false}/>}
 													</>}

@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import { useIsMobile } from "../hooks/IsMobile";
 
 const navigation = [
-	{ name: "home", link: "/new" },
-	{ name: "projects", link: "/new/projects" },
-	{ name: "videos", link: "/new/videos" },
-	{ name: "contact", link: "/new/contact" }
+	{ name: "home", link: "/" },
+	{ name: "projects", link: "projects" },
+	{ name: "videos", link: "videos" },
+	{ name: "contact", link: "contact" }
 ]
 function NavigationBar() {
 	const isMobile = useIsMobile();
@@ -79,14 +79,13 @@ function MenuItems({currentPage}) {
 			<ul className="navbar-nav text-uppercase">
 				{navigation.map((item, index) => {
 					// console.log("Navigation item:", item); // Debugging line to check each navigation item
-					const isActive = currentPage === item.name || (currentPage === "new" && item.name === "home");
+					const isActive = currentPage === item.name || (currentPage === "" && item.name === "home");
 					// console.log(`Is "${item.name}" active?`, isActive); // Debugging line to check if the item is active
 					const animationDelay = isMobile?`${0.1 + index * 0.1}s`:`${0.4 + index * 0.4}s`;
 					// console.log("Animation delay for:", item.name, ':', animetionDelay); // Debugging line to check animation delay
 					const first = index === 0;
 					const last = index === navigation.length - 1;
 					const firstOrLast = first || last;
-					const marginValue = 0
 					return (
 						<Fragment key={index}>
 							{isMobile ?
@@ -100,7 +99,7 @@ function MenuItems({currentPage}) {
 								first={first}
 								last={last}
 								firstOrLast={firstOrLast}/>
-								{!last ? <hr className="mb-4"/> : <hr className="mb-2"/>}
+								{!last ? <hr className="mb-3"/> : <hr className="mb-2"/>}
 								{/* <hr className="mb-4"/> */}
 							</div>
 							:

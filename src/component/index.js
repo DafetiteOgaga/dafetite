@@ -10,8 +10,9 @@ import dafetite from '../dafetite.png';
 import resume from '../Dafetite_Ogaga.pdf';
 import { useIsMobile } from '../hooks/IsMobile';
 import { names, email, skills } from '../entry/Entry';
+import { DafetiteSchema } from '../schemas/dafetiteSchema';
 
-function Index () {
+function MainIndex () {
 	const isMobile = useIsMobile();
 	// console.log("Index component loaded");
 	const scrollRef = useRef(null); // Still passing for other usage
@@ -59,6 +60,7 @@ function Index () {
 	}, []);
 	return (
 		<>
+			<DafetiteSchema />
 			<BackgroundSlideshowProvider>
 				<BackgroundSlideshow />
 				<div className="tm-container">
@@ -159,4 +161,4 @@ function GetResume() {
 		</a>
 	)
 }
-export {Index}
+export {MainIndex}

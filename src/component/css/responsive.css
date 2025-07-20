@@ -8,7 +8,6 @@
 }
 
 @media (max-width: 992px) {
-
     .navbar-nav {
 		flex-direction: row;
 	}
@@ -22,6 +21,7 @@
         top: 44px;
         right: 4px;
         overflow-x: hidden;
+		border-radius: 10px 0 10px 10px;
     }
 
 	.navbar-nav {
@@ -41,8 +41,9 @@
     }
 
 	.tm-content {
-        max-height: none;
-        margin-top: 40px;
+		max-height: none;
+        margin-top: 0;
+        padding-left: 20px;
     }
 	.tm-site-footer { padding-top: 40px; }
 
@@ -57,17 +58,16 @@
     .tm-bg-right {
         width: 100%;
     }
-    .tm-col-left {
-        width: 65%;
+	.tm-col-left {
+		/* controls the overall width of the view */
+        width: 71%;
         padding: 0 8px;
+    }
+	.dafetite {
+        width: 57%;
     }
     .icon-bar {
         padding-left: 0;
-    }
-    .dafetite {
-        width: 57%;
-        /* height: 40%; */
-        /* margin-bottom: 20px; */
     }
 
     .dafetite-profile {
@@ -102,13 +102,16 @@
     .tm-bg { flex-direction: column; }
 
     .tm-bg-left {
-        height: 200px;
-        border-bottom: 50px solid rgba(0,0,0,0.5);
+        height: 50%;
+        border-bottom: 50px solid rgba(0,0,0,0.6);
         border-right: 0;
         border-top: 0;
     }
 
-    .tm-bg-right { height: calc(100% - 200px); }
+    .tm-bg-right {
+		height: 550%;
+        border-bottom: 50px solid rgba(0,0,0,0.2);
+	}
 
     .tm-bg-controls-wrapper {
         margin-left: 0;
@@ -124,11 +127,10 @@
         padding-left: 10px;
         padding-right: 10px;
     }
-}
+/* }
 
-@media (max-width: 460px) {
+@media (max-width: 460px) { */
     .tm-main-nav {
-        /* padding-right: 5%; */
         z-index: 3;
     }
     .tm-logo { margin-right: 15px; }
@@ -138,26 +140,14 @@
         padding-left: 8px;
     }
     .tm-skills-slogon { font-size: 20rem; }
-    /* .tm-nav {
-        background: rgba(0, 0, 0, 0.5);
-    } */
     .tm-profile-name {
         font-size: 1.45rem;
         /* line-height: 1.2; */
         margin-top: 0;
     }
-    .tm-col-left {
-		/* controls the overall width of the view */
-        width: 71%;
-        padding: 0 8px;
-    }
     .skill-slogon {
         line-height: 1.2rem;
         font-size: 1rem;
-    }
-    .tm-content {
-        margin-top: 0;
-        padding-left: 20px;
     }
 
     .tm-content-title { font-size: 1.6rem; }
@@ -169,9 +159,7 @@
         z-index: 1;
         overflow-x: hidden;
     }
-    /* .top-container-mobile.scrolling {
-        background-color: rgba(0, 0, 0, 0.7);
-    } */
+
     .scroll-container-mobile {
         position: relative;
         z-index: 1;
@@ -188,6 +176,8 @@
         z-index: 4;
         background-color: rgba(0, 0, 0, 0.7);
         padding-bottom: 18%;
+		padding-top: 6%;
+		/* padding: 6% auto 18% auto; */
         /* border-top: 2px solid #ddd; */
         overflow-x: hidden;
     }
@@ -202,14 +192,6 @@
     .tm-service-img,
     .tm-service-img-r {
         width: 100%;
-    }
-    .tm-bg-left {
-        height: 50%;
-        border-bottom: 50px solid rgba(0,0,0,0.6);
-    }
-    .tm-bg-right {
-        height: 550%;
-        border-bottom: 50px solid rgba(0,0,0,0.2);
     }
     .tm-site-header-socials {
         margin: auto;
