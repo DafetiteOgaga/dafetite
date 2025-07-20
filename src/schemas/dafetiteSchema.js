@@ -128,6 +128,72 @@ const credentialList = Object.values(certifications).map(cert => ({
 	recognizedBy: cert.recognizedBy
 }));
 
+const personalProjects = {
+	customCommands: {
+		name: "Custom Commands",
+		description: `A Unix-like command utility project that simplifies repetitive terminal tasks. It features a
+				collection of custom commands created to automate everyday operations for developers and power
+				users.`,
+		url: "https://github.com/DafetiteOgaga/custom_commands",
+		keywords: [
+			"shell",
+			"cli-tools",
+			"automation",
+			"productivity",
+			"bash",
+			"python",
+			"scripts",
+			"bash-scripts",
+			"python-scripts",
+			"c-programming",
+			"git",
+			"version-control",
+			"git-commands",
+			"github",
+			"unix-like",
+			"linux",
+			"git-bash",
+			"command",
+			"terminal-utilities",
+		],
+	},
+	altaviz: {
+		name: "Altaviz Support Limited",
+		description: `
+					A robust role-based workflow management system built for Altaviz Support Limited. This
+					web application streamlines operations across multiple departments, including Custodians,
+					Engineers, Workshop staff, Help Desk, HR, and Supervisors. Developed using Django (backend),
+					ReactJS (frontend), and MySQL (database), the platform is designed to be fast, scalable,
+					and reliable, providing a seamless interface for day-to-day company operations.`,
+		url: "https://altaviz-frontend.vercel.app/",
+		keywords: [
+			"workflow-management",
+			"role-based-access",
+			"django",
+			"reactjs",
+			"mysql",
+			"enterprise-app",
+			"departmental-tools",
+			"staff-portal",
+			"company-operations",
+			"helpdesk-system",
+			"hr-management",
+			"engineer-tools",
+			"custodian-portal",
+			"scalable-web-app",
+			"business-automation"
+		],
+	},
+}
+// Transform to Schema.org format
+const personalProjectsList = Object.values(personalProjects).map(project => ({
+	"@type": "EducationalOccupationalCredential",
+	name: project.name,
+	description: project.description,
+	url: project.url,
+	keywords: project.keywords
+}));
+
 const organizationAndPerson = {
 	"@context": "https://schema.org",
 	"@type": "Organization",
@@ -153,9 +219,7 @@ const dafe = {
 	"@type": "Person",
 	"name": "Dafetite Ogaga",
 	"url": "https://dafetiteogaga.github.io/dafetite/",
-	// "logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
 	"image": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
-	// "image": "https://dafetiteogaga.github.io/dafetite/dafe.png",
 	"jobTitle": "Software and Automation Engineer",
 	"description": "Software and Automation Engineer skilled in fullstack (web and mobile) development, IT support, automated software testing, and programming tutoring.",
 	"sameAs": [
@@ -170,7 +234,8 @@ const dafe = {
 		"https://hashnode.com/@Dafetite",
 		"https://www.upwork.com/freelancers/~01b8518a3f4c591e32",
 	],
-	"hasCredential": credentialList
+	"hasCredential": credentialList,
+	"hasPart": personalProjectsList
 }
 const website = {
 	"@context": "https://schema.org",
@@ -182,7 +247,7 @@ const website = {
 const DafetiteSchema = () => (
 	<Helmet>
 		<script type="application/ld+json">
-		{JSON.stringify(dafe)}
+			{JSON.stringify(dafe)}
 		</script>
 		<script type="application/ld+json">
 			{JSON.stringify(website)}
@@ -190,4 +255,4 @@ const DafetiteSchema = () => (
 	</Helmet>
 );
 
-export default DafetiteSchema;
+export {DafetiteSchema};
