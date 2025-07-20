@@ -35,8 +35,14 @@ p { line-height: 1.9; }
     transform: skewX(-15deg);
     background-color: rgba(0,0,0,0.5);
     color: white;
-}
 
+    /* padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem; */
+}
 .navbar-toggler i { transform: skewX(15deg); }
 
 .navbar-expand-lg {
@@ -461,14 +467,6 @@ textarea {
         /* margin-bottom: 20px; */
     }
 
-    #tm-main-nav {
-        position: fixed;
-        top: auto;
-        right: 20px;
-        padding-bottom: 0;
-        z-index: 3;
-    }
-
     .dafetite-profile {
         width: 142%;
         z-index: -10;
@@ -530,6 +528,13 @@ textarea {
 }
 
 @media (max-width: 460px) {
+    .tm-main-nav {
+        position: fixed;
+        top: auto;
+        right: 20px;
+        padding-bottom: 0;
+        z-index: 3;
+    }
     .tm-logo { margin-right: 15px; }
     .tm-sitename { font-size: 1.8rem; }
     .tm-slogon {
