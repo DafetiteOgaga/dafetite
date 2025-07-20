@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect, Fragment} from 'react';
 // import '../App.css';
 // import '../global.css';
 import { Outlet } from 'react-router-dom';
@@ -9,11 +9,8 @@ import { Footer } from './footer';
 import dafetite from '../dafetite.png';
 import resume from '../Dafetite_Ogaga.pdf';
 import { useIsMobile } from '../hooks/IsMobile';
+import { names, email, skills } from '../entry/Entry';
 
-const skills = [
-	'Software and Automation Engineer', 'Fullstack (Web and Mobile) Developer', 'IT Support',
-	'Automated Software Tester', 'Programming Tutor', 'ATM and Technical Engineer'
-]
 function Index () {
 	const isMobile = useIsMobile();
 	// console.log("Index component loaded");
@@ -99,28 +96,13 @@ function Index () {
 }
 
 function LeftBox() {
+	const isMobile = useIsMobile();
 	return (
 		<div className="tm-col-left">
 			<div className='profile-container'>
 				<img src={dafetite} alt="Dafetite Ogaga" className="dafetite-profile image-fade fade-in-from-top" />
 				<div className="tm-col-left-content">
-					<div className='flex-display'>
-						<h1 style={{animationDelay: '0.s'}}
-						className="tm-sitename text-uppercase tm-profile-name flip-and-fade-in">
-							Dafetite O. Ogaga
-						</h1>
-						<a
-						href={resume}
-						// download
-						target="_blank"
-						rel="noopener noreferrer"
-						className="btn resume">
-							<span>
-								Get Resume
-							</span>
-						</a>
-					</div>
-					<p className='italiced underlined' style={{marginTop: -10}}>Email: <strong>ogagadafetite@gmail.com</strong></p>
+					<PersonalInfo />
 					{skills.map((skill, index) => {
 						const animetionDelay = `${0.4 + index * 0.4}s`;
 						return (
@@ -135,8 +117,44 @@ function LeftBox() {
 					<p className="tm-slogon">a ReactJS project</p>
 					<p className="tm-slogon">a template by <a rel="nofollow" target="_parent" href="https://templatemo.com" className="tm-text-link">TemplateMo</a></p> */}
 				</div>
+				{!isMobile &&
+				<div className='resume-container'>
+					<GetResume />
+				</div>}
 			</div>
 		</div>
+	)
+}
+
+function PersonalInfo() {
+	const isMobile = useIsMobile();
+	return (
+		<div>
+				<h1 style={{animationDelay: '0.s'}}
+				className="tm-sitename text-uppercase tm-profile-name flip-and-fade-in">
+					{names}
+				</h1>
+				<p className='italiced underlined right-slide-in tm-email'>Email: <strong>{email}</strong></p>
+			{isMobile &&
+				<div style={{marginBottom: '1.3rem'}}>
+					<GetResume />
+				</div>}
+		</div>
+	)
+}
+
+function GetResume() {
+	return (
+		<a
+		href={resume}
+		// download
+		target="_blank"
+		rel="noopener noreferrer"
+		className="btn resume">
+			<span>
+				Get Resume
+			</span>
+		</a>
 	)
 }
 export {Index}
