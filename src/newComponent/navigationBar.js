@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useState, useRef, Fragment} from "react";
 import { Link, useLocation } from 'react-router-dom';
 import { useIsMobile } from "../hooks/IsMobile";
 
@@ -81,20 +81,63 @@ function MenuItems({currentPage}) {
 					// console.log("Navigation item:", item); // Debugging line to check each navigation item
 					const isActive = currentPage === item.name || (currentPage === "new" && item.name === "home");
 					// console.log(`Is "${item.name}" active?`, isActive); // Debugging line to check if the item is active
-					const animetionDelay = isMobile?`${0.1 + index * 0.1}s`:`${0.4 + index * 0.4}s`;
+					const animationDelay = isMobile?`${0.1 + index * 0.1}s`:`${0.4 + index * 0.4}s`;
 					// console.log("Animation delay for:", item.name, ':', animetionDelay); // Debugging line to check animation delay
+					const first = index === 0;
+					const last = index === navigation.length - 1;
+					const firstOrLast = first || last;
+					const marginValue = 0
 					return (
-						<li key={index}
-						className={`nav-item ${isActive && 'active'} ${!isMobile?'flip-and-fade-in':'flip-and-fade-in-faster'}`}
-						style={{ animationDelay: animetionDelay }}>
-							<Link to={item.link}
-							className="nav-link tm-nav-link">{item.name}
-								<span className="sr-only">(current)</span></Link>
-						</li>
+						<Fragment key={index}>
+							{isMobile ?
+							<div>
+								{first && <hr className="mt-2"/>}
+								<MenuItemsDisplay
+								index={index}
+								item={item}
+								animationDelay={animationDelay}
+								isActive={isActive}
+								first={first}
+								last={last}
+								firstOrLast={firstOrLast}/>
+								{!last ? <hr className="mb-4"/> : <hr className="mb-2"/>}
+								{/* <hr className="mb-4"/> */}
+							</div>
+							:
+							<MenuItemsDisplay
+								index={index}
+								item={item}
+								animationDelay={animationDelay}
+								isActive={isActive}
+								first={first}
+								last={last}
+								firstOrLast={firstOrLast}/>}
+						</Fragment>
 					)
 				})}
 			</ul>
 		</div>
+	)
+}
+
+function MenuItemsDisplay ({
+	index,
+	item,
+	animationDelay,
+	isActive,
+	first,
+	last,
+	firstOrLast
+}) {
+	const isMobile = useIsMobile();
+	return (
+		<li key={index}
+		className={`nav-item ${isActive && 'active'} ${!isMobile?'flip-and-fade-in':'flip-and-fade-in-faster'}`}
+		style={{ animationDelay: animationDelay }}>
+			<Link to={item.link}
+			className="nav-link tm-nav-link">{item.name}
+				<span className="sr-only">(current)</span></Link>
+		</li>
 	)
 }
 export { NavigationBar };
