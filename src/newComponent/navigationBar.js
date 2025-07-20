@@ -39,14 +39,22 @@ function NavigationBar() {
 	return (
 		<div className="tm-col-right">
 			<nav className="navbar navbar-expand-lg tm-main-nav">
+				<div><p style={{color: 'magenta', fontWeight: 'bolder'}}>one</p></div>
 				<div ref={menuWrapperRef}>
+					<div><p style={{color: 'yellow', fontWeight: 'bolder'}}>two</p></div>
 					<button
 					onClick={(e) => {
 						e.stopPropagation();
 						setIsMobileMenuOpen(prev=>!prev);
 					}}
 					className="navbar-toggler" type="button">
-						<span><i className={`fas ${!isMobileMenuOpen?'fa-bars':'fa-times'}`}></i></span>
+						<div><p style={{color: 'blue', fontWeight: 'bolder'}}>three</p></div>
+						<span>
+							<div><p style={{color: 'pink', fontWeight: 'bolder'}}>four</p></div>
+							<i className={`fas ${!isMobileMenuOpen?'fa-bars':'fa-times'}`}>
+								<div><p style={{color: 'cyan', fontWeight: 'bolder'}}>five</p></div>
+							</i>
+						</span>
 					</button>
 					{!isMobile ?
 						<MenuItems currentPage={currentPage} />
