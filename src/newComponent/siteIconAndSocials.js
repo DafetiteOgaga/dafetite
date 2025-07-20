@@ -66,7 +66,7 @@ function SiteIconAndSocials() {
 
 function Socials () {
 	return (
-		<div className='right-fade-in'>
+		<div className='tm-site-header-socials right-fade-in'>
 			{socials.map(({ icon, url }) => (
 				<Link
 				key={url}
@@ -80,14 +80,14 @@ function Socials () {
 					borderRadius: 5,
 				}}
 				rel="noopener noreferrer">
-				<FontAwesomeIcon
-				key={url}
-				className='awesome-icons'
-				size='lg'
-				icon={icon} />
+					<FontAwesomeIcon
+					key={url}
+					className='awesome-icons'
+					size="lg"
+					icon={icon} />
 				</Link>
 			))}
 		</div>
 	)
 }
-export { SiteIconAndSocials }
+export { SiteIconAndSocials, Socials }
