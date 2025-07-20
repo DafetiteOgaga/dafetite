@@ -7,7 +7,7 @@ const videos = require.context('../altavizVideos', false, /\.(mp4|webm|ogg|png|j
 const getVideo = (name) => (videos(`./${name}`))
 
 // index component
-const names = 'Dafetite O. Ogaga';
+const names = '1Dafetite O. Ogaga';
 const email = 'ogagadafetite@gmail.com'
 const skills = [
 	'Software and Automation Engineer', 'Fullstack (Web and Mobile) Developer', 'IT Support',
