@@ -76,12 +76,12 @@ function Contact () {
 	// console.log("Contact component loaded");
 	return (
 		<>
-			<main className="tm-col-right fade-in-from-bottom tm-contact-main">
+			<main className="tm-col-right tm-contact-main">
 				{/* <!-- contact --> */}
 				<section className={`tm-content tm-contact fade-in-from-bottom scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
 				ref={scrollRef}
 				>
-					<h2 className="mb-4 tm-content-title">Contact Us</h2>
+					<h2 className="mb-4 tm-content-title fade-in-from-bottom">Contact Us</h2>
 					{/* <p className="mb-85">
 						Etiam et egestas arcu. Fusce congue quis elit vitae commodo. Cras neque mauris,
 						vehicula in ipsum sit amet, faucibus aliquam arcu.

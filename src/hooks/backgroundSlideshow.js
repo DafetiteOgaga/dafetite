@@ -67,14 +67,13 @@ const BackgroundSlideshow = () => {
 	// console.log("Current path in BackgroundSlideshow:", path); // Debugging line to check the current path
 	let extendDiagonal;
 	if (path.toLowerCase() === 'projects') {
-		extendDiagonal = {LRwidth: '40%', Rwidth: '60%', tmMarginLeft: '-150px', tmMaxWidth: '60%', tmMaxHeight: '550px'};
+		extendDiagonal = {LRwidth: '50%', Rwidth: '50%', tmMarginLeft: '-150px', tmMaginLeft: '5%'};
 	} else if (path.toLowerCase() === 'contact') {
-		extendDiagonal = {LRwidth: '60%', Rwidth: '40%', tmMarginLeft: 'auto', tmMaxWidth: '525px', tmMaxHeight: '510px'};
+		extendDiagonal = {LRwidth: '58%', Rwidth: '42%', tmMarginLeft: 'auto', tmMaginLeft: '15%'};
 	} else if (path.toLowerCase() === 'videos') {
-		console.log("Videos path detected");
-		extendDiagonal = {LRwidth: '50%', Rwidth: '50%', tmMarginLeft: 'auto', tmMaxWidth: '525px', tmMaxHeight: '550px'};
+		extendDiagonal = {LRwidth: '47%', Rwidth: '53%', tmMarginLeft: 'auto', tmMaginLeft: '5%'};
 	} else {
-		extendDiagonal = {LRwidth: '50%', Rwidth: '50%', tmMarginLeft: 'auto', tmMaxWidth: '525px', tmMaxHeight: '510px'};
+		extendDiagonal = {LRwidth: '48%', Rwidth: '52%', tmMarginLeft: 'auto', tmMaginLeft: '5%'};
 	}
 	const { current, displayHeight, displayWidth } = useBackground()
 	const tmBgLeftStyle = displayWidth > 768
@@ -90,24 +89,26 @@ const BackgroundSlideshow = () => {
 	useEffect(() => {
 		if (!isMobile) {
 			// console.log("Applying styles for path:", path);
-			const sectionElementProjects = document.getElementById('section-projects-id');
-			const sectionElementVideos = document.getElementById('section-videos-id');
+			const divElementContact = document.getElementById('is_contact');
+			console.log("divElementContact:", divElementContact);
+			console.log('path:', path);
+			// const sectionElementVideos = document.getElementById('section-videos-id');
 		
 			// Reset any previously applied styles
-			if (sectionElementProjects) {
-				sectionElementProjects.style.marginLeft = '0';
-				sectionElementProjects.style.maxWidth = '100%';
-				sectionElementProjects.style.maxHeight = 'initial';
+			if (divElementContact) {
+				divElementContact.style.marginLeft = '5%';
 			}
 		
 			// Now apply current path-specific styles
-			if (sectionElementProjects && path === 'projects') {
-				sectionElementProjects.style.marginLeft = extendDiagonal.tmMarginLeft;
-				sectionElementProjects.style.maxWidth = extendDiagonal.tmMaxWidth;
-				sectionElementProjects.style.maxHeight = extendDiagonal.tmMaxHeight;
-			}
-			if (sectionElementVideos && path === 'videos') {
-				sectionElementVideos.style.maxHeight = extendDiagonal.tmMaxHeight;
+			// if (sectionElementProjects && path === 'projects') {
+			// 	// sectionElementProjects.style.marginLeft = extendDiagonal.tmMarginLeft;
+			// 	// sectionElementProjects.style.maxHeight = extendDiagonal.tmMaxHeight;
+			// }
+			// if (sectionElementVideos && path === 'videos') {
+			// 	// sectionElementVideos.style.maxHeight = extendDiagonal.tmMaxHeight;
+			// }
+			if (divElementContact && path === 'contact') {
+				divElementContact.style.marginLeft = extendDiagonal.tmMaginLeft;
 			}
 		}
 	}, [path]);
@@ -150,6 +151,7 @@ const BackgroundSlideshow = () => {
 }
 
 const ManualBackgroundSelector = () => {
+	const isMobile = useIsMobile();
 	const { allBackgrounds, setCurrentIndex, currentIndex } = useBackground()
 	const handleControlClick = (index) => {
 		setCurrentIndex(index);
@@ -157,8 +159,8 @@ const ManualBackgroundSelector = () => {
 	return (
 		<>
 			{/* Manual background selectors */}
-			<div className="tm-col-left text-center">
-				<ul className="tm-bg-controls-wrapper">
+			<div className="tm-col-left text-center background-selector">
+				<ul style={isMobile?{}:{marginBottom: -70}} className="tm-bg-controls-wrapper">
 					{allBackgrounds.map((_, idx) => {
 						const first = idx === 0;
 						const last = idx === allBackgrounds.length - 1;
@@ -176,7 +178,8 @@ const ManualBackgroundSelector = () => {
 							borderBottomLeftRadius: first ? 5 : 0,
 							borderTopRightRadius: last ? 5 : 0,
 							borderBottomRightRadius: last ? 5 : 0,
-								backgroundColor: idx === currentIndex ? 'white' : 'gray',
+							backgroundColor: idx === currentIndex ? 'transparent' : 'snow',
+							// backgroundColor: 'gray',
 							// 	cursor: 'pointer',
 							}}
 						/>

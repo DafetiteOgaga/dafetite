@@ -68,8 +68,8 @@ function MainIndex () {
 						<div
 						// className='tm-row-baseline-align'
 						>
-						<div className="tm-row pt-4">
-							<div style={{display: 'flex', justifyContent: isMobile?'space-around':'normal', width: '100%'}}>
+						<div className="tm-row">
+							<div style={{display: 'flex', justifyContent: isMobile?'space-around':'space-between', width: '100%'}}>
 								<SiteIconAndSocials />
 								<NavigationBar />
 							</div>
@@ -79,20 +79,33 @@ function MainIndex () {
 						<div className="tm-row">
 							{/* left box */}
 							{isMobile ?
+							// mobile view
 							<div className='top-container-mobile'>
 								<LeftBox />
 							</div>
 							:
-							<LeftBox />}
+							// desktop view
+							// <div style={{display: 'flex', flexDirection: 'column'}}>
+								<LeftBox />
+								
+							// </div>
+							}
+							
+							<div id="is_contact" className='main-container'>
 								{/* right box (component) */}
 								<Outlet context={{ scrollRef, isOverlayed, setIsOverlayed }} />
+								<div>
+									<Footer />
+								</div>
+							</div>
+							
 						</div>
 					</div>
 
-					<div className="tm-row">
-						{!isMobile && <ManualBackgroundSelector />}
-						<Footer />
-					</div>
+					{/* <div className="tm-row"> */}
+						{/* {!isMobile && <ManualBackgroundSelector />} */}
+						{/* <Footer /> */}
+					{/* </div> */}
 				</div>
 			</BackgroundSlideshowProvider>
 		</>
@@ -105,6 +118,7 @@ function LeftBox() {
 		<div className="tm-col-left">
 			<div className='profile-container'>
 				<img src={dafetite} alt="Dafetite Ogaga" className="dafetite-profile image-fade fade-in-from-top" />
+				<ManualBackgroundSelector />
 				<div className="tm-col-left-content">
 					<PersonalInfo />
 					{skills.map((skill, index) => {
@@ -113,7 +127,6 @@ function LeftBox() {
 							<p key={index}
 							className="tm-slogon skill-slogon skill-fade-in-from-top" style={{
 								animationDelay: animetionDelay,
-								// lineHeight: '1rem',
 							}}>|| {skill}</p>
 						)
 					})}
@@ -124,6 +137,7 @@ function LeftBox() {
 				{!isMobile &&
 				<div className='resume-container'>
 					<GetResume />
+					{/* {!isMobile && <ManualBackgroundSelector />} */}
 				</div>}
 			</div>
 		</div>

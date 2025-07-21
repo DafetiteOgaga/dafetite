@@ -204,6 +204,13 @@
         margin-top: -4px;
         margin-bottom: auto;
     }
+    .main-container {
+        margin-left: 0;
+    }
+    .background-selector {
+        top: 2%;
+        right: -45%;
+    }
 }
 
 @media (max-width: 450px), (min-width: 768px) and (max-width: 830px), (min-width: 992px) and (max-width: 1040px) {
