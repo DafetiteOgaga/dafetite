@@ -204,6 +204,9 @@
         margin-top: -4px;
         margin-bottom: auto;
     }
+    .main-container {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 450px), (min-width: 768px) and (max-width: 830px), (min-width: 992px) and (max-width: 1040px) {
