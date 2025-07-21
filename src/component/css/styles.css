@@ -417,12 +417,9 @@ textarea {
 
 .background-selector {
     position: absolute;
-    /* top: -49%; */
-    /* right: -48%; */
-    top: 13%;
+    top: 20%;
     right: 71%;
     background: rgba(0,0,0,0.6);
-    /* display: block; */
     width: 6%;
     height: 0%;
 }
