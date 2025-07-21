@@ -129,6 +129,7 @@ function MenuItemsDisplay ({
 	firstOrLast
 }) {
 	const isMobile = useIsMobile();
+	console.log('to:', item.link);
 	return (
 		<li key={index}
 		className={`nav-item ${isActive && 'active'} ${!isMobile?'flip-and-fade-in':'flip-and-fade-in-faster'}`}
