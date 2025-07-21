@@ -159,7 +159,7 @@ const ManualBackgroundSelector = () => {
 	return (
 		<>
 			{/* Manual background selectors */}
-			<div className="tm-col-left text-center">
+			<div className="tm-col-left text-center background-selector">
 				<ul style={isMobile?{}:{marginBottom: -70}} className="tm-bg-controls-wrapper">
 					{allBackgrounds.map((_, idx) => {
 						const first = idx === 0;
@@ -178,7 +178,8 @@ const ManualBackgroundSelector = () => {
 							borderBottomLeftRadius: first ? 5 : 0,
 							borderTopRightRadius: last ? 5 : 0,
 							borderBottomRightRadius: last ? 5 : 0,
-								backgroundColor: idx === currentIndex ? 'white' : 'gray',
+							backgroundColor: idx === currentIndex ? 'transparent' : 'snow',
+							// backgroundColor: 'gray',
 							// 	cursor: 'pointer',
 							}}
 						/>
