@@ -187,33 +187,17 @@ const personalProjects = {
 }
 // Transform to Schema.org format
 const personalProjectsList = Object.values(personalProjects).map(project => ({
-	"@type": "EducationalOccupationalCredential",
+	"@type": "CreativeWork",
 	name: project.name,
 	description: project.description,
 	url: project.url,
-	keywords: project.keywords
+	keywords: project.keywords,
+	author: {
+		"@type": "Person",
+		name: "Dafetite Ogaga"
+	},
 }));
 
-const organizationAndPerson = {
-	"@context": "https://schema.org",
-	"@type": "Organization",
-	"name": "Dafetite Ogaga",
-	"url": "https://dafetiteogaga.github.io/dafetite/",
-	"logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
-	"sameAs": [
-		"https://www.linkedin.com/in/ogagadafetite/",
-		"https://github.com/DafetiteOgaga"
-	],
-	"founder": {
-		"@type": "Person",
-		"name": "Dafetite Ogaga",
-		"jobTitle": "Software and Automation Engineer",
-		"sameAs": [
-			"https://www.linkedin.com/in/ogagadafetite/",
-			"https://github.com/DafetiteOgaga"
-		]
-	}
-}
 const dafe = {
 	"@context": "https://schema.org",
 	"@type": "Person",
@@ -234,8 +218,37 @@ const dafe = {
 		"https://hashnode.com/@Dafetite",
 		"https://www.upwork.com/freelancers/~01b8518a3f4c591e32",
 	],
+	knowAbout: [
+		"Software Development",
+		"Automation Engineering",
+		"Web Development",
+		"Mobile Development",
+		"IT Support",
+		"Programming Tutoring",
+		"ReactJS",
+		"Python",
+		"JavaScript",
+		"HTML",
+		"CSS",
+		"SQL",
+		"Django",
+		"Git",
+		"Linux",
+		"APIs",
+		"Software Testing",
+		"Version Control",
+		"Front-End Development",
+		"Back-End Development",
+		"Responsive Design",
+		"Continuous Integration",
+		"Continuous Deployment",
+		"bash Scripting",
+		"Command Line Tools",
+		"Software Deployment",
+		"C Programming",
+	],
 	"hasCredential": credentialList,
-	"hasPart": personalProjectsList
+	"subjectOf": personalProjectsList,
 }
 const website = {
 	"@context": "https://schema.org",
@@ -254,5 +267,33 @@ const DafetiteSchema = () => (
 		</script>
 	</Helmet>
 );
+
+
+
+
+
+// #################################
+const organizationAndPerson = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Dafetite Ogaga",
+	"url": "https://dafetiteogaga.github.io/dafetite/",
+	"logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	"sameAs": [
+		"https://www.linkedin.com/in/ogagadafetite/",
+		"https://github.com/DafetiteOgaga"
+	],
+	"founder": {
+		"@type": "Person",
+		"name": "Dafetite Ogaga",
+		"jobTitle": "Software and Automation Engineer",
+		"sameAs": [
+			"https://www.linkedin.com/in/ogagadafetite/",
+			"https://github.com/DafetiteOgaga"
+		]
+	}
+}
+
+
 
 export {DafetiteSchema};
