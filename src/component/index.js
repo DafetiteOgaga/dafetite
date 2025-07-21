@@ -127,7 +127,6 @@ function LeftBox() {
 							<p key={index}
 							className="tm-slogon skill-slogon skill-fade-in-from-top" style={{
 								animationDelay: animetionDelay,
-								// lineHeight: '1rem',
 							}}>|| {skill}</p>
 						)
 					})}
