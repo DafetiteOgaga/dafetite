@@ -60,7 +60,6 @@ function Videos () {
 												target="_blank"
 												rel="noopener noreferrer"
 												style={{color: 'inherit', animationDelay: animationDelay}}
-												// className="media my-3 mb-5 tm-service-media tm-service-media-img-l fade-in-from-bottom">
 												className="media my-3 mb-5 tm-service-media tm-service-media-img-l link-hover">
 													{contentIndex%2 ?
 													<>
