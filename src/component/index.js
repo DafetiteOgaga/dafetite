@@ -118,6 +118,7 @@ function LeftBox() {
 		<div className="tm-col-left">
 			<div className='profile-container'>
 				<img src={dafetite} alt="Dafetite Ogaga" className="dafetite-profile image-fade fade-in-from-top" />
+				<ManualBackgroundSelector />
 				<div className="tm-col-left-content">
 					<PersonalInfo />
 					{skills.map((skill, index) => {
@@ -137,7 +138,7 @@ function LeftBox() {
 				{!isMobile &&
 				<div className='resume-container'>
 					<GetResume />
-					{!isMobile && <ManualBackgroundSelector />}
+					{/* {!isMobile && <ManualBackgroundSelector />} */}
 				</div>}
 			</div>
 		</div>
