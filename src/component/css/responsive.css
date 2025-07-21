@@ -208,10 +208,8 @@
         margin-left: 0;
     }
     .background-selector {
-        position: absolute;
-        top: -49%;
-        right: -48%;
-        /* background: rgba(0,0,0,0.6); */
+        top: 2%;
+        right: -45%;
     }
 }
 
