@@ -14,7 +14,7 @@ function Videos () {
 		<>
 			<main className="tm-col-right">
 				<section id='section-videos-id'
-				className={`tm-content scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
+				className={`tm-content scroll-container-mobile ${isOverlayed ? 'overlay' : ''} fade-in-from-bottom`}
 				ref={scrollRef}
 				>
 				{videoCardsContent.map((item, index) => {
@@ -23,7 +23,7 @@ function Videos () {
 					return (
 						<Fragment key={index}>
 							<h2 style={{animationDelay: animationDelay}}
-							className="tm-project-content-title underlined italiced fade-in-from-bottom">{item.status}</h2>
+							className="tm-project-content-title underlined italiced">{item.status}</h2>
 							{item.content.map((content, contentIndex) => {
 								const last = item.content.length - 1 === contentIndex;
 								// (last&&video) && console.log("Last content:", content.title);
