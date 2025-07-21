@@ -218,7 +218,7 @@ const dafe = {
 		"https://hashnode.com/@Dafetite",
 		"https://www.upwork.com/freelancers/~01b8518a3f4c591e32",
 	],
-	knowAbout: [
+	knowsAbout: [
 		"Software Development",
 		"Automation Engineering",
 		"Web Development",
