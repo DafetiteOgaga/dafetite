@@ -19,10 +19,10 @@ function Project () {
 						return (
 							<Fragment key={index}>
 								<h2 style={{animationDelay: animationDelay}}
-								className={`tm-project-content-title underlined italiced ${isMobile?'fade-in-from-bottom':''}`}>{item.status}</h2>
+								className="tm-project-content-title underlined italiced fade-in-from-bottom">{item.status}</h2>
 								{item.content.map((content, contentIndex) => {
 									return (
-											<div key={`${index}${contentIndex}`} className={`${isMobile?'fade-in-from-bottom':''}`}>
+											<div key={`${index}${contentIndex}`} className="fade-in-from-bottom">
 												<Link to={content.url}
 												target="_blank"
 												rel="noopener noreferrer"
