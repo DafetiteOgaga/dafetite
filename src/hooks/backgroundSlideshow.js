@@ -1,17 +1,17 @@
 // hooks/BackgroundSlideshow.jsx
 import React, { useContext, useEffect, useState, createContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import bg1 from '../component/img/diagoona-bg-1.jpg';
-import bg2 from '../component/img/diagoona-bg-2.jpg';
-import bg3 from '../component/img/diagoona-bg-3.jpg';
+import bg1 from '../bgImages/bg3.jpg';
 import { useIsMobile } from './IsMobile';
-// import bg from '../newComponent/img/diagoona-bg-4.jpg'; // Assuming this is the correct path for bg4
+const images = require.context('../bgImages', false, /\.(png|jpe?g|svg)$/);
+// const getBGImage = (name) => (images(`./${name}`)) // to get a specific image by name
+const getBGImages = () => images.keys().map((key) => images(key)); // to get all images in the folder
 
 const BackgroundContext = createContext(null);
 
 const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
-  const bgImgs = [bg1, bg2, bg3]; // Add more images as needed
-//   const bgImgs = [bg1]; // Add more images as needed
+	const bgImagesArr = getBGImages()
+	const bgImgs = [bg1]; // Add more images as needed
 
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [paused] = useState(!autoplay);
@@ -23,11 +23,11 @@ const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
 		if (paused) return;
 
 		const interval = setInterval(() => {
-			setCurrentIndex(prev => (prev + 1) % bgImgs.length);
+			setCurrentIndex(prev => (prev + 1) % bgImagesArr.length);
 		}, 4000);
 
 		return () => clearInterval(interval);
-	}, [paused, bgImgs.length]);
+	}, [paused, bgImagesArr.length]);
 
 	// resize logic for overlay
 	useEffect(() => {
@@ -50,11 +50,11 @@ const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
 
 	// console.log("\nCurrent background image:", bgImgs[currentIndex], "\nat index:", currentIndex);
 	const value = {
-		current: bgImgs[currentIndex],
+		current: bgImagesArr[currentIndex],
 		currentIndex,
 		setCurrentIndex,
-		isLast: currentIndex === bgImgs.length - 1,
-		allBackgrounds: bgImgs,
+		isLast: currentIndex === bgImagesArr.length - 1,
+		allBackgrounds: bgImagesArr,
 		displayHeight: bgHeight,
 		displayWidth: windowWidth,
 	};
@@ -160,9 +160,11 @@ const ManualBackgroundSelector = () => {
 		<>
 			{/* Manual background selectors */}
 			<div className="tm-col-left text-center background-selector">
-				<ul style={isMobile?{}:{marginBottom: -70}} className="tm-bg-controls-wrapper">
+				<ul className="tm-bg-controls-wrapper">
 					{allBackgrounds.map((_, idx) => {
 						const first = idx === 0;
+						const third = idx === 2;
+						const fourth = idx === 3;
 						const last = idx === allBackgrounds.length - 1;
 						return (
 						<li	key={idx}
@@ -175,8 +177,8 @@ const ManualBackgroundSelector = () => {
 							// 	margin: 5,
 							// 	borderRadius: '50%',
 							borderTopLeftRadius: first ? 5 : 0,
-							borderBottomLeftRadius: first ? 5 : 0,
-							borderTopRightRadius: last ? 5 : 0,
+							borderBottomLeftRadius: fourth ? 5 : 0,
+							borderTopRightRadius: third ? 5 : 0,
 							borderBottomRightRadius: last ? 5 : 0,
 							backgroundColor: idx === currentIndex ? 'transparent' : 'snow',
 							// backgroundColor: 'gray',

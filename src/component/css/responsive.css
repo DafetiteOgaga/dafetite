@@ -114,7 +114,7 @@
 	}
 
     .tm-bg-controls-wrapper {
-        margin-left: 0;
+        margin-left: -1px;
         margin-top: 50px;
     }
 
@@ -208,8 +208,10 @@
         margin-left: 0;
     }
     .background-selector {
-        top: 2%;
-        right: -45%;
+        top: 5%;
+        right: 5%;
+        width: 22%;
+        /* height: 40%; */
     }
 }
 
