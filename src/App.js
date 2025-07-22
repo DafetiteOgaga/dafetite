@@ -20,7 +20,7 @@ function App() {
       <ToastContainer
       toastClassName="custom_toast"
       position={isMobile?"top-center":"top-right"}
-      autoClose={false} //{3000} // 3 seconds (you can increase if needed)
+      autoClose={3000} // 3 seconds (you can increase if needed)
       hideProgressBar={false}
       newestOnTop={true}
       closeOnClick
