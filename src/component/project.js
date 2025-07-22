@@ -6,7 +6,7 @@ import { useIsMobile } from '../hooks/IsMobile';
 function Project () {
 	const isMobile = useIsMobile();
 	const { scrollRef, isOverlayed } = useOutletContext();
-	console.log("Project component loaded");
+	// console.log("Project component loaded");
 	return (
 		<>
 			<main className="tm-col-right">
