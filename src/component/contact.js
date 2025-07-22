@@ -40,38 +40,19 @@ function Contact () {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setIsSending(true);
+		// sendEmailAndGetNotified({formData, setFormData, setIsSending})
 
-		// First, send the message youself, site owner (you)
-		emailjs.send(
-			'service_2x0u2dm',      // your service ID
-			'template_ddksigd',     // Template A - message to you
-			formData,
-			'qQE_DwjBJWwq6sEOg'     // your public key
-			).then(() => {
-				// Then send acknowledgment to the sender
-				emailjs.send(
-					'service_2x0u2dm',    // same service
-					'template_5w7eds8',   // Template B - thank-you to user
-					formData,
-					'qQE_DwjBJWwq6sEOg'   // your public key
-				).then(() => {
-					toast.success(
-						<div>
-							<strong>Success:</strong> Message sent successfully!
-						</div>);
-					setFormData(formValues);
-				}).catch((error) => {
-					toast.error(
-						<div>
-							<strong>Failed:</strong> {error.text}
-						</div>);
-				});
-
-			}).catch((error) => {
-				alert('Failed to send message: ' + error.text);
-			}).finally(() => {
-				setIsSending(false);
-			});
+		console.log("Form submitted with data:", formData);
+		// remove after email is setup ##########
+		// Object.entries(formData).forEach((value, key) => {
+		// 	console.log(`${key}: ${value}`);
+		// })
+		toast.success(
+			<div>
+				<strong>Hold on!</strong> Form setup not completed yet. Will be ready soon.
+			</div>);
+		setIsSending(false);
+		// remove after email is setup ##########
 	};
 	// console.log("Contact component loaded");
 	return (
@@ -81,7 +62,7 @@ function Contact () {
 				<section className={`tm-content tm-contact fade-in-from-bottom scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
 				ref={scrollRef}
 				>
-					<h2 className="mb-4 tm-content-title fade-in-from-bottom">Contact Me</h2>
+					<h2 className="mb-4 tm-content-title fade-in-from-bottom">Contact Us</h2>
 					{/* <p className="mb-85">
 						Etiam et egestas arcu. Fusce congue quis elit vitae commodo. Cras neque mauris,
 						vehicula in ipsum sit amet, faucibus aliquam arcu.
@@ -132,5 +113,39 @@ function Contact () {
 			</main>
 		</>
 	)
+}
+
+function sendEmailAndGetNotified({formData, setFormData, setIsSending}) {
+	// First, send the message youself, site owner (you)
+	emailjs.send(
+		'service_2x0u2dm',      // your service ID
+		'template_ddksigd',     // Template A - message to you
+		formData,
+		'qQE_DwjBJWwq6sEOg'     // your public key
+		).then(() => {
+			// Then send acknowledgment to the sender
+			emailjs.send(
+				'service_2x0u2dm',    // same service
+				'template_5w7eds8',   // Template B - thank-you to user
+				formData,
+				'qQE_DwjBJWwq6sEOg'   // your public key
+			).then(() => {
+				toast.success(
+					<div>
+						<strong>Success:</strong> Message sent successfully!
+					</div>);
+				setFormData(formValues);
+			}).catch((error) => {
+				toast.error(
+					<div>
+						<strong>Failed:</strong> {error.text}
+					</div>);
+			});
+
+		}).catch((error) => {
+			alert('Failed to send message: ' + error.text);
+		}).finally(() => {
+			setIsSending(false);
+		});
 }
 export {Contact}
