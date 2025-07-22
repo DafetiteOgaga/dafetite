@@ -53,22 +53,11 @@ function Home() {
 					professionalExperience.map((item, index) => {
 						// const last = professionalExperience.length - 1 === index;
 						// if (!showMore) return null;
-						console.log("item", item);
+						// console.log("item", item);
 						return (
 							<Fragment key={index}>
 								<h4 className="underlined"><strong>{item.experience}</strong></h4>
 								{(showMore?item.roles:[item.roles[0]]).map((role, roleIndex) => {
-									console.log("role", role);
-									// if (!showMore && roleIndex === 0) {
-									// 	return (
-									// 		<div key={`${index}${roleIndex}`} className="mb-5">
-									// 			<h5 style={{margin: 0}}>{role.title}</h5>
-									// 			<p  className="italiced" style={{marginBottom: 0}}><strong>{role.company}</strong> - {role.duration}</p>
-									// 			{/* <p style={{lineHeight: 1.4}}>{filteredRoles?.description}</p> */}
-									// 		</div>
-									// 	)
-									// }
-									// console.log("role", filteredRoles);
 									return (
 										<div key={`${index}${roleIndex}`} className="mb-5">
 											<h5 style={{margin: 0}}>{role.title}</h5>
