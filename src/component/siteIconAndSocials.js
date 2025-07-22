@@ -4,7 +4,7 @@ import dafetite from '../myLogos/dafeWhiteTransp.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faMedium, faStackOverflow,
-	faFacebook, faFigma, faHashnode, faTwitter } from "@fortawesome/free-brands-svg-icons";
+	faFacebook, faFigma, faHashnode, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useIsMobile } from '../hooks/IsMobile';
 import { wrblo } from '../entry/Entry';
 // import dafe from '../myLogos/dafeWhiteTransp180pxy.png'
@@ -27,6 +27,10 @@ const socials = [
 		url: "https://x.com/dafetite_ogaga",
 	},
 	{
+		icon: faWhatsapp,
+		url: "https://wa.link/67x975",
+	},
+	{
 		icon: faFacebook,
 		url: "https://web.facebook.com/ogaga01",
 	},
@@ -34,18 +38,18 @@ const socials = [
 		icon: faStackOverflow,
 		url: "https://stackoverflow.com/users/19809880/dafetite",
 	},
-	{
-		icon: faMedium,
-		url: "https://medium.com/@ogagadafetite",
-	},
+	// {
+	// 	icon: faMedium,
+	// 	url: "https://medium.com/@ogagadafetite",
+	// },
 	{
 		icon: faFigma,
 		url: "https://www.figma.com/files/team/1371771369221734563/recents-and-sharing/recently-viewed?fuid=1371771366746349296",
 	},
-	{
-		icon: faHashnode,
-		url: "https://hashnode.com/@Dafetite",
-	},
+	// {
+	// 	icon: faHashnode,
+	// 	url: "https://hashnode.com/@Dafetite",
+	// },
 ];
 
 function SiteIconAndSocials() {
