@@ -1,7 +1,7 @@
 // hooks/BackgroundSlideshow.jsx
 import React, { useContext, useEffect, useState, createContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import bg1 from '../bgImages/bg_pc3.jpg';
+import bg1 from '../bgImages/bg_pc1.jpg';
 import { useIsMobile } from './IsMobile';
 const images = require.context('../bgImages', false, /\.(png|jpe?g|svg)$/);
 // const getBGImage = (name) => (images(`./${name}`)) // to get a specific image by name
