@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 function useSetHeadTag() {
 	// console.log('useSetHeadTag called');
+	// console.log('process.env.NODE_ENV:', process.env.NODE_ENV);
 	useEffect(() => {
 		if (process.env.NODE_ENV === 'development') {
 			const localUrl = '/dafetite/dafeWhiteBlack180pxy.png';
