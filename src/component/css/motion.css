@@ -66,6 +66,34 @@
     animation: fadeInFromBottom 1s ease-out forwards;
 }
 
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%) scaleX(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%) scaleX(1);
+        opacity: 1;
+    }
+}
+.slide-in-from-bottom {
+    animation: slideInFromBottom 1s ease-out forwards;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%) scaleX(1);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%) scaleX(1);
+        opacity: 1;
+    }
+}
+.slide-in-from-top {
+    animation: slideInFromTop 1s ease-out forwards;
+}
+
 @keyframes fadeInFromTop {
     0% {
         transform: translateY(-20%);

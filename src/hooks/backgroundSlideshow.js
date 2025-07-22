@@ -1,16 +1,21 @@
 // hooks/BackgroundSlideshow.jsx
 import React, { useContext, useEffect, useState, createContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import bg1 from '../bgImages/bg3.jpg';
+import bg1 from '../bgImages/bg_pc3.jpg';
 import { useIsMobile } from './IsMobile';
 const images = require.context('../bgImages', false, /\.(png|jpe?g|svg)$/);
 // const getBGImage = (name) => (images(`./${name}`)) // to get a specific image by name
 const getBGImages = () => images.keys().map((key) => images(key)); // to get all images in the folder
+const imageDuration = 21000; // 21 seconds for each image
+const imageVisibleDuration = 20000; // 20 seconds for each image to be visible
+const transitionDuration = `opacity ${(imageDuration - imageVisibleDuration) / 1000}s ease-in-out` // 1 second for transition
 
 const BackgroundContext = createContext(null);
 
 const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
-	const bgImagesArr = getBGImages()
+	const isMobile = useIsMobile();
+	const bgImagesArr = getBGImages().filter(img =>
+		isMobile ? img.includes('bg_phone') : true);
 	const bgImgs = [bg1]; // Add more images as needed
 
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +29,7 @@ const BackgroundSlideshowProvider = ({children, autoplay = true}) => {
 
 		const interval = setInterval(() => {
 			setCurrentIndex(prev => (prev + 1) % bgImagesArr.length);
-		}, 4000);
+		}, imageDuration);
 
 		return () => clearInterval(interval);
 	}, [paused, bgImagesArr.length]);
@@ -85,37 +90,41 @@ const BackgroundSlideshow = () => {
         borderLeft: `${displayWidth}px solid transparent`,
         borderTop: '0',
 	};
-	// adjust section element dynamically
+
+	const [fade, setFade] = useState(false);
+	const [prevImage, setPrevImage] = useState(null);
+
+	// Watch for current background image change and trigger fade
+	useEffect(() => {
+		if (!current) return;
+
+		setPrevImage(current);       // Keep a copy of the last image
+		setFade(true);               // Start fade effect
+
+		const timeout = setTimeout(() => {
+			setFade(false)}, imageVisibleDuration); // End fade after 1s
+		return () => clearTimeout(timeout);
+	}, [current]);
+
+
+	// adjust element dynamically
 	useEffect(() => {
 		if (!isMobile) {
-			// console.log("Applying styles for path:", path);
 			const divElementContact = document.getElementById('is_contact');
-			console.log("divElementContact:", divElementContact);
-			console.log('path:', path);
-			// const sectionElementVideos = document.getElementById('section-videos-id');
-		
+			// console.log("divElementContact:", divElementContact);
+			// console.log('path:', path);
+
 			// Reset any previously applied styles
 			if (divElementContact) {
 				divElementContact.style.marginLeft = '5%';
 			}
-		
-			// Now apply current path-specific styles
-			// if (sectionElementProjects && path === 'projects') {
-			// 	// sectionElementProjects.style.marginLeft = extendDiagonal.tmMarginLeft;
-			// 	// sectionElementProjects.style.maxHeight = extendDiagonal.tmMaxHeight;
-			// }
-			// if (sectionElementVideos && path === 'videos') {
-			// 	// sectionElementVideos.style.maxHeight = extendDiagonal.tmMaxHeight;
-			// }
 			if (divElementContact && path === 'contact') {
 				divElementContact.style.marginLeft = extendDiagonal.tmMaginLeft;
 			}
 		}
 	}, [path]);
-	
 	return (
 		<>
-			{/* <div style={slideshowStyle}></div> */}
 			<div
 			style={{
 				position: 'fixed',
@@ -127,6 +136,37 @@ const BackgroundSlideshow = () => {
 				zIndex: -20,
 			}}
 			>
+				{/* <img
+					src={current}
+					alt="Background Slideshow"
+					style={{
+						height: '100%',
+						width: '100%',
+						objectFit: 'cover',
+						position: 'absolute',
+						top: 0,
+						left: 0,
+					}}
+				/> */}
+				{/* Previous image fades out */}
+				{/* {prevImage && (
+					<img
+						src={prevImage}
+						alt="Previous"
+						style={{
+							height: '100%',
+							width: '100%',
+							objectFit: 'cover',
+							position: 'absolute',
+							top: 0,
+							left: 0,
+							opacity: fade ? 1 : 0,
+							transition: 'opacity 2s ease-in-out',
+						}}
+					/>
+				)} */}
+
+				{/* Current image fades in */}
 				<img
 					src={current}
 					alt="Background Slideshow"
@@ -137,6 +177,8 @@ const BackgroundSlideshow = () => {
 						position: 'absolute',
 						top: 0,
 						left: 0,
+						opacity: fade ? 1 : 0,
+						transition: transitionDuration,
 					}}
 				/>
 			</div>
@@ -152,20 +194,31 @@ const BackgroundSlideshow = () => {
 
 const ManualBackgroundSelector = () => {
 	const isMobile = useIsMobile();
+	const [next, setNext] = useState(0);
 	const { allBackgrounds, setCurrentIndex, currentIndex } = useBackground()
 	const handleControlClick = (index) => {
 		setCurrentIndex(index);
 	};
+	const itemOfSix = Array.from({ length: 6 }, (_, i) => i);
+	useEffect(() => {
+		const motionInterval = setInterval(() => {
+			setNext(prev => (prev + 1) % itemOfSix.length);
+		}, 1000);
+		return () => clearInterval(motionInterval);
+	}, []);
+	// console.log('itemOfSix:', itemOfSix);
 	return (
 		<>
 			{/* Manual background selectors */}
-			<div className="tm-col-left text-center background-selector">
+			<div className="tm-col-left text-center background-selector right-slide-in">
 				<ul className="tm-bg-controls-wrapper">
-					{allBackgrounds.map((_, idx) => {
+					{itemOfSix.map((_, idx) => {
+						// console.log('item:', _);
 						const first = idx === 0;
 						const third = idx === 2;
 						const fourth = idx === 3;
-						const last = idx === allBackgrounds.length - 1;
+						const last = idx === itemOfSix.length - 1;
+						// console.log('first:', first, 'third:', third, 'fourth:', fourth, 'last:', last);
 						return (
 						<li	key={idx}
 							className='tm-bg-control'
@@ -180,7 +233,7 @@ const ManualBackgroundSelector = () => {
 							borderBottomLeftRadius: fourth ? 5 : 0,
 							borderTopRightRadius: third ? 5 : 0,
 							borderBottomRightRadius: last ? 5 : 0,
-							backgroundColor: idx === currentIndex ? 'transparent' : 'snow',
+							backgroundColor: idx === next ? 'transparent' : 'snow',
 							// backgroundColor: 'gray',
 							// 	cursor: 'pointer',
 							}}

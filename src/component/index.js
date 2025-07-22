@@ -26,15 +26,15 @@ function MainIndex () {
 		
 			const scrollingUp = st < lastScrollTop.current;
 			const scrollingDown = st > lastScrollTop.current;
-			const dots = '.';
-			console.log(
-				dots.repeat(15),
-				'\nscrollingUp:', scrollingUp,
-				'\nscrollingDown:', scrollingDown,
-				'\nisOverlayed:', isOverlayed,
-				'\nscrollTop:', st,
-				dots.repeat(15),
-			)
+			// const dots = '.';
+			// console.log(
+			// 	dots.repeat(15),
+			// 	'\nscrollingUp:', scrollingUp,
+			// 	'\nscrollingDown:', scrollingDown,
+			// 	'\nisOverlayed:', isOverlayed,
+			// 	'\nscrollTop:', st,
+			// 	dots.repeat(15),
+			// )
 		
 			const threshold = 150; // Adjust to taste
 		
@@ -117,7 +117,7 @@ function LeftBox() {
 	return (
 		<div className="tm-col-left">
 			<div className='profile-container'>
-				<img src={dafetite} alt="Dafetite Ogaga" className="dafetite-profile image-fade fade-in-from-top" />
+				<img src={dafetite} alt="Dafetite Ogaga" className="dafetite-profile image-fade slide-in-from-bottom" />
 				<ManualBackgroundSelector />
 				<div className="tm-col-left-content">
 					<PersonalInfo />
@@ -135,7 +135,7 @@ function LeftBox() {
 					<p className="tm-slogon">a template by <a rel="nofollow" target="_parent" href="https://templatemo.com" className="tm-text-link">TemplateMo</a></p> */}
 				</div>
 				{!isMobile &&
-				<div className='resume-container'>
+				<div className='resume-container slide-in-from-bottom'>
 					<GetResume />
 					{/* {!isMobile && <ManualBackgroundSelector />} */}
 				</div>}
@@ -154,7 +154,7 @@ function PersonalInfo() {
 				</h1>
 				<p className='italiced underlined right-slide-in tm-email'>Email: <strong>{email}</strong></p>
 			{isMobile &&
-				<div style={{marginBottom: '1.3rem'}}>
+				<div className='left-slide-in' style={{marginBottom: '1.3rem'}}>
 					<GetResume />
 				</div>}
 		</div>
