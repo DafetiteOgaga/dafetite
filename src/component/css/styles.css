@@ -423,3 +423,13 @@ textarea {
     width: 6%;
     height: 0%;
 }
+
+/* toast styling */
+.custom_toast {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #858585 !important;
+    border-radius: 8px !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: white !important;
+}
