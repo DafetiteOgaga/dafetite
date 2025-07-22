@@ -42,7 +42,7 @@ function Contact () {
 		setIsSending(true);
 		// sendEmailAndGetNotified({formData, setFormData, setIsSending})
 
-		console.log("Form submitted with data:", formData);
+		// console.log("Form submitted with data:", formData);
 		// remove after email is setup ##########
 		// Object.entries(formData).forEach((value, key) => {
 		// 	console.log(`${key}: ${value}`);
@@ -99,6 +99,7 @@ function Contact () {
 						<fieldset className="text-right">
 							<button
 							type="submit"
+							style={isSending ? styles.isSending : {}}
 							// id="form-submit"
 							className="btn btn-primary submit"
 							disabled={isSending}>
@@ -147,5 +148,11 @@ function sendEmailAndGetNotified({formData, setFormData, setIsSending}) {
 		}).finally(() => {
 			setIsSending(false);
 		});
+}
+
+const styles = {
+	isSending: {
+		backgroundColor: '#9CC',
+	}
 }
 export {Contact}

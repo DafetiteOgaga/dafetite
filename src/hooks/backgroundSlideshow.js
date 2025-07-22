@@ -197,6 +197,7 @@ const ManualBackgroundSelector = () => {
 	const [next, setNext] = useState(0);
 	const { allBackgrounds, setCurrentIndex, currentIndex } = useBackground()
 	const handleControlClick = (index) => {
+		if (isMobile) return; // Disable manual control on mobile
 		setCurrentIndex(index);
 	};
 	const itemOfSix = Array.from({ length: 6 }, (_, i) => i);
