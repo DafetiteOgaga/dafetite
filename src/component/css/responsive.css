@@ -222,3 +222,12 @@
     .tm-service-img { margin-right: 0; }
     .tm-service-img-r { margin-left: 0; }
 }
+
+/* toast styling */
+.Toastify__toast-container--top-center {
+    margin-top: 60px !important;
+}
+.custom_toast {
+    max-width: 77%;
+    margin: 0 auto;
+}
