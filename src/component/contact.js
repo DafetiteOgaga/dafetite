@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useOutletContext } from 'react-router-dom';
-import emailjs from "emailjs-com";
 import { toast } from 'react-toastify';
-import { useIsMobile } from '../hooks/IsMobile';
+import { useBrevoEmail } from '../hooks/useBrevoEmail';
+import { fetchBrevoKeyFromBackend } from '../hooks/useFetchApi';
+// import { useIsMobile } from '../hooks/IsMobile';
 
 const formInputValues = [
 	{
@@ -24,66 +25,111 @@ const formValues = {
 	message: ""
 }
 
+async function getKey(apiKey, setApiKey) {
+	if (!apiKey) {
+		// console.log('Fetching API key...');
+		try {
+			const endpoint = 'dafetite_brevo_api_key/dafetite_brevo_api'
+			const response = await fetchBrevoKeyFromBackend(endpoint);
+			if (response?.success && response?.key) {
+				setApiKey(response.key);
+			} else {
+				console.error('Failed to fetch API key:', response);
+			}
+		} catch (err) {
+			console.error('Error while fetching API key:', err);
+		}
+	} else {
+		console.warn('Using existing API key');
+	}
+}
+
 function Contact () {
-	const isMobile = useIsMobile();
-	const [isSending, setIsSending] = useState(false);
+	// console.log("Contact component loaded");
+	const { sendContactEmails, success, loading, error, clearInfo } = useBrevoEmail(); // useBrevoEmail hook
 	const { scrollRef, isOverlayed } = useOutletContext();
 	const [formData, setFormData] = useState(formValues);
+	const [apiKey, setApiKey] = useState(null);
+	const [isKeyPressed, setIsKeyPressed] = useState(false);
 	const handleInputChange = (e) => {
-		// toast.success(<div><strong>Success:</strong> Message sent successfully!</div>);
+		getKey(apiKey, setApiKey);
+		// console.log('apiKey:', apiKey);
 		const { name, value } = e.target;
 		setFormData({
 			...formData,
 			[name]: value
 		});
 	}
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		setIsSending(true);
-		// sendEmailAndGetNotified({formData, setFormData, setIsSending})
 
-		// console.log("Form submitted with data:", formData);
-		// remove after email is setup ##########
-		// Object.entries(formData).forEach((value, key) => {
-		// 	console.log(`${key}: ${value}`);
-		// })
-		toast.success(
-			<div>
-				<strong>Hold on!</strong> Form setup not completed yet. Will be ready soon.
-			</div>);
-		setIsSending(false);
-		// remove after email is setup ##########
+	// fetch API key on component mount
+	useEffect(() => {
+		if (!apiKey) getKey(apiKey, setApiKey);
+	}, []);
+
+	const handleSubmit = async (e) => {
+		// console.log("handleSubmit called");
+		e.preventDefault();
+		// console.warn('success before clearing:', success)
+		clearInfo();
+		// console.warn('success after clearing:', success)
+
+		const config = {
+			apiKey: apiKey, // 'your-brevo-api-key',
+			ownerEmail: 'ogagadafetite@gmail.com', // your-email@example.com',
+			senderName: 'Dafetite Ogaga', // 'Your Website Name'
+		};
+
+		const cleanedData = {...formData, subject: 'Message Received! - Email confirmation'};
+		try {
+			// passed formData and config to the hook
+			await sendContactEmails(cleanedData, config);
+			// Success
+			toast.success(
+				<div>
+					{/* use success response */}
+					Success! {success}
+					<br />
+					Kindly check your inbox (or spam folder) for email
+				</div>);
+				setFormData(formValues); // Resets the form data
+			// console.log("Emails sent successfully");
+		} catch (err) {
+			// Error
+			toast.error(
+				<div>
+					{/* use error response */}
+					Error: :::{error} ::::: {err.message}
+				</div>);
+			console.error("Failed to send emails:", error);
+			console.error("Failed to send emails:", err);
+		}
 	};
-	// console.log("Contact component loaded");
+
 	return (
 		<>
 			<main className="tm-col-right tm-contact-main">
 				{/* <!-- contact --> */}
 				<section className={`tm-content tm-contact fade-in-from-bottom scroll-container-mobile ${isOverlayed ? 'overlay' : ''}`}
-				ref={scrollRef}
-				>
-					<h2 className="mb-4 tm-content-title fade-in-from-bottom">Contact Us</h2>
-					{/* <p className="mb-85">
-						Etiam et egestas arcu. Fusce congue quis elit vitae commodo. Cras neque mauris,
-						vehicula in ipsum sit amet, faucibus aliquam arcu.
-					</p> */}
+				ref={scrollRef}>
+					<h2 className="mb-4 tm-content-title fade-in-from-bottom">Contact Me</h2>
 					<form onSubmit={handleSubmit}>
-							{formInputValues.map((input, index) => (
-								<fieldset className="form-group mb-4" key={index}>
-									<input
-										key={index}
-										type={input.type}
-										name={input.name}
-										className="form-control"
-										id={input.id}
-										placeholder={input.placeholder}
-										value={formData[input.name]}
-										onChange={handleInputChange}
-										required
-									/>
-								</fieldset>
-							))}
-						{/* </fieldset> */}
+						{/* name and email */}
+						{formInputValues.map((input, index) => (
+							<fieldset className="form-group mb-4" key={index}>
+								<input
+									key={index}
+									type={input.type}
+									name={input.name}
+									className="form-control"
+									id={input.id}
+									placeholder={input.placeholder}
+									value={formData[input.name]}
+									onChange={handleInputChange}
+									required
+								/>
+							</fieldset>
+						))}
+						{/* message */}
 						<fieldset className="form-group mb-4">
 							<textarea
 							name="message"
@@ -96,58 +142,22 @@ function Contact () {
 							required
 							></textarea>
 						</fieldset>
+						{/* submit button */}
 						<fieldset className="text-right">
 							<button
 							type="submit"
-							style={isSending ? styles.isSending : {}}
-							// id="form-submit"
+							// use loading responses to dynamically disable, add style, render texts on button
+							style={loading ? styles.isSending : {}}
 							className="btn btn-primary submit"
-							disabled={isSending}>
-								{isSending ? "Sending..." : "Send Message"}
+							disabled={loading}>
+								{loading ? "Sending..." : "Send Message"}
 							</button>
 						</fieldset>
-						{/* <div className="text-right">
-							<button type="submit" className="btn btn-big btn-primary">Send It</button>
-						</div> */}
 					</form>
 				</section>
 			</main>
 		</>
 	)
-}
-
-function sendEmailAndGetNotified({formData, setFormData, setIsSending}) {
-	// First, send the message youself, site owner (you)
-	emailjs.send(
-		'service_2x0u2dm',      // your service ID
-		'template_ddksigd',     // Template A - message to you
-		formData,
-		'qQE_DwjBJWwq6sEOg'     // your public key
-		).then(() => {
-			// Then send acknowledgment to the sender
-			emailjs.send(
-				'service_2x0u2dm',    // same service
-				'template_5w7eds8',   // Template B - thank-you to user
-				formData,
-				'qQE_DwjBJWwq6sEOg'   // your public key
-			).then(() => {
-				toast.success(
-					<div>
-						<strong>Success:</strong> Message sent successfully!
-					</div>);
-				setFormData(formValues);
-			}).catch((error) => {
-				toast.error(
-					<div>
-						<strong>Failed:</strong> {error.text}
-					</div>);
-			});
-
-		}).catch((error) => {
-			alert('Failed to send message: ' + error.text);
-		}).finally(() => {
-			setIsSending(false);
-		});
 }
 
 const styles = {
