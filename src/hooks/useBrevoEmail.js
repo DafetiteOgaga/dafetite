@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { DateHook } from './DateHook';
+import { toTitleCase } from './caseConversion';
 // import { config } from './myKey';
 // import { useFetchApi } from './useFetchApi';
 
@@ -34,7 +35,8 @@ const sendEmail = async (emailData, apiKey) => {
 // Function to generate email content
 const emailContentTemplate = ({ formData, type = 'owner' }) => {
 	const { todaySeconds, todayMinutes, todayHours, todayDay, todayDateWithSuffix, todayMonthName, todayYear } = DateHook();
-	const h2 = type === 'owner' ? `New Message From - ${formData.name}` : 'Thank You for Your Message!';
+	const dateTimeStamp = `${todayDay}, ${todayDateWithSuffix} ${todayMonthName} ${todayYear} at exactly ${todayHours}:${todayMinutes}:${todaySeconds}`
+	const h2 = type === 'owner' ? `New Message From - ${toTitleCase(formData.name)}` : 'Thank You for Your Message!';
 	const socialIconStyle = 'width:24px;height:24px;vertical-align:middle;';
 	const socialLinkStyle = 'margin:0 8px;text-decoration:none;display:inline-block;';
 	const socialLinks = `
@@ -62,22 +64,22 @@ const emailContentTemplate = ({ formData, type = 'owner' }) => {
 				?
 				`
 					<div style="background:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;">
-						<p><strong>From:</strong> ${formData.name}</p>
+						<p><strong>From:</strong> ${toTitleCase(formData.name)}</p>
 						<p><strong>Email:</strong> ${formData.email}</p>
 						<p><strong>Subject:</strong> ${formData.subject}</p>
-						<p><strong>Time:</strong> ${todayDay}, ${todayDateWithSuffix} ${todayMonthName} ${todayYear} at exactly ${todayHours}:${todayMinutes}:${todaySeconds}</p>
+						<p><strong>Time:</strong> ${dateTimeStamp}</p>
 					</div>
 					<div style="background:#fff;padding:20px;border-left:4px solid rgba(0,0,0,0.5);margin:20px 0;">
 						<h3 style="color:#333;margin-top:0;">Message:</h3>
 						<p style="line-height:1.6;color:#555;">${formData.message.replace(/\n/g, '<br>')}</p>
 					</div>
 					<div style="text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid #eee;">
-						<p style="color:#888;font-size:12px;">This message was sent from my portfolio website's contact form.</p>
+						<p style="color:#888;font-size:12px;">This message was sent from my portfolio website's contact form (${dateTimeStamp}).</p>
 					</div>
 				`
 				:
 				`
-					<p style="color:#555;line-height:1.6;">Dear ${formData.name},</p>
+					<p style="color:#555;line-height:1.6;">Dear ${toTitleCase(formData.name)},</p>
 					<p style="color:#555;line-height:1.6;">
 						Thank you for reaching out.
 						This is to let you know that I have received your message and will respond as soon as possible.
@@ -93,7 +95,7 @@ const emailContentTemplate = ({ formData, type = 'owner' }) => {
 					<p style="color:#555;line-height:1.6;margin-top:0;">Thanks again,<br/>Dafetite Ogaga.</p>
 					${socialLinks}
 					<div style="text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid #eee;">
-						<p style="color:#888;font-size:12px;">This is an automated confirmation email.</p>
+						<p style="color:#888;font-size:12px;">This is an automated confirmation email (${dateTimeStamp}).</p>
 					</div>
 				`
 			}
@@ -132,7 +134,7 @@ export const useBrevoEmail = () => {
 					email: ownerEmail,
 					name: senderName
 				}],
-				subject: `New Message from ${formData.name}`,
+				subject: `New Message from ${toTitleCase(formData.name)}`,
 				htmlContent: emailContentTemplate({formData, type: 'owner'})
 			};
 
@@ -145,7 +147,7 @@ export const useBrevoEmail = () => {
 				},
 				to: [{
 					email: formData.email,
-					name: formData.name
+					name: toTitleCase(formData.name)
 				}],
 				subject: formData.subject,
 				htmlContent: emailContentTemplate({formData, type: 'visitor'})
