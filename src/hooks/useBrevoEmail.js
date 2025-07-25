@@ -152,10 +152,10 @@ export const useBrevoEmail = () => {
 			};
 
 			// Send both emails
-			// await Promise.all([
-			// 	sendEmail(ownerEmailData, apiKey),
-			// 	sendEmail(confirmationEmailData, apiKey)
-			// ]);
+			await Promise.all([
+				sendEmail(ownerEmailData, apiKey),
+				sendEmail(confirmationEmailData, apiKey)
+			]);
 
 			setSuccess('Message sent.');
 			// return { success: true, message: 'Emails sent successfully' };
