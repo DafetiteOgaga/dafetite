@@ -50,7 +50,7 @@ function Contact () {
 	const { scrollRef, isOverlayed } = useOutletContext();
 	const [formData, setFormData] = useState(formValues);
 	const [apiKey, setApiKey] = useState(null);
-	const [isKeyPressed, setIsKeyPressed] = useState(false);
+
 	const handleInputChange = (e) => {
 		getKey(apiKey, setApiKey);
 		// console.log('apiKey:', apiKey);
@@ -74,8 +74,8 @@ function Contact () {
 		// console.warn('success after clearing:', success)
 
 		const config = {
-			apiKey: apiKey, // 'your-brevo-api-key',
-			ownerEmail: 'ogagadafetite@gmail.com', // your-email@example.com',
+			apiKey: apiKey, // 'brevo-api-key',
+			ownerEmail: 'ogagadafetite@gmail.com', // your-email',
 			senderName: 'Dafetite Ogaga', // 'Your Website Name'
 		};
 
