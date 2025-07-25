@@ -40,12 +40,9 @@ async function getKey(apiKey, setApiKey) {
 			console.error('Error while fetching API key:', err);
 		}
 	} else {
-		console.warn('Using existing API key:', apiKey);
+		console.warn('Using existing API key');
 	}
 }
-
-// REACT_APP_BREVO_API_KEY=your-brevo-api-key-here
-// REACT_APP_OWNER_EMAIL=your-email@example.com
 
 function Contact () {
 	// console.log("Contact component loaded");
