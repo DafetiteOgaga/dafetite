@@ -352,7 +352,8 @@ textarea {
     height: 50%;
     border-radius: 3%;
     padding: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.438);
+    /* border: 1px solid rgba(0, 0, 0, 0.438); */
+    border: 1px solid rgba(255, 255, 255, 0.39);
     /* background-size: contain; */
 }
 .profile-container {
@@ -365,7 +366,7 @@ textarea {
         zlinear-gradient(to top, transparent, black 15%, black 100%, transparent);
     -webkit-mask-image:
         /* linear-gradient(to right, transparent, black 20%, black 80%, transparent), */
-        linear-gradient(to top, transparent, black 15%, black 100%, transparent);
+        linear-gradient(to top, transparent, black 35%, black 100%, transparent);
     mask-composite: intersect;
     -webkit-mask-composite: destination-in;
 }
@@ -417,8 +418,8 @@ textarea {
 
 .background-selector {
     position: absolute;
-    top: 20%;
-    right: 71%;
+    top: 19%;
+    right: 71.5%;
     background: rgba(0,0,0,0.6);
     width: 6%;
     height: 0%;

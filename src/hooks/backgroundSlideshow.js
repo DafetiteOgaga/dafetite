@@ -194,51 +194,50 @@ const BackgroundSlideshow = () => {
 
 const ManualBackgroundSelector = () => {
 	const isMobile = useIsMobile();
-	const [next, setNext] = useState(0);
+	const spiralOrder = [0, 1, 2, 5, 4, 3];
+	const [nextIdx, setNextIdx] = useState(0);
+	// This is the actual index of the item that should be highlighted
+	const next = spiralOrder[nextIdx];
 	const { allBackgrounds, setCurrentIndex, currentIndex } = useBackground()
 	const handleControlClick = (index) => {
 		if (isMobile) return; // Disable manual control on mobile
 		setCurrentIndex(index);
 	};
-	const itemOfSix = Array.from({ length: 6 }, (_, i) => i);
 	useEffect(() => {
 		const motionInterval = setInterval(() => {
-			setNext(prev => (prev + 1) % itemOfSix.length);
-		}, 1000);
+		setNextIdx(prev => (prev + 1) % spiralOrder.length);
+		}, 700);
 		return () => clearInterval(motionInterval);
 	}, []);
-	// console.log('itemOfSix:', itemOfSix);
 	return (
 		<>
 			{/* Manual background selectors */}
 			<div className="tm-col-left text-center background-selector right-slide-in">
 				<ul className="tm-bg-controls-wrapper">
-					{itemOfSix.map((_, idx) => {
+					{[...Array(6)].map((_, idx) => {
 						// console.log('item:', _);
 						const first = idx === 0;
+						const second = idx === 1;
 						const third = idx === 2;
 						const fourth = idx === 3;
-						const last = idx === itemOfSix.length - 1;
+						const fifth = idx === 4;
+						const last = idx === 5;
 						// console.log('first:', first, 'third:', third, 'fourth:', fourth, 'last:', last);
 						return (
 						<li	key={idx}
 							className='tm-bg-control'
 							onClick={() => handleControlClick(idx)}
 							style={{
-							// 	display: 'inline-block',
-							// 	width: 10,
-							// 	height: 10,
-							// 	margin: 5,
-							// 	borderRadius: '50%',
 							borderTopLeftRadius: first ? 5 : 0,
 							borderBottomLeftRadius: fourth ? 5 : 0,
 							borderTopRightRadius: third ? 5 : 0,
 							borderBottomRightRadius: last ? 5 : 0,
 							backgroundColor: idx === next ? 'transparent' : 'snow',
-							// backgroundColor: 'gray',
-							// 	cursor: 'pointer',
-							}}
-						/>
+							opacity: idx === next ? 0.2 : 1,
+							transition: 'opacity 1s ease-in-out',
+							marginBottom: (fourth||fifth||last) ? 0 : -11.5,
+							marginTop: (first||second||third) ? 0 : -11.5,
+							}}/>
 					)})}
 				</ul>
 			</div>
