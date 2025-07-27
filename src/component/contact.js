@@ -89,7 +89,9 @@ function Contact () {
 					{/* use success response */}
 					Success! {success}
 					<br />
-					Kindly check your inbox (or spam folder) for email
+					Kindly check your inbox
+					<br />
+					(or spam folder) for email
 				</div>);
 				setFormData(formValues); // Resets the form data
 			// console.log("Emails sent successfully");
