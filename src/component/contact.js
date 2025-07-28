@@ -25,7 +25,7 @@ const formValues = {
 	message: ""
 }
 
-async function getKey(apiKey, setApiKey) {
+async function getKey(apiKey, setApiKey, setApiEmail) {
 	if (!apiKey) {
 		// console.log('Fetching API key...');
 		try {
@@ -33,6 +33,7 @@ async function getKey(apiKey, setApiKey) {
 			const response = await fetchBrevoKeyFromBackend(endpoint);
 			if (response?.success && response?.key) {
 				setApiKey(response.key);
+				setApiEmail(response.email);
 			} else {
 				console.error('Failed to fetch API key:', response);
 			}
@@ -50,9 +51,10 @@ function Contact () {
 	const { scrollRef, isOverlayed } = useOutletContext();
 	const [formData, setFormData] = useState(formValues);
 	const [apiKey, setApiKey] = useState(null);
+	const [apiEmail, setApiEmail] = useState(null);
 
 	const handleInputChange = (e) => {
-		getKey(apiKey, setApiKey);
+		getKey(apiKey, setApiKey, setApiEmail);
 		// console.log('apiKey:', apiKey);
 		const { name, value } = e.target;
 		setFormData({
@@ -63,7 +65,7 @@ function Contact () {
 
 	// fetch API key on component mount
 	useEffect(() => {
-		if (!apiKey) getKey(apiKey, setApiKey);
+		if (!apiKey) getKey(apiKey, setApiKey, setApiEmail);
 	}, []);
 
 	const handleSubmit = async (e) => {
@@ -75,6 +77,7 @@ function Contact () {
 
 		const config = {
 			apiKey: apiKey, // 'brevo-api-key',
+			apiEmail: apiEmail, // brevo email address
 			ownerEmail: 'ogagadafetite@gmail.com', // your-email',
 			senderName: 'Dafetite Ogaga', // 'Your Website Name'
 		};
