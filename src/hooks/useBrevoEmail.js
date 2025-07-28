@@ -66,7 +66,6 @@ const emailContentTemplate = ({ formData, type = 'owner' }) => {
 					<div style="background:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;">
 						<p><strong>From:</strong> ${toTitleCase(formData.name)}</p>
 						<p><strong>Email:</strong> ${formData.email}</p>
-						<p><strong>Subject:</strong> ${formData.subject}</p>
 						<p><strong>Time:</strong> ${dateTimeStamp}</p>
 					</div>
 					<div style="background:#fff;padding:20px;border-left:4px solid rgba(0,0,0,0.5);margin:20px 0;">
@@ -134,6 +133,10 @@ export const useBrevoEmail = () => {
 					email: ownerEmail,
 					name: senderName
 				}],
+				replyTo: {
+					email: formData.email,
+					name: toTitleCase(formData.name)
+				},
 				subject: `New Message from ${toTitleCase(formData.name)}`,
 				htmlContent: emailContentTemplate({formData, type: 'owner'})
 			};
@@ -149,6 +152,10 @@ export const useBrevoEmail = () => {
 					email: formData.email,
 					name: toTitleCase(formData.name)
 				}],
+				replyTo: {
+					email: ownerEmail,
+					name: senderName
+				},
 				subject: formData.subject,
 				htmlContent: emailContentTemplate({formData, type: 'visitor'})
 			};
