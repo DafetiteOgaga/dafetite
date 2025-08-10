@@ -101,11 +101,6 @@ function MainIndex () {
 							
 						</div>
 					</div>
-
-					{/* <div className="tm-row"> */}
-						{/* {!isMobile && <ManualBackgroundSelector />} */}
-						{/* <Footer /> */}
-					{/* </div> */}
 				</div>
 			</BackgroundSlideshowProvider>
 		</>
@@ -118,7 +113,7 @@ function LeftBox() {
 		<div className="tm-col-left">
 			<div className='profile-container'>
 				<img src={dafetite} alt="Dafetite Ogaga" className="dafetite-profile image-fade slide-in-from-bottom" />
-				<ManualBackgroundSelector />
+				{isMobile && <ManualBackgroundSelector />}
 				<div className="tm-col-left-content">
 					<PersonalInfo />
 					{skills.map((skill, index) => {
@@ -137,7 +132,6 @@ function LeftBox() {
 				{!isMobile &&
 				<div className='resume-container slide-in-from-bottom'>
 					<GetResume />
-					{/* {!isMobile && <ManualBackgroundSelector />} */}
 				</div>}
 			</div>
 		</div>
