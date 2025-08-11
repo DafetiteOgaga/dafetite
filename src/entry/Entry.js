@@ -217,6 +217,19 @@ const projectCardsContent = [
 		status: 'WebApps',
 		content: [
 			{
+				title: "FamousPropertiesNG",
+				description: `
+					An innovative decluttering and e-commerce platform that connects sellers looking to part
+					with property items to buyers seeking quality deals. Designed to streamline the property
+					resale process, the platform offers a seamless experience for discovering and
+					purchasing items. Built with modern web technologies, FamousPropertiesNG emphasizes speed,
+					scalability, and intuitive navigation, ensuring that users can browse listings,
+					view detailed product information and make orders with ease.`,
+				url: "https://dafetiteogaga.github.io/famepropertiesng_repo/",
+				getImageSrc: getImage("famouspropertiesng.png"),
+				stack: "ReactJS",
+			},
+			{
 				title: "Altaviz Support Limited",
 				description: `
 					A robust role-based workflow management system built for Altaviz Support Limited. This
