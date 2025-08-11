@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.b5352bfb.css",
-    "main.js": "/dafetite/static/js/main.51f558cb.js",
+    "main.js": "/dafetite/static/js/main.f6d51159.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
@@ -17,6 +17,7 @@
     "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.c7216c04ce3716c367c6.pdf",
     "static/media/creonovo-website.png": "/dafetite/static/media/creonovo-website.e1ba1479077b1020e92c.png",
     "static/media/altaviz-support-ltd.png": "/dafetite/static/media/altaviz-support-ltd.68ac417a32afc61656d0.png",
+    "static/media/famouspropertiesng.png": "/dafetite/static/media/famouspropertiesng.6d3b5738a4a2403dc6ad.png",
     "static/media/bg_pc2.jpg": "/dafetite/static/media/bg_pc2.3b2925ad46133863f581.jpg",
     "static/media/creonovo_restaurant-backend-component.png": "/dafetite/static/media/creonovo_restaurant-backend-component.8ad44ad3d7f9933da8d6.png",
     "static/media/creonovo_restaurant.png": "/dafetite/static/media/creonovo_restaurant.121be8c82aab833d39ec.png",
@@ -50,11 +51,11 @@
     "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
     "main.b5352bfb.css.map": "/dafetite/static/css/main.b5352bfb.css.map",
-    "main.51f558cb.js.map": "/dafetite/static/js/main.51f558cb.js.map",
+    "main.f6d51159.js.map": "/dafetite/static/js/main.f6d51159.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5352bfb.css",
-    "static/js/main.51f558cb.js"
+    "static/js/main.f6d51159.js"
   ]
 }
