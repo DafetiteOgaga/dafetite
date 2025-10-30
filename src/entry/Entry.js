@@ -230,6 +230,18 @@ const projectCardsContent = [
 				stack: "ReactJS",
 			},
 			{
+				title: "StuddieBudie",
+				description: `
+					An EdTech platform designed to enhance learning for students in basic and secondary schools.
+					The application offers curriculum-aligned subject materials, auto-graded tests, and dynamic
+					question pools. Teachers can contribute and scramble custom questions for download in up to
+					26 formats, ideal for both digital learning and physical classroom use. Built using ReactJS,
+					Express, and MongoDB.`,
+				url: "https://dafetiteogaga.github.io/studdiebudie_frontend/",
+				getImageSrc: getImage("studdiebudie.png"),
+				stack: "ReactJS, Django REST Framework, SQLite and previously used Express, MongoDB",
+			},
+			{
 				title: "Altaviz Support Limited",
 				description: `
 					A robust role-based workflow management system built for Altaviz Support Limited. This
@@ -429,22 +441,22 @@ const videoCardsContent = [
 			},
 		],
 	},
-	{
-		status: 'In development...',
-		content: [
-			{
-				title: "StuddieBudie",
-				description:
-					`An EdTech platform designed to enhance learning for students in basic and secondary schools. The application
-					offers curriculum-aligned subject materials, auto-graded tests, and dynamic question pools. Teachers can
-					contribute and scramble custom questions for download in up to 26 formats, ideal for both digital learning and
-					physical classroom use. Built using ReactJS, Express, and MongoDB.`,
-				url: "https://dafetiteogaga.github.io/studdiebudie_frontend/",
-				getImageSrc: getImage("studdiebudie.png"),
-				stack: "ReactJS, Django REST Framework, SQLite and previously used Express, MongoDB",
-			},
-		],
-	},
+	// {
+	// 	status: 'In development...',
+	// 	content: [
+	// 		{
+	// 			title: "StuddieBudie",
+	// 			description:
+	// 				`An EdTech platform designed to enhance learning for students in basic and secondary schools. The application
+	// 				offers curriculum-aligned subject materials, auto-graded tests, and dynamic question pools. Teachers can
+	// 				contribute and scramble custom questions for download in up to 26 formats, ideal for both digital learning and
+	// 				physical classroom use. Built using ReactJS, Express, and MongoDB.`,
+	// 			url: "https://dafetiteogaga.github.io/studdiebudie_frontend/",
+	// 			getImageSrc: getImage("studdiebudie.png"),
+	// 			stack: "ReactJS, Django REST Framework, SQLite and previously used Express, MongoDB",
+	// 		},
+	// 	],
+	// },
 ]
 
 export {
