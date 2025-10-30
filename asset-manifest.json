@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.b5352bfb.css",
-    "main.js": "/dafetite/static/js/main.9645c57f.js",
+    "main.js": "/dafetite/static/js/main.bc456da4.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
@@ -14,7 +14,6 @@
     "static/media/article-hive-app.png": "/dafetite/static/media/article-hive-app.252e55b21b1e8eb04e12.png",
     "static/media/pdf2docx Converter.png": "/dafetite/static/media/pdf2docx Converter.b4eb607d4ddf23db5e81.png",
     "static/media/article-hive.png": "/dafetite/static/media/article-hive.d3041a637c87e0336347.png",
-    "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.c7216c04ce3716c367c6.pdf",
     "static/media/creonovo-website.png": "/dafetite/static/media/creonovo-website.e1ba1479077b1020e92c.png",
     "static/media/altaviz-support-ltd.png": "/dafetite/static/media/altaviz-support-ltd.68ac417a32afc61656d0.png",
     "static/media/famouspropertiesng.png": "/dafetite/static/media/famouspropertiesng.6d3b5738a4a2403dc6ad.png",
@@ -24,6 +23,7 @@
     "static/media/jimmy_ayodele.png": "/dafetite/static/media/jimmy_ayodele.510f41a907856b763a05.png",
     "static/media/techflows.png": "/dafetite/static/media/techflows.cdc12f18ea50e77ced58.png",
     "static/media/profilePage.png": "/dafetite/static/media/profilePage.875b79542a38aee39108.png",
+    "static/media/Dafetite_Ogaga.pdf": "/dafetite/static/media/Dafetite_Ogaga.bed80ea22e0896fc8aac.pdf",
     "static/media/fa-solid-900.eot": "/dafetite/static/media/fa-solid-900.83cde42bd24c17780ce5.eot",
     "static/media/fa-solid-900.ttf": "/dafetite/static/media/fa-solid-900.42160288ec8fe6ee9ffc.ttf",
     "static/media/bg_pc1.jpg": "/dafetite/static/media/bg_pc1.2c7abe969f93dc6621ba.jpg",
@@ -51,11 +51,11 @@
     "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
     "main.b5352bfb.css.map": "/dafetite/static/css/main.b5352bfb.css.map",
-    "main.9645c57f.js.map": "/dafetite/static/js/main.9645c57f.js.map",
+    "main.bc456da4.js.map": "/dafetite/static/js/main.bc456da4.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5352bfb.css",
-    "static/js/main.9645c57f.js"
+    "static/js/main.bc456da4.js"
   ]
 }
