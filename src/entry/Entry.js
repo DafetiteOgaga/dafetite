@@ -6,7 +6,7 @@ const versionNumber = require('../../package.json').version;
 const videos = require.context('../altavizVideos', false, /\.(mp4|webm|ogg|png|jpe?g|svg)$/);
 const getVideo = (name) => (videos(`./${name}`))
 
-// index component
+// index component.
 const names = 'Dafetite O. Ogaga';
 const email = 'ogagadafetite@gmail.com'
 const skills = [
