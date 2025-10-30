@@ -7,7 +7,7 @@ import { SiteIconAndSocials, Socials } from './siteIconAndSocials';
 import { NavigationBar } from './navigationBar';
 import { Footer } from './footer';
 import dafetite from '../dafetite.png';
-import resume from '../Dafetite_Ogaga.pdf';
+import resume from '../components/Dafetite_Ogaga.pdf';
 import { useIsMobile } from '../hooks/IsMobile';
 import { names, email, skills } from '../entry/Entry';
 import { DafetiteSchema } from '../schemas/dafetiteSchema';
