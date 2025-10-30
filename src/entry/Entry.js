@@ -17,7 +17,7 @@ const skills = [
 // site icon and socials component
 const wrblo = "we rise by lifting others..."
 
-// home component
+// home component.
 const professionalSummary = [
 	{
 		text: `
