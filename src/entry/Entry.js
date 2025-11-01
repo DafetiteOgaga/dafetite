@@ -219,15 +219,14 @@ const projectCardsContent = [
 			{
 				title: "FamousPropertiesNG",
 				description: `
-					An innovative decluttering and e-commerce platform that connects sellers looking to part
-					with property items to buyers seeking quality deals. Designed to streamline the property
-					resale process, the platform offers a seamless experience for discovering and
-					purchasing items. Built with modern web technologies, FamousPropertiesNG emphasizes speed,
-					scalability, and intuitive navigation, ensuring that users can browse listings,
-					view detailed product information and make orders with ease.`,
+					A dynamic online marketplace that connects everyday sellers and buyers across a wide range of
+					product categories. FamousPropertiesNG simplifies online trading by allowing users to browse
+					and purchase quality goods with ease. The platform allow users to become sellers, manage
+					products. Built with ReactJS and Django REST Framework, it delivers speed, scalability, and
+					an intuitive interface, accessibility and performance.`,
 				url: "https://dafetiteogaga.github.io/famepropertiesng_repo/",
 				getImageSrc: getImage("famouspropertiesng.png"),
-				stack: "ReactJS",
+				stack: "ReactJS, Django",
 			},
 			{
 				title: "StuddieBudie",
