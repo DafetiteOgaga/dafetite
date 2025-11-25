@@ -328,7 +328,7 @@ const projectCardsContent = [
 		],
 	},
 	{
-		status: 'Projects',
+		status: 'My Projects',
 		content: [
 			{
 				title: "Custom Commands",
