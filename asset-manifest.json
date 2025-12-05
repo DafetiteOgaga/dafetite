@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.b5352bfb.css",
-    "main.js": "/dafetite/static/js/main.73d5a159.js",
+    "main.js": "/dafetite/static/js/main.7daf3c18.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
     "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
@@ -12,6 +12,7 @@
     "static/media/fa-brands-400.svg": "/dafetite/static/media/fa-brands-400.e6d9951396c3e073f9ab.svg",
     "static/media/altaviz_mobile.png": "/dafetite/static/media/altaviz_mobile.170a83ea670822bb9de8.png",
     "static/media/article-hive-app.png": "/dafetite/static/media/article-hive-app.252e55b21b1e8eb04e12.png",
+    "static/media/classic-brownline.png": "/dafetite/static/media/classic-brownline.b6da93ec0c490c5fbd82.png",
     "static/media/pdf2docx Converter.png": "/dafetite/static/media/pdf2docx Converter.b4eb607d4ddf23db5e81.png",
     "static/media/article-hive.png": "/dafetite/static/media/article-hive.d3041a637c87e0336347.png",
     "static/media/creonovo-website.png": "/dafetite/static/media/creonovo-website.e1ba1479077b1020e92c.png",
@@ -51,11 +52,11 @@
     "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
     "main.b5352bfb.css.map": "/dafetite/static/css/main.b5352bfb.css.map",
-    "main.73d5a159.js.map": "/dafetite/static/js/main.73d5a159.js.map",
+    "main.7daf3c18.js.map": "/dafetite/static/js/main.7daf3c18.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5352bfb.css",
-    "static/js/main.73d5a159.js"
+    "static/js/main.7daf3c18.js"
   ]
 }
