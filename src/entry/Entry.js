@@ -285,6 +285,17 @@ const projectCardsContent = [
 		status: 'Websites',
 		content: [
 			{
+				title: "Classic Brownline Plumbing Services",
+				description:
+					`Classic Brownline Plumbing Services is a professional plumbing company dedicated to
+					providing reliable and affordable solutions for both residential and commercial clients.
+					From quick repairs to full plumbing system installations, the company delivers
+					high-quality workmanship, fast response times, and excellent.`,
+				url: "https://dafetiteogaga.github.io/classic_brownline_plumbing_services/",
+				getImageSrc: getImage("classic-brownline.png"),
+				stack: "ReactJS",
+			},
+			{
 				title: "TechFlows Engineering",
 				description:
 					`TechFlows Engineering is a technology company that offers innovative solutions across
