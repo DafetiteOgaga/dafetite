@@ -217,6 +217,18 @@ const projectCardsContent = [
 		status: 'WebApps',
 		content: [
 			{
+				title: "eStudieBuddie (Remake)",
+				description: `
+					eStudieBuddie is an interactive digital learning platform designed to support students in
+					their academic journey through structured study resources and collaborative features. The
+					platform simplifies learning by providing access to study materials, practice content,
+					and guided academic tools in one place. eStudieBuddie enables users to create accounts,
+					manage profiles, track learning progress, and engage with educational content efficiently`,
+				url: "https://dafetiteogaga.github.io/estudiebuddie_frontend/",
+				getImageSrc: getImage("eStudieBuddie.png"),
+				stack: "ReactJS, Django",
+			},
+			{
 				title: "FamousPropertiesNG",
 				description: `
 					A dynamic online marketplace that connects everyday sellers and buyers across a wide range of
