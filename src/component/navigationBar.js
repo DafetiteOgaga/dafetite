@@ -5,7 +5,7 @@ import { useIsMobile } from "../hooks/IsMobile";
 const navigation = [
 	{ name: "home", link: "/" },
 	{ name: "projects", link: "projects" },
-	{ name: "videos", link: "videos" },
+	// { name: "videos", link: "videos" },
 	{ name: "contact", link: "contact" }
 ]
 function NavigationBar() {
