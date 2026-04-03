@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.b5352bfb.css",
-    "main.js": "/dafetite/static/js/main.583c5df2.js",
+    "main.js": "/dafetite/static/js/main.b2e44514.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
     "static/media/studdiebudie.png": "/dafetite/static/media/studdiebudie.2ac84ee7342f97fe17d7.png",
     "static/media/bg_phone1.jpg": "/dafetite/static/media/bg_phone1.fc5feb1d7319a3782732.jpg",
@@ -51,11 +51,11 @@
     "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
     "main.b5352bfb.css.map": "/dafetite/static/css/main.b5352bfb.css.map",
-    "main.583c5df2.js.map": "/dafetite/static/js/main.583c5df2.js.map",
+    "main.b2e44514.js.map": "/dafetite/static/js/main.b2e44514.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5352bfb.css",
-    "static/js/main.583c5df2.js"
+    "static/js/main.b2e44514.js"
   ]
 }
