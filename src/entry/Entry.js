@@ -224,7 +224,7 @@ const projectCardsContent = [
 					platform simplifies learning by providing access to study materials, practice content,
 					and guided academic tools in one place. eStudieBuddie enables users to create accounts,
 					manage profiles, track learning progress, and engage with educational content efficiently`,
-				url: "https://dafetiteogaga.github.io/estudiebuddie_frontend/",
+				url: "https://estudiebuddie-frontend.pages.dev/",
 				getImageSrc: getImage("eStudieBuddie.png"),
 				stack: "ReactJS, Django",
 			},
@@ -441,41 +441,25 @@ const projectCardsContent = [
 
 // videos component
 const videoCardsContent = [
-	{
-		status: 'Videos',
-		content: [
-			{
-				thumbnail: getVideo("profilePage.png"),
-				videoSrc: getVideo("altavizWeb.mp4"),
-				title: "Altaviz Web App",
-				description: `A full-featured web platform engineered for Altaviz Support Limited to streamline ATM
-					operations, service requests, and performance reporting. Built with Django and React, the system integrates
-					user management, real-time service tracking, and admin dashboards—delivering seamless coordination between
-					field teams and back-office support.`,
-			},
-			{
-				thumbnail: getVideo("mobileHome.png"),
-				videoSrc: getVideo("altavizMobile.mp4"),
-				title: "Altaviz Mobile App",
-				description: `A cross-platform mobile solution tailored for engineers and custodians to manage ATM service
-					tickets, updates, and resolutions in the field. Built with responsiveness and speed in mind, it enables
-					on-the-go reporting, status updates, and real-time task tracking, complementing the Altaviz Web platform.`,
-			},
-		],
-	},
 	// {
-	// 	status: 'In development...',
+	// 	status: 'Videos',
 	// 	content: [
 	// 		{
-	// 			title: "StuddieBudie",
-	// 			description:
-	// 				`An EdTech platform designed to enhance learning for students in basic and secondary schools. The application
-	// 				offers curriculum-aligned subject materials, auto-graded tests, and dynamic question pools. Teachers can
-	// 				contribute and scramble custom questions for download in up to 26 formats, ideal for both digital learning and
-	// 				physical classroom use. Built using ReactJS, Express, and MongoDB.`,
-	// 			url: "https://dafetiteogaga.github.io/studdiebudie_frontend/",
-	// 			getImageSrc: getImage("studdiebudie.png"),
-	// 			stack: "ReactJS, Django REST Framework, SQLite and previously used Express, MongoDB",
+	// 			thumbnail: getVideo("profilePage.png"),
+	// 			videoSrc: getVideo("altavizWeb.mp4"),
+	// 			title: "Altaviz Web App",
+	// 			description: `A full-featured web platform engineered for Altaviz Support Limited to streamline ATM
+	// 				operations, service requests, and performance reporting. Built with Django and React, the system integrates
+	// 				user management, real-time service tracking, and admin dashboards—delivering seamless coordination between
+	// 				field teams and back-office support.`,
+	// 		},
+	// 		{
+	// 			thumbnail: getVideo("mobileHome.png"),
+	// 			videoSrc: getVideo("altavizMobile.mp4"),
+	// 			title: "Altaviz Mobile App",
+	// 			description: `A cross-platform mobile solution tailored for engineers and custodians to manage ATM service
+	// 				tickets, updates, and resolutions in the field. Built with responsiveness and speed in mind, it enables
+	// 				on-the-go reporting, status updates, and real-time task tracking, complementing the Altaviz Web platform.`,
 	// 		},
 	// 	],
 	// },

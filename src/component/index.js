@@ -113,7 +113,7 @@ function LeftBox() {
 		<div className="tm-col-left">
 			<div className='profile-container'>
 				<img src={dafetite} alt="Dafetite Ogaga" className="dafetite-profile image-fade slide-in-from-bottom" />
-				{isMobile && <ManualBackgroundSelector />}
+				{/* {isMobile && <ManualBackgroundSelector />} */}
 				<div className="tm-col-left-content">
 					<PersonalInfo />
 					{skills.map((skill, index) => {
