@@ -202,8 +202,8 @@ const dafe = {
 	"@context": "https://schema.org",
 	"@type": "Person",
 	"name": "Dafetite Ogaga",
-	"url": "https://dafetiteogaga.github.io/dafetite/",
-	"image": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	"url": "https://dafetite.pages.dev/",
+	"image": "https://dafetite.pages.dev/dafeWhiteBlack180pxy.png",
 	"jobTitle": "Software and Automation Engineer",
 	"description": "Software and Automation Engineer skilled in fullstack (web and mobile) development, IT support, automated software testing, and programming tutoring.",
 	"sameAs": [
@@ -217,6 +217,7 @@ const dafe = {
 		"https://medium.com/@ogagadafetite",
 		"https://hashnode.com/@Dafetite",
 		"https://www.upwork.com/freelancers/~01b8518a3f4c591e32",
+		"https://dafetite.pages.dev/",
 	],
 	knowsAbout: [
 		"Software Development",
@@ -254,7 +255,7 @@ const website = {
 	"@context": "https://schema.org",
 	"@type": "WebSite",
 	"name": "Dafetite Ogaga's Website",
-	"url": "https://dafetiteogaga.github.io/dafetite/"
+	"url": "https://dafetite.pages.dev/"
 }
 
 const DafetiteSchema = () => (
@@ -277,8 +278,8 @@ const organizationAndPerson = {
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	"name": "Dafetite Ogaga",
-	"url": "https://dafetiteogaga.github.io/dafetite/",
-	"logo": "https://dafetiteogaga.github.io/dafetite/dafeWhiteBlack180pxy.png",
+	"url": "https://dafetite.pages.dev/",
+	"logo": "https://dafetite.pages.dev/dafeWhiteBlack180pxy.png",
 	"sameAs": [
 		"https://www.linkedin.com/in/ogagadafetite/",
 		"https://github.com/DafetiteOgaga"
