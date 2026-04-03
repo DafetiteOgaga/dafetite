@@ -8,7 +8,7 @@ const WebsiteSchema = () => (
 				"@context": "https://schema.org",
 				"@type": "WebSite",
 				"name": "Dafetite Ogaga's Website",
-				"url": "https://dafetiteogaga.github.io/dafetite/"
+				"url": "https://dafetite.pages.dev/"
 			})}
 		</script>
 	</Helmet>
