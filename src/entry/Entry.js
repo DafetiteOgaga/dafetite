@@ -224,7 +224,7 @@ const projectCardsContent = [
 					platform simplifies learning by providing access to study materials, practice content,
 					and guided academic tools in one place. eStudieBuddie enables users to create accounts,
 					manage profiles, track learning progress, and engage with educational content efficiently`,
-				url: "https://dafetiteogaga.github.io/estudiebuddie_frontend/",
+				url: "https://estudiebuddie-frontend.pages.dev/",
 				getImageSrc: getImage("eStudieBuddie.png"),
 				stack: "ReactJS, Django",
 			},
