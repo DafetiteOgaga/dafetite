@@ -1,10 +1,8 @@
 {
   "files": {
     "main.css": "/dafetite/static/css/main.b5352bfb.css",
-    "main.js": "/dafetite/static/js/main.1b85c21d.js",
+    "main.js": "/dafetite/static/js/main.583c5df2.js",
     "static/js/453.804285dd.chunk.js": "/dafetite/static/js/453.804285dd.chunk.js",
-    "static/media/altavizWeb.mp4": "/dafetite/static/media/altavizWeb.bcc515cf94401941da43.mp4",
-    "static/media/altavizMobile.mp4": "/dafetite/static/media/altavizMobile.e6dc89fd9541155de4ad.mp4",
     "static/media/studdiebudie.png": "/dafetite/static/media/studdiebudie.2ac84ee7342f97fe17d7.png",
     "static/media/bg_phone1.jpg": "/dafetite/static/media/bg_phone1.fc5feb1d7319a3782732.jpg",
     "static/media/fa-solid-900.svg": "/dafetite/static/media/fa-solid-900.e8c64de0ba20f065c9e0.svg",
@@ -53,11 +51,11 @@
     "static/media/dafeWhiteTransp.png": "/dafetite/static/media/dafeWhiteTransp.9e22063262c522af2111.png",
     "index.html": "/dafetite/index.html",
     "main.b5352bfb.css.map": "/dafetite/static/css/main.b5352bfb.css.map",
-    "main.1b85c21d.js.map": "/dafetite/static/js/main.1b85c21d.js.map",
+    "main.583c5df2.js.map": "/dafetite/static/js/main.583c5df2.js.map",
     "453.804285dd.chunk.js.map": "/dafetite/static/js/453.804285dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b5352bfb.css",
-    "static/js/main.1b85c21d.js"
+    "static/js/main.583c5df2.js"
   ]
 }
