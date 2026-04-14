@@ -297,6 +297,17 @@ const projectCardsContent = [
 		status: 'Websites',
 		content: [
 			{
+				title: "TOTALMAN SCHOOL",
+				description:
+					`Totalman School is a comprehensive educational institution offering kindergarten,
+					primary, secondary, and adult education. The school is committed to academic excellence,
+					character development, and providing a supportive environment that nurtures lifelong
+					learning and success.`,
+				url: "https://totalmanschool.pages.dev/",
+				getImageSrc: getImage("totalmanschool.png"),
+				stack: "ReactJS",
+			},
+			{
 				title: "Classic Brownline Plumbing Services",
 				description:
 					`Classic Brownline Plumbing Services is a professional plumbing company dedicated to
