@@ -303,7 +303,7 @@ const projectCardsContent = [
 					primary, secondary, and adult education. The school is committed to academic excellence,
 					character development, and providing a supportive environment that nurtures lifelong
 					learning and success.`,
-				url: "https://totalmanschool.pages.dev/",
+				url: "https://thetotalmanschools.pages.dev/",
 				getImageSrc: getImage("totalmanschool.png"),
 				stack: "ReactJS",
 			},
