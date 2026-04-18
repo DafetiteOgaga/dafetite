@@ -297,14 +297,13 @@ const projectCardsContent = [
 		status: 'Websites',
 		content: [
 			{
-				title: "TOTALMAN SCHOOL",
+				title: "THE TOTALMAN SCHOOLS",
 				description:
-					`Totalman School is a comprehensive educational institution offering kindergarten,
-					primary, secondary, and adult education. The school is committed to academic excellence,
-					character development, and providing a supportive environment that nurtures lifelong
-					learning and success.`,
+					`A network of forward-thinking schools dedicated to shaping well-rounded individuals
+					from kindergarten through adulthood. The Totalman Schools blend academic rigor with
+					strong values, creating environments where every student can thrive and grow.`,
 				url: "https://thetotalmanschools.pages.dev/",
-				getImageSrc: getImage("totalmanschool.png"),
+				getImageSrc: getImage("thetotalmanschools.png"),
 				stack: "ReactJS",
 			},
 			{
