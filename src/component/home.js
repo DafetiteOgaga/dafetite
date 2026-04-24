@@ -141,7 +141,9 @@ function Home() {
 									return (
 										<div key={`${index}${eduIndex}`} className="mb-5">
 											<h5 style={{margin: 0}}>{edu.course}</h5>
-											<p  className="italiced" style={{marginBottom: 0}}><strong>{edu.degree}</strong> - {edu.year}</p>
+											<p  className="italiced" style={{marginBottom: 0}}><strong>{edu.degree}</strong> 
+											{/* - {edu.year} */}
+											</p>
 											<p style={{lineHeight: 1.4}}>{edu.school}</p>
 										</div>
 									)
