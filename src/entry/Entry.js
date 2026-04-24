@@ -199,13 +199,13 @@ const education = [
 				school: 'Federal University of Technology Akure, Ondo State.',
 				course: 'Metallurgical and Materials Engineering',
 				degree: 'Bachelor of Engineering (B.Eng)',
-				year: '2014'
+				// year: '2014'
 			},
 			{
 				school: ' Lagos State Model College Badore.',
 				course: 'West African Examination Council (WAEC)',
 				degree: 'Senor Secondary School Certificate Examination (SSCE)',
-				year: '2005'
+				// year: '2005'
 			},
 		]
 	},
