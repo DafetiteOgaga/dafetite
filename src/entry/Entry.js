@@ -307,6 +307,18 @@ const projectCardsContent = [
 				stack: "ReactJS",
 			},
 			{
+				title: "Mayowa Adeniyi",
+				description:
+					`A Business Intelligence Analyst who turns complex data into clear, actionable insights
+					for decision-making. He builds dashboards and reporting systems that help organizations
+					move from assumptions to reliable, data-driven understanding.He works with SQL, Power
+					BI, Python, Tableau, R, and cloud tools, collaborating with teams to deliver practical
+					BI solutions that support better decisions.`,
+				url: "https://mayowa.pages.dev/",
+				getImageSrc: getImage("mayowa_adeniyi.png"),
+				stack: "ReactJS",
+			},
+			{
 				title: "Classic Brownline Plumbing Services",
 				description:
 					`Classic Brownline Plumbing Services is a professional plumbing company dedicated to
@@ -318,6 +330,16 @@ const projectCardsContent = [
 				stack: "ReactJS",
 			},
 			{
+				title: "Jimmy Ayodele",
+				description:
+					`A professional portfolio website for Jimmy Ayodele, showcasing his projects, skills,
+					achievements, and career journey. This site provides insights into his background, technical
+					expertise, and offers a contact page for collaboration or job opportunities.`,
+				url: "https://fijimi65.github.io/fijimiayodele/",
+				getImageSrc: getImage("jimmy_ayodele.png"),
+				stack: "ReactJS",
+			},
+			{
 				title: "TechFlows Engineering",
 				description:
 					`TechFlows Engineering is a technology company that offers innovative solutions across
@@ -326,16 +348,6 @@ const projectCardsContent = [
 					commitment to professional excellence and client satisfaction.`,
 				url: "https://dafetiteogaga.github.io/techflows/",
 				getImageSrc: getImage("techflows.png"),
-				stack: "ReactJS",
-			},
-			{
-				title: "Jimmy Ayodele",
-				description:
-					`A professional portfolio website for Jimmy Ayodele, showcasing his projects, skills,
-					achievements, and career journey. This site provides insights into his background, technical
-					expertise, and offers a contact page for collaboration or job opportunities.`,
-				url: "https://fijimi65.github.io/fijimiayodele/",
-				getImageSrc: getImage("jimmy_ayodele.png"),
 				stack: "ReactJS",
 			},
 			{
