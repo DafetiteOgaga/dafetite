@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import dafetite from '../myLogos/dafeWhiteTransp.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone, faPhoneSquare, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faMedium, faStackOverflow,
 	faFacebook, faFigma, faHashnode, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useIsMobile } from '../hooks/IsMobile';
@@ -10,6 +10,10 @@ import { wrblo } from '../entry/Entry';
 // import dafe from '../myLogos/dafeWhiteTransp180pxy.png'
 
 const socials = [
+	{
+		icon: faPhone,
+		url: "tel:+2348038091572",
+	},
 	{
 		icon: faEnvelope,
 		url: "mailto: ogagadafetite@gmail.com",
