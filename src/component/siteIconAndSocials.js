@@ -4,7 +4,7 @@ import dafetite from '../myLogos/dafeWhiteTransp.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faPhoneSquare, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faMedium, faStackOverflow,
-	faFacebook, faFigma, faHashnode, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+	faFacebook, faFigma, faHashnode, faTwitter, faXTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useIsMobile } from '../hooks/IsMobile';
 import { wrblo } from '../entry/Entry';
 // import dafe from '../myLogos/dafeWhiteTransp180pxy.png'
@@ -27,7 +27,7 @@ const socials = [
 		url: "https://www.linkedin.com/in/ogagadafetite/",
 	},
 	{
-		icon: faTwitter,
+		icon: faXTwitter,
 		url: "https://x.com/dafetite_ogaga",
 	},
 	{
