@@ -247,6 +247,12 @@ hr { border-top: 1px solid white; }
     color: #9CC;
 }
 
+.sup {
+    font-size: 10px;
+    position: relative;
+    top: -0.35em;
+}
+
 /* Service */
 .tm-service-text {
     /* max-width: 365px; */
