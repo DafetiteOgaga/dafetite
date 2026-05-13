@@ -142,7 +142,7 @@ function Home() {
 								{item.educationInfo.map((edu, eduIndex) => {
 									return (
 										<div key={`${index}${eduIndex}`} className="mb-5">
-											<h5 style={{margin: 0}}>{edu.course}</h5>
+											{/* <h5 style={{margin: 0}}>{edu.course}</h5> */}
 											<p  className="italiced" style={{marginBottom: 0}}><strong>{edu.degree}</strong> 
 											{/* - {edu.year} */}
 											</p>
