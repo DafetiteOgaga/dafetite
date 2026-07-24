@@ -26,10 +26,10 @@ const socials = [
 		icon: faLinkedin,
 		url: "https://www.linkedin.com/in/ogagadafetite/",
 	},
-	{
-		icon: faXTwitter,
-		url: "https://x.com/dafetite_ogaga",
-	},
+	// {
+	// 	icon: faXTwitter,
+	// 	url: "https://x.com/dafetite_ogaga",
+	// },
 	{
 		icon: faWhatsapp,
 		url: "https://wa.link/67x975",
