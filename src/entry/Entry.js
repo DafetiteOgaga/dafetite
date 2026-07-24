@@ -52,6 +52,16 @@ const professionalExperience = [
 					industry.`,
 			},
 			{
+				title: 'Software and Mathematics Teacher',
+				company: 'The Totalman Schools',
+				duration: '2025',
+				description: `Delivered engaging lessons in Mathematics alongside hands-on training in HTML, CSS,
+					JavaScript, React, Python, and Django to beginner and intermediate learners. Designed
+					interactive lessons, assessed students' progress, and mentored over 30 learners in developing
+					strong analytical, problem-solving, and software development skills through classroom instruction
+					and practical projects.`,
+			},
+			{
 				title: 'Software and Automation Engineer',
 				company: 'Freelance',
 				duration: '2023 - 2025',
@@ -90,6 +100,14 @@ const professionalProjects = [
 					enhancing developer productivity through streamlined workflows, built-in templates,
 					and intuitive scripting. Designed for flexibility, portability, and rapid daily
 					development.`
+			},
+			{
+				name: 'eStudieBuddie',
+				description: `A cross-platform education management platform built with React (frontend) and
+					Django REST Framework (backend). It enables students to take quizzes, monitor academic
+					performance, and track school grades, while providing teachers with tools to create,
+					shuffle, submit, and manage test and examination questions, record student scores, and
+					monitor academic progress through an intuitive, role-based system.`
 			},
 			{
 				name: 'Altaviz Support Limited',
