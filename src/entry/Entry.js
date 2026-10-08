@@ -52,7 +52,7 @@ const professionalExperience = [
 					industry.`,
 			},
 			{
-				title: 'Software and Mathematics Teacher',
+				title: 'Software Teacher',
 				company: 'The Totalman Schools',
 				duration: '2025',
 				description: `Delivered engaging lessons in Mathematics alongside hands-on training in HTML, CSS,
