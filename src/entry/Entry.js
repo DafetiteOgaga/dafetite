@@ -30,7 +30,7 @@ const professionalSummary = [
 	},
 	{
 		text: `
-			Proficient in Python, JavaScript (ES6+), SQL, C, HTML5, and CSS, and experienced with
+			Proficient in C#, Python, JavaScript (ES6+), SQL, C, HTML5, and CSS, and experienced with
 			frameworks such as React.js, React Native, Express, MongoDB, Expo, Django, Django REST
 			Framework, and Selenium. I specialize in developing responsive, maintainable, and
 			user-centric applications. My workflow also integrates DevOps practices using Bash,
