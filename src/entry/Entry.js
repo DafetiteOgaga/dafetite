@@ -46,10 +46,9 @@ const professionalExperience = [
 				title: 'Software Engineer',
 				company: 'BSSL Technologies Limited',
 				duration: '2026 - Present',
-				description: `Provided hands-on training in HTML, CSS, JavaScript, React, Python, and Django to
-					beginner and intermediate learners. Conducted both in-person and online workshops, helping over
-					50 young women build fully functional web applications and gain confidence to enter the tech
-					industry.`,
+				description: `Solved Software issues including, APIs, Databases, Web Applications, etc using
+					Asp.Net Core, C#, Typescript, Javascript and Razor pages. Handling API integrations, development,
+					testing, and bug fixes. Had hands-on experiences, and trained newly reruits.`,
 			},
 			{
 				title: 'Programming Tutor',
