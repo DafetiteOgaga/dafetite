@@ -30,7 +30,7 @@ const professionalSummary = [
 	},
 	{
 		text: `
-			Proficient in C#, Python, JavaScript (ES6+), SQL, C, HTML5, and CSS, and experienced with
+			Proficient in C#, Python, JavaScript (ES6+), TypeScript, SQL, C, HTML5, and CSS, and experienced with
 			frameworks such as React.js, Razor-pages, Entity Framework Core, ASP.Net-Core, React Native, Express, MongoDB, Expo, Django, Django REST
 			Framework, and Selenium. I specialize in developing responsive, maintainable, and
 			user-centric applications. My workflow also integrates DevOps practices using Bash,
@@ -43,9 +43,18 @@ const professionalExperience = [
 		experience: 'Professional Experiences',
 		roles: [
 			{
+				title: 'Software Engineer',
+				company: 'BSSL Technologies Limited',
+				duration: '2026 - Present',
+				description: `Provided hands-on training in HTML, CSS, JavaScript, React, Python, and Django to
+					beginner and intermediate learners. Conducted both in-person and online workshops, helping over
+					50 young women build fully functional web applications and gain confidence to enter the tech
+					industry.`,
+			},
+			{
 				title: 'Programming Tutor',
 				company: 'Tech for Girls',
-				duration: '2025 - Present',
+				duration: '2025 - 2026',
 				description: `Provided hands-on training in HTML, CSS, JavaScript, React, Python, and Django to
 					beginner and intermediate learners. Conducted both in-person and online workshops, helping over
 					50 young women build fully functional web applications and gain confidence to enter the tech
