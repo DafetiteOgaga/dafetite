@@ -61,7 +61,9 @@ function Home() {
 									return (
 										<div key={`${index}${roleIndex}`} className="mb-5">
 											<h5 style={{margin: 0}}>{role.title}</h5>
-											<p  className="italiced" style={{marginBottom: 0}}><strong>{role.company}</strong> - {role.duration}</p>
+											<p  className="italiced" style={{marginBottom: 0}}><strong>{role.company}</strong>
+											{/* - {role.duration} */}
+											</p>
 											{showMore && <p style={{lineHeight: 1.4}}>{role?.description}</p>}
 										</div>
 									)
@@ -140,8 +142,10 @@ function Home() {
 								{item.educationInfo.map((edu, eduIndex) => {
 									return (
 										<div key={`${index}${eduIndex}`} className="mb-5">
-											<h5 style={{margin: 0}}>{edu.course}</h5>
-											<p  className="italiced" style={{marginBottom: 0}}><strong>{edu.degree}</strong> - {edu.year}</p>
+											{/* <h5 style={{margin: 0}}>{edu.course}</h5> */}
+											<p  className="italiced" style={{marginBottom: 0}}><strong>{edu.degree}</strong> 
+											{/* - {edu.year} */}
+											</p>
 											<p style={{lineHeight: 1.4}}>{edu.school}</p>
 										</div>
 									)

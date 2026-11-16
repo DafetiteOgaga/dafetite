@@ -188,10 +188,10 @@
     .tm-footer-zindexed {
         /* position: relative; */
         /* z-index: 1; */
-        /* text-align: center; */
+        /* text-align: center !important; */
         /* overflow-x: hidden; */
         margin-right: 16%;
-        text-wrap: nowrap;
+        /* text-wrap: nowrap; */
     }
     .tm-service-img,
     .tm-service-img-r {

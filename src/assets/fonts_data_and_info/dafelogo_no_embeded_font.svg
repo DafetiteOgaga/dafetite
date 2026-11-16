@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 90" width="320" height="90">
+  <style>
+    @font-face {
+      font-family: 'MrsSaintDelafield';
+      src: url('MrsSaintDelafield-Regular.ttf') format('truetype');
+    }
+    .logo-text {
+      font-family: 'MrsSaintDelafield', cursive;
+      font-size: 68px;
+      fill: currentColor;
+      color: white;
+    }
+  </style>
+  <text
+    x="50%"
+    y="72"
+    text-anchor="middle"
+    class="logo-text"
+    fill="white"
+  >Dafetite</text>
+</svg>

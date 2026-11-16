@@ -30,8 +30,8 @@ const professionalSummary = [
 	},
 	{
 		text: `
-			Proficient in Python, JavaScript (ES6+), SQL, C, HTML5, and CSS, and experienced with
-			frameworks such as React.js, React Native, Express, MongoDB, Expo, Django, Django REST
+			Proficient in C#, Python, JavaScript (ES6+), TypeScript, SQL, C, HTML5, and CSS, and experienced with
+			frameworks such as React.js, Razor-pages, Entity Framework Core, ASP.Net-Core, React Native, Express, MongoDB, Expo, Django, Django REST
 			Framework, and Selenium. I specialize in developing responsive, maintainable, and
 			user-centric applications. My workflow also integrates DevOps practices using Bash,
 			and PowerShell to streamline development and enhance system performance.
@@ -43,13 +43,31 @@ const professionalExperience = [
 		experience: 'Professional Experiences',
 		roles: [
 			{
+				title: 'Software Engineer',
+				company: 'BSSL Technologies Limited',
+				duration: '2026 - Present',
+				description: `Solved Software issues including, APIs, Databases, Web Applications, etc using
+					Asp.Net Core, C#, Typescript, Javascript and Razor pages. Handling API integrations, development,
+					testing, and bug fixes. Had hands-on experiences, and trained newly reruits.`,
+			},
+			{
 				title: 'Programming Tutor',
 				company: 'Tech for Girls',
-				duration: '2025 - Present',
+				duration: '2025 - 2026',
 				description: `Provided hands-on training in HTML, CSS, JavaScript, React, Python, and Django to
 					beginner and intermediate learners. Conducted both in-person and online workshops, helping over
 					50 young women build fully functional web applications and gain confidence to enter the tech
 					industry.`,
+			},
+			{
+				title: 'Software Teacher',
+				company: 'The Totalman Schools',
+				duration: '2025',
+				description: `Delivered engaging lessons in Mathematics alongside hands-on training in HTML, CSS,
+					JavaScript, React, Python, and Django to beginner and intermediate learners. Designed
+					interactive lessons, assessed students' progress, and mentored over 30 learners in developing
+					strong analytical, problem-solving, and software development skills through classroom instruction
+					and practical projects.`,
 			},
 			{
 				title: 'Software and Automation Engineer',
@@ -90,6 +108,14 @@ const professionalProjects = [
 					enhancing developer productivity through streamlined workflows, built-in templates,
 					and intuitive scripting. Designed for flexibility, portability, and rapid daily
 					development.`
+			},
+			{
+				name: 'eStudieBuddie',
+				description: `A cross-platform education management platform built with React (frontend) and
+					Django REST Framework (backend). It enables students to take quizzes, monitor academic
+					performance, and track school grades, while providing teachers with tools to create,
+					shuffle, submit, and manage test and examination questions, record student scores, and
+					monitor academic progress through an intuitive, role-based system.`
 			},
 			{
 				name: 'Altaviz Support Limited',
@@ -199,13 +225,13 @@ const education = [
 				school: 'Federal University of Technology Akure, Ondo State.',
 				course: 'Metallurgical and Materials Engineering',
 				degree: 'Bachelor of Engineering (B.Eng)',
-				year: '2014'
+				// year: '2014'
 			},
 			{
 				school: ' Lagos State Model College Badore.',
 				course: 'West African Examination Council (WAEC)',
 				degree: 'Senor Secondary School Certificate Examination (SSCE)',
-				year: '2005'
+				// year: '2005'
 			},
 		]
 	},
@@ -297,6 +323,28 @@ const projectCardsContent = [
 		status: 'Websites',
 		content: [
 			{
+				title: "THE TOTALMAN SCHOOLS",
+				description:
+					`A network of forward-thinking schools dedicated to shaping well-rounded individuals
+					from kindergarten through adulthood. The Totalman Schools blend academic rigor with
+					strong values, creating environments where every student can thrive and grow.`,
+				url: "https://thetotalmanschools.pages.dev/",
+				getImageSrc: getImage("thetotalmanschools.png"),
+				stack: "ReactJS",
+			},
+			{
+				title: "Mayowa Adeniyi",
+				description:
+					`A Business Intelligence Analyst who turns complex data into clear, actionable insights
+					for decision-making. He builds dashboards and reporting systems that help organizations
+					move from assumptions to reliable, data-driven understanding.He works with SQL, Power
+					BI, Python, Tableau, R, and cloud tools, collaborating with teams to deliver practical
+					BI solutions that support better decisions.`,
+				url: "https://mayowa.pages.dev/",
+				getImageSrc: getImage("mayowa_adeniyi.png"),
+				stack: "ReactJS",
+			},
+			{
 				title: "Classic Brownline Plumbing Services",
 				description:
 					`Classic Brownline Plumbing Services is a professional plumbing company dedicated to
@@ -308,6 +356,16 @@ const projectCardsContent = [
 				stack: "ReactJS",
 			},
 			{
+				title: "Jimmy Ayodele",
+				description:
+					`A professional portfolio website for Jimmy Ayodele, showcasing his projects, skills,
+					achievements, and career journey. This site provides insights into his background, technical
+					expertise, and offers a contact page for collaboration or job opportunities.`,
+				url: "https://fijimi65.github.io/fijimiayodele/",
+				getImageSrc: getImage("jimmy_ayodele.png"),
+				stack: "ReactJS",
+			},
+			{
 				title: "TechFlows Engineering",
 				description:
 					`TechFlows Engineering is a technology company that offers innovative solutions across
@@ -316,16 +374,6 @@ const projectCardsContent = [
 					commitment to professional excellence and client satisfaction.`,
 				url: "https://dafetiteogaga.github.io/techflows/",
 				getImageSrc: getImage("techflows.png"),
-				stack: "ReactJS",
-			},
-			{
-				title: "Jimmy Ayodele",
-				description:
-					`A professional portfolio website for Jimmy Ayodele, showcasing his projects, skills,
-					achievements, and career journey. This site provides insights into his background, technical
-					expertise, and offers a contact page for collaboration or job opportunities.`,
-				url: "https://fijimi65.github.io/fijimiayodele/",
-				getImageSrc: getImage("jimmy_ayodele.png"),
 				stack: "ReactJS",
 			},
 			{
